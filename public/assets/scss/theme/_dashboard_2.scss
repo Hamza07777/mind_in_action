@@ -1,0 +1,899 @@
+/**=====================
+      67. Dashboard 2 CSS Start
+==========================**/
+.resolve-complain {
+  p {
+    font-family: $font-roboto, $font-serif;
+    margin-top: 7px;
+    color: $semi-dark;
+  }
+  .media {
+     position: relative;
+     .radial-bar {
+       margin-right: 30px;
+       width: 120px;
+       height: 120px;
+       &::after {
+         width: 100px;
+         height: 100px;
+         margin-left: 9.5px;
+         margin-top: 9.5px;
+         line-height: 100px;
+       }
+     }
+     .small-bar {
+       margin-right: 30px;
+       height: 100px;
+       .small-chart {
+         &.flot-chart-container {
+           width: 125px;
+           height: 120px;
+           .chartist-tooltip {
+             position: absolute;
+             opacity: 0;
+             .chartist-tooltip-value {
+               font-size: 10px;
+               padding: 5px;
+               color: $white;
+               background-color: rgba(0, 0, 0, 0.5);
+               border-radius: 4px;
+             }
+             &.tooltip-show {
+               opacity: 1;
+             }
+           }
+           svg {
+             position: absolute;
+             left: 0;
+             bottom: 0;
+             width: 120px !important;
+             .ct-series-a {
+               .ct-point, .ct-line, .ct-bar, .ct-slice-donut {
+                 stroke: $primary-color;
+               }
+             }
+             .ct-series-b {
+               .ct-point, .ct-line, .ct-bar, .ct-slice-donut {
+                 stroke: rgba($primary-color, 0.35);
+               }
+             }
+           }
+         }
+       }
+     }
+     .media-body {
+       h4 {
+         line-height: 0.8;
+         span {
+           font-family: $font-roboto, $font-serif;
+         }
+       }
+     }
+  }
+}
+.average-radial {
+  .media {
+    align-items: center;
+  }
+}
+.complaints {
+  .card-header {
+    justify-content: space-between;
+    .btn {
+      font-size: 10px;
+      text-transform: uppercase;
+      font-weight: 500;
+      padding: 6px 12px;
+      color: $theme-body-sub-title-color;
+    }
+  }
+  .apex-complain {
+    margin-bottom: -16px;
+    margin-top: -50px;
+    #complain {
+      width: 100%;
+    }
+  }
+}
+.complain-details {
+ text-align: right;
+    padding-right: 30px;
+  h4 {   
+    span {
+      font-size: 9px;
+      display: inline-block;
+      padding-left: 5px;
+      color: $semi-dark;
+      font-weight: 600;
+      &.font-primary {
+        font-size: 10px;
+      }
+    }
+  }
+  p {
+    color: $semi-dark;
+    font-family: $font-roboto, $font-serif;
+   width: 50%;
+    margin-left: auto;
+  }
+}
+.customer-satisfied {
+  .card-header {
+    p {
+      width: 80%;
+    }
+  }
+  .customers-details {
+    .complain-details {
+      width: 65%;
+          text-align: left;
+      > span {
+        text-transform: uppercase;
+        color: $semi-dark;
+        font-weight: 500;
+        font-size: 11px;
+      }
+    }
+    .legend-radial {
+      ul {
+        li {
+          line-height: 1.2;
+          @each $value-square-box-name, $value-square-box-color in (primary, $primary-color),
+                  (secondary, $secondary-color) ,
+                  (success, $success-color),
+                  (danger, $danger-color),
+                  (info, $info-color),
+                  (light, $light-color),
+                  (dark, $dark-color),
+                  (warning, $warning-color) {
+            .value-square-box-#{$value-square-box-name}{
+              width: 6px;
+              height: 6px;
+            }
+          }
+          span {
+            font-size: 8px;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+  }
+}
+.satisfaction-table {
+  table {
+    tbody {
+      tr {
+        td {
+          border-top: 1px solid $light-gray;
+          width: 100%;
+          vertical-align: middle;
+          padding: 20px 30px;
+          &:last-child {
+            padding-left: 0;
+          }
+          p, span {
+            font-size: 11px;
+          }
+          span {
+            font-weight: 500;
+            &.d-block {
+              font-family: $font-roboto, $font-serif;
+            }
+          }
+          p {
+            text-transform: uppercase;
+            margin-bottom: 2.5px;
+          }
+          .number-radial {
+            .radial-bar-success {
+              &.radial-bar-90 {
+                  background-image: linear-gradient(414deg, $success-color 50%, transparent 50%, transparent),linear-gradient(270deg, $success-color 50%, #dfe5f5 50%, #dfe5f5);
+              }
+              &::after {
+                background-color: lighten($success-color, 52%);
+              }
+            }
+            .radial-bar-secondary {
+              &.radial-bar-75 {
+                  background-image: linear-gradient(360deg, $secondary-color 50%, transparent 50%, transparent),linear-gradient(270deg, $secondary-color 50%, #dfe5f5 50%, #dfe5f5);
+              }
+              &::after {
+                background-color: lighten($secondary-color, 44%);
+              }
+            }
+            .radial-bar-warning {
+              &.radial-bar-60 {
+                  background-image: linear-gradient(306deg, $warning-color 50%, transparent 50%, transparent),linear-gradient(270deg, $warning-color 50%, #dfe5f5 50%, #dfe5f5);
+              }
+              &::after {
+                background-color: lighten($warning-color, 40%);
+              }
+            }
+            .radial-bar-danger {
+              &.radial-bar-20 {
+                  background-image: linear-gradient(90deg, #dfe5f5 50%, transparent 50%, transparent),linear-gradient(162deg, $danger-color 50%, #dfe5f5 50%, #dfe5f5);
+              }
+              &::after {
+                background-color: lighten($danger-color, 39%);
+              }
+            }
+            .radial-bar {
+              width: 46px;
+              height: 46px;
+              &:after {
+                font-size: 0;
+                width: 40px;
+                height: 40px;
+                margin-left: 3px;
+                margin-top: 3px;
+                line-height: 44px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.tickets {
+  .d-flex {
+    justify-content: space-between;
+    .btn {
+      font-size: 10px;
+      text-transform: uppercase;
+      font-weight: 500;
+      padding: 6px 12px;
+      color: $theme-body-sub-title-color;
+    }
+  }
+  p {
+    width: 74%;
+    color: $semi-dark;
+    font-family: $font-roboto, $font-serif;
+  }
+  small {
+      font-size: 9px;
+      color: $semi-dark;
+      span {
+        font-size: 10px;
+        display: inline-block;
+        margin-left: 5px;
+      }
+  }
+  .apex-complain {
+    margin-bottom: -19px;
+    margin-right: -4px;
+  }
+  .ticket-legend {
+    position: absolute;
+    bottom: 54px;
+    right: 30px;
+  }
+}
+.setting-round {
+  i {
+    color: #cfddf3;
+    font-size: 16px;
+  }
+}
+.overall-rating {
+  .rating-box {
+    .main-rating {
+      border-right: 1px solid $light-gray;
+      p {
+        color: $semi-dark;
+        font-size: 10px;
+        font-weight: 600;
+        width: 80%;
+        margin-top: 4px;
+      }
+      .rating-box {
+        padding: 30px;
+        padding-right: 0;
+      }
+    }
+  }
+  .rating-container {
+    .star-ratings {
+      .stars {
+        width: auto;
+        text-align: left;
+        .br-theme-fontawesome-stars-o {
+          .br-widget {
+            a {
+              font: normal normal normal 25px/1 FontAwesome;
+              &.br-selected, &.br-fractional, &.br-active {
+                &::after {
+                  color: #fed112;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .small-rating {
+    h6 {
+      margin-bottom: 0;
+      .stars-small {
+        .fa-star {
+          color: #cfddf3;
+        }
+        .checked {
+          color: #fed112;
+        }
+      }
+      span {
+        &.f-12 {
+          display: inline-block;
+          margin-top: 3px;
+        }
+      }
+    }
+    li {
+      padding: 18px;
+      + li {
+        border-top: 1px solid $light-gray;
+      }
+    }
+  }
+}
+.agent-performance-table {
+  table {
+    tr {
+      + tr {
+        td {
+          border-top: 1px solid $light-gray;
+        }
+      }
+      td {
+        vertical-align: middle;
+        padding: 21px 30px;
+        padding-right: 0;
+        + td {
+          min-width: 115px;
+        }
+        p {
+          font-size: 9px;
+        }
+        .progress-showcase {
+          .progress {
+            border-radius: 0;
+          }
+          p {
+            margin-top: 9px;
+          }
+        }
+        .align-middle {
+          .f-12 {
+            text-transform: uppercase;
+          }
+          span {
+            &.d-block {
+              font-size: 11px;
+              color: $semi-dark;
+            }
+          }
+        }
+      }
+      &:first-child {
+        td {
+            padding-top: 0;
+        }
+      }
+    }
+  }
+}
+.timeline-recent {
+  .media {
+    .timeline-line {
+      height: 55%;
+      position: absolute;
+      width: 1px;
+      border: 1px dashed #ddd;
+      margin: 0 auto;
+      left: 50px;
+      z-index: 1;
+    }
+    + .media {
+      margin-top: 30px;
+    }
+    .media-body {
+      margin-left: 20px;
+      p, .light-font {
+        font-size: 11px;
+        font-family: $font-roboto, $font-serif;
+      }
+      p {
+        margin-top: 3px;
+        margin-bottom: 0;
+        + p {
+          color: $semi-dark;
+          width: 65%;
+        }
+      }
+    }
+    @each $timeline-dot-name, $timeline-dot-color in (primary, $primary-color),
+            (secondary, $secondary-color) ,
+            (success, $success-color),
+            (danger, $danger-color),
+            (info, $info-color),
+            (light, $light-color),
+            (dark, $dark-color),
+            (warning, $warning-color) {
+      .timeline-dot-#{$timeline-dot-name}{
+        width: 42px;
+        height: 42px;
+        background-color: $timeline-dot-color;
+        border-radius: 100%;
+        border: 15px solid lighten($timeline-dot-color, 38%);
+        position: relative;
+        z-index: 2;
+      }
+    }
+  }
+}
+@each $round-light-icon-name, $round-light-icon-color in (primary, $primary-color),
+        (secondary, $secondary-color) ,
+        (success, $success-color),
+        (danger, $danger-color),
+        (info, $info-color),
+        (light, $light-color),
+        (dark, $dark-color),
+        (warning, $warning-color) {
+  .round-light-icon-#{$round-light-icon-name}{
+    width: 42px;
+    height: 42px;
+    background-color: lighten($round-light-icon-color, 35%);
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    i {
+      color: $round-light-icon-color;
+      font-size: 20px;
+    }
+  }
+}
+.transaction-table {
+  table {
+    tbody {
+      tr {
+        td {
+          vertical-align: middle;
+          padding: 19px 0 20px 30px;
+          .media {
+            align-items: center;
+          }
+          .btn {
+            font-size: 12px;
+          }
+          .round-light-icon-primary {
+            background-color: rgba($primary-color, 0.2);
+          }
+          .round-light-icon-success {
+            background-color: rgba($success-color, 0.2);
+          }
+          .badge-warning {
+            color: $white;
+          }
+          &:last-child {
+            padding-right: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+.tickets-bar {
+  .flot-chart-container {
+    height: 278px;
+    &.ct-chartbar {
+      svg {
+        -webkit-box-reflect: below -297px -webkit-gradient(linear, right top, right bottom, from(transparent), to(rgba(255,255,255,0.4)));
+        .ct-bar {
+          stroke-width: 20px !important;
+        }
+        .ct-series-a {
+          .ct-point, .ct-line, .ct-bar, .ct-slice-donut {
+            stroke: lighten($primary-color, 28%);
+          }
+        }
+        .ct-series-b {
+          .ct-point, .ct-line, .ct-bar, .ct-slice-donut {
+            stroke: $primary-color;
+          }
+        }
+      }
+    }
+  }
+}
+.small-mix {
+  svg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 90px !important;
+    .ct-series-a {
+      .ct-point, .ct-line, .ct-bar, .ct-slice-donut {
+        stroke: rgba($primary-color, 0.2);
+      }
+    }
+  }
+}
+.current-tickets {
+  .current-legend {
+     position: absolute;
+     right: 25%;
+     top: 25%;
+  }
+}
+// responsive
+@media only screen and (max-width: 1366px) {
+  .agent-performance-table {
+    table {
+      tr {
+        td {
+          &:first-child {
+            min-width: 200px;
+          }
+        }
+      }
+    }
+  }
+  .customer-satisfied {
+    .card-header {
+      p {
+        width: 85%;
+      }
+    }
+  }
+  .satisfaction-table {
+    table {
+      tbody {
+        tr {
+          td {
+            &:first-child {
+              min-width: 180px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .resolve-complain {
+    p {
+      width: 100%;
+    }
+  }
+}
+@media only screen and (max-width: 1199px) {
+  .resolve-complain {
+    .media {
+      .small-bar {
+        height: 85px;
+      }
+    }
+  }
+  .satisfaction-table {
+    table {
+      tbody {
+        tr {
+          td {
+              min-width: 130px;
+          }
+        }
+      }
+    }
+  }
+  .overall-rating {
+    .rating-box {
+      .main-rating {
+        p {
+          width: 83%;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 991px) {
+  .resolve-complain {
+    .media {
+      .small-bar, .radial-bar {
+        margin-right: 20px;
+      }
+    }
+  }
+  .complain-details {
+    padding-left: 20px;
+  }
+  .satisfaction-table {
+    table {
+      tbody {
+        tr {
+          td {
+            padding: 20px;
+          }
+        }
+      }
+    }
+  }
+  .tickets {
+    .ticket-legend {
+      right: 20px;
+      bottom: 44px;
+    }
+  }
+  .overall-rating {
+    .rating-box {
+      .main-rating {
+        .rating-box {
+          padding: 20px;
+        }
+      }
+    }
+    .small-rating {
+      li {
+        padding: 12px;
+      }
+    }
+  }
+  .timeline-recent {
+    .media {
+      +.media {
+        margin-top: 20px;
+      }
+      .timeline-line {
+        left: 40px;
+      }
+    }
+  }
+  .agent-performance-table {
+    table {
+      tr {
+        td {
+           padding: 20px;
+           padding-right: 0;
+           + td {
+            min-width: 156px;
+           }
+           .progress-showcase {
+              .progress {
+                width: 50%;
+              }
+            }
+        }
+      }
+    }
+  }
+  .satisfaction-table {
+    table {
+      tbody {
+        tr {
+          td {
+             min-width: 160px;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 767px) {
+  .overall-rating {
+    .small-rating {
+      li {
+        padding: 14px;
+      }
+    }
+  }
+  .satisfaction-table {
+    table {
+      tbody {
+        tr {
+          td {
+            min-width: 98px;
+          }
+        }
+      }
+    }
+  }
+  .current-tickets {
+     .current-legend {
+      display: none;
+     }
+  }
+  .tickets-bar {
+    .flot-chart-container {
+      &.ct-chartbar {
+        svg {
+          .ct-bar {
+            stroke-width: 10px !important;
+          }
+        }
+      }
+    }
+  }
+  .tickets {
+    p {
+      width: 80%;
+    }
+  }
+  .agent-performance-table {
+    table {
+      tr {
+        td {
+          &:first-child {
+            min-width: 245px;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 575px) {
+  .resolve-complain {
+    .media {
+      .small-bar, .radial-bar {
+        margin-right: 15px;
+      }
+    }
+  }
+  .customer-satisfied {
+    .card-header {
+      p {
+        width: 100%;
+      }
+    }
+  }
+  .tickets, .complaints {
+    .d-flex, .card-header {
+      .btn {
+        display: none;
+      }
+    }
+    p {
+      width: 100%;
+    }
+  }
+  .complain-details {
+    padding-left: 15px;
+    p {
+      width: 70%;
+    }
+  }
+  .satisfaction-table {
+    table {
+      tbody {
+        tr {
+          td {
+            padding: 15px;
+            &:first-child {
+              min-width: 202px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .overall-rating {
+    .rating-box {
+      .main-rating {
+        border-right: none;
+        border-bottom: 1px solid $light-gray;
+        p {
+          width: 100%;
+        }
+        .rating-box {
+          padding: 15px;
+        }
+      }
+    }
+    .small-rating {
+      li {
+        padding: 15px;
+      }
+    }
+  }
+  .timeline-recent {
+    .media {
+      +.media {
+        margin-top: 15px;
+      }
+      @each $timeline-dot-name, $timeline-dot-color in (primary, $primary-color),
+            (secondary, $secondary-color) ,
+            (success, $success-color),
+            (danger, $danger-color),
+            (info, $info-color),
+            (light, $light-color),
+            (dark, $dark-color),
+            (warning, $warning-color) {
+      .timeline-dot-#{$timeline-dot-name}{
+        width: 36px;
+        height: 36px;
+        border: 12px solid lighten($timeline-dot-color, 38%);
+      }
+    }
+      .media-body {
+          margin-left: 15px;
+          p {
+            +p {
+              width: 100%;
+            }
+          }
+          .d-block {
+            .pull-right {
+              display: none;
+            }
+          }
+      }
+      .timeline-line {
+        left: 32px;
+      }
+    }
+  }
+  .agent-performance-table {
+    table {
+      tr {
+        td {
+           padding: 15px;
+           padding-right: 0;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 360px) {
+  .resolve-complain {
+    .media {
+      display: block;
+      .small-bar {
+        height: 134px;
+        margin-right: 0;
+        margin-top: -16px;
+        .small-chart {
+          &.flot-chart-container {
+            svg {
+              position: relative;
+            }
+          }
+        }
+      }
+      .radial-bar {
+        margin-bottom: 15px;
+        margin-right: 0;
+      }
+    }
+  }
+  .customer-satisfied {
+    .customers-details {
+      display: block !important;
+      .complain-details {
+        margin-bottom: 10px;
+      }
+    }
+  }
+  .tickets-bar {
+    .flot-chart-container {
+      &.ct-chartbar {
+        svg {
+          .ct-bar {
+            stroke-width: 6px !important;
+          }
+        }
+      }
+    }
+  }
+  .overall-rating {
+    .setting-round {
+      i {
+        display: none;
+      }
+    }
+  }
+}
+/**=====================
+     67. Dashboard 2  CSS End
+==========================**/

@@ -1,0 +1,548 @@
+/**=====================
+      68. Dashboard 3 CSS Start
+==========================**/
+$url_0: url(../images/dashboard/social.jpg);
+@each $border-recent-name, $border-recent-color in (primary, $primary-color),
+(secondary, $secondary-color) ,
+(success, $success-color),
+(danger, $danger-color),
+(info, $info-color),
+(light, $light-color),
+(dark, $dark-color),
+(warning, $warning-color) {
+  .border-recent-#{$border-recent-name}{
+    border-left: 3px solid $border-recent-color;
+  }
+}
+.insta-profile {
+  ul {
+    li {
+      display: inline-block;
+      width: 24%;
+      h6 {
+        font-size: 20px;
+      }
+      + li {
+        margin-left: 20px;
+        padding-left: 20px;
+        border-left: 1px solid $light-gray;
+      }
+    }
+  }
+}
+.social-title {
+  font-size: 20px;
+  font-weight: 700;
+  -webkit-text-fill-color: transparent;
+  background: -o-linear-gradient(transparent, transparent);
+  -webkit-background-clip: text;
+  background-image: -webkit-linear-gradient(transparent, transparent), url(../images/title.gif);
+  background-position: left;
+}
+.filter-cards-view{
+  background-color: red;
+  .badge{
+    border: 1px solid #ddd;
+    background-color: transparent;
+    font-size: 9px;
+    padding: 0.30em 0.5em;
+  }
+}  
+.view-members {
+  img {
+    margin-bottom: 15px;
+  }
+  h6{
+    margin-top: 10px;
+  }
+  .d-flex {
+    justify-content: space-between;
+    ul {
+      li {
+        display: inline-block;
+        + li {
+          margin-left: 5px;
+        }
+        a {
+          svg {
+            width: 16px;
+            height: 16px;
+          }
+        }
+      }
+    }
+  }
+} 
+.birthday-card {
+  .d-flex {
+    margin-bottom: 48px;
+    i {
+      font-size: 25px;
+    }
+    a {
+      i {
+        color: $white;
+      }
+    }
+  }
+  .birthday-bg {
+    position:absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: $url_0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: overlay;
+    background-color: #5349da;
+    animation: birthday-bg 9s linear infinite;
+  }
+  .card-body {
+    z-index: 1;
+  }
+}
+@keyframes birthday-bg {
+  0% { transform:scale(1); }
+  50% { transform:scale(1.1,1.1); }
+  100% {
+    transform:scale(1);
+  }
+}
+.connection {
+  ul {
+    li {
+      padding: 20px;
+      + li {
+        padding-top: 0;
+      }
+      .media {
+        align-items: center;
+      }
+      p {
+        font-size: 10px;
+        font-family: $font-roboto, $font-serif;
+        color: $semi-dark;
+      }
+    }
+  }
+}
+.likes-page {
+  padding-left: 30px;
+  h4 {
+    span {
+      svg {
+        width: 14px;
+        height: 14px;
+        vertical-align: sub;
+      }
+    }
+  }
+  p {
+    color: $semi-dark;
+  }
+}
+.messanger-chat {
+  .input-group {
+    .form-control {
+      font-size: 12px;
+      height: calc(2.25rem + 2px);
+    }
+    .input-group-append {
+      .input-group-text {
+        background-color: $transparent-color;
+        border-color: $transparent-color;
+        svg {
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+  }
+  .f-12, p {
+    font-family: $font-roboto, $font-serif;
+  }
+  span {
+    &.f-12 {
+      font-weight: 500;
+    }
+  }
+  .chat {
+    .media {
+      margin-bottom: 20px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      .media-body {
+        .message-main {
+          padding: 13px 16px;
+          border-radius: 20px;
+          margin-top: 4px;
+          width: 75%;
+          p {
+            margin-bottom: 5px;
+          }
+          ul {
+            li {
+              display: inline-block;
+            }
+          }
+        }
+      }
+    }
+    .left-side-chat {
+      .media-body {
+        .message-main {
+          background-color: #f8f8f8;
+          border-top-left-radius: 0;
+        }
+      }
+    }
+    .right-side-chat {
+      p{
+        color: $primary-color;
+      }
+      .media-body {
+        .message-main {
+          background-color: rgba($primary-color, 0.2);
+          border-top-right-radius: 0;
+        }
+      }
+    }
+  }
+}
+
+.social-user-card {
+  .social-user-top-content {
+    span {
+      font-weight: 500;
+    }
+    .option-social {
+      margin-top: 30px;
+      button {
+        svg {
+          width: 16px;
+          height: 16px;
+          vertical-align: top;
+        }
+      }
+    }
+    .img-social {
+      width: 79px;
+    }
+    ul {
+      margin-top: 10px;
+      li {
+        display: inline-block;
+      }
+    }
+    .customers {
+      ul {
+        li {
+          img {
+            filter: none;
+          }
+          span {
+            display: inline-block;
+            margin-top: 11px;
+          }
+          &:last-child {
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+    p {
+      margin-top: 20px;
+    }
+    img {
+      filter: drop-shadow(-7px 7px 6px rgba(228, 228, 228, 0.8));
+    }
+    h4 {
+      padding-top: 20px;
+    }
+  }
+  h2 {
+    font-weight: 600;
+  }
+  h4 {
+    font-family: $font-roboto, $font-serif;
+    font-weight: 500;
+    margin-bottom: 0;
+  }
+  .card-footer {
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: nowrap;
+      li {
+        width: 100%;
+        text-align: center;
+        display: inline-block;
+        span {
+          font-weight: 600;
+          padding: 30px;
+          display: block;
+        }
+        &:first-child {
+          border-right: 1px solid $card-border-color;
+        }
+      }
+    }
+  }
+}
+.activity-social {
+  ul {
+    li {
+      padding-left: 15px;
+      
+      + li {
+        margin-top: 20px;
+      }
+      p {
+        font-family: $font-roboto, $font-serif;
+        font-weight: 500;
+      }
+      small {
+        color: $light-text;
+        font-weight: 500;
+      }
+    }
+  }
+}
+.joined-status {
+  position: absolute;
+  right: 85px;
+  top: 23px;
+  .circle-dashed-box {
+    display: inline-block;
+    margin-right: 10px;
+    .circle-dashed {
+      display: flex;
+      width: 30px;
+      height: 30px;
+      border: 2px dashed #e8e8e8;
+      border-radius: 100%;
+      align-items: center;
+      justify-content: center;
+      i {
+        color: #e8e8e8;
+      }
+    }
+  }
+  img {
+    margin-right: 10px;
+  }
+}
+.groups-table {
+  table {
+    tr {
+      th,td {
+        border-top: none;
+      }
+      &:first-child {
+        td {
+          padding-top: 20px;
+        }
+      }
+      td {
+        vertical-align: middle;
+        .align-middle {
+          .f-12 {
+            text-transform: capitalize;
+            font-weight: 500;
+          }
+        }
+        button {
+          font-size: 13px;
+          font-weight: 500;
+        }
+        &:nth-child(2) {
+          span {
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
+}
+// responsive
+@media only screen and (max-width: 1366px) {
+  .groups-table {
+    table {
+      tr {
+        td {
+          + td {
+            min-width: 150px;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 991px) {
+  .joined-status {
+    top: 14px;
+  }
+  .birthday-card {
+    .d-flex {
+      margin-bottom: 20px;
+    }
+  }
+  .filter-cards-view {
+    &.pt-0 {
+      padding-top: 0 !important;
+    }
+  }
+  .likes-page {
+    padding-left: 20px;
+  }
+  .apex-social {
+    margin-bottom: -40px;
+  }
+  .social-user-card {
+    .social-user-top-content {
+      .option-social {
+        margin-top: 20px;
+      }
+    }
+    .card-footer {
+      ul {
+        li {
+          span {
+            padding: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 575px) {
+  .joined-status {
+    display: none;
+  }
+  .activity-social {
+    ul {
+      li {
+        +li {
+          margin-top: 15px;
+        }
+      }
+    }
+  }
+  .groups-table {
+    table {
+      tr {
+        &:first-child {
+          td {
+            padding-top: 15px;
+          }
+        }
+      }
+    }
+  }
+
+  .birthday-card {
+    .d-flex {
+      margin-bottom: 15px;
+    }
+    h4 {
+      font-size: 20px;
+    }
+    .img-50 {
+      width: 40px !important;
+    }
+  }
+  .social-user-card {
+    .social-user-top-content {
+      .option-social, p {
+        margin-top: 15px;
+      }
+      h4 {
+        padding-top: 15px;
+      }
+    }
+    .card-footer {
+      ul {
+        li {
+          span {
+            padding: 15px;
+          }
+        }
+      }
+    }
+  }
+  .likes-page {
+    padding-left: 15px;
+  }
+  .connection {
+    ul {
+      li {
+        padding: 15px;
+      }
+    }
+  }
+  .insta-profile {
+    ul {
+      li {
+        width: 28%;
+        p {
+          font-size: 11px;
+          margin-top: 5px;
+        }
+        + li {
+          padding-left: 15px;
+          margin-left: 15px;
+        }
+      }
+    }
+  }
+  .messanger-chat {
+    .chat  {
+      .media {
+        margin-bottom: 15px;
+        .img-60 {
+          width: 40px !important;
+        }
+        .media-body {
+          .message-main {
+            width: 100%;
+            padding: 15px;
+          }
+        }
+        &.left-side-chat {
+          .m-r-20 {
+            margin-right: 15px;
+          }
+        }
+        &.right-side-chat {
+          .m-l-20 {
+            margin-left: 15px !important;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 360px) {
+  .option-social {
+    button {
+      svg {
+        display: none;
+      }
+    }
+  }
+  .insta-profile {
+    .media {
+      img {
+        margin-bottom: 15px;
+        margin-right: 0;
+      }
+    }
+  }
+}
+/**=====================
+     68. Dashboard 3  CSS End
+==========================**/

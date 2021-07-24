@@ -1,0 +1,1073 @@
+- var prism                 = true;
+- var apex                  = true;
+- var chartist              = true;
+- var clipboard             = true;
+- var customcard            = true;
+- var theme_customizer      = true;
+- var tooltip               = true;
+- var dashboard_default     = true;
+- var counter               = true;
+- var notify                = true;
+
+doctype html
+html(lang='en')
+    include ../../components/header-files
+    body
+        include ../../components/loader
+        // page-wrapper Start
+        #pageWrapper.page-wrapper.compact-wrapper
+            include ../../components/header
+            // Page Body Start
+            .page-body-wrapper.sidebar-icon
+                include ../../components/sidebar
+                .page-body
+                    .container-fluid
+                        .page-header
+                            .row
+                                .col-lg-6
+                                    ol.breadcrumb
+                                      li.breadcrumb-item
+                                        a(href='index.html')
+                                         i.f-16.fa.fa-home
+                                      li.breadcrumb-item Dashboard
+                                    h3 
+                                      | Business Dashboard
+                                .col-lg-6
+                                  include ../../components/bookmark
+                    // Container-fluid starts
+                    .container-fluid
+                        .row
+                          .col-lg-12.xl-100.box-col-12
+                            .row.total-sale-col
+                              .col-xl-5.box-col-12.xl-100
+                                .row
+                                  .col-12.xl-50
+                                    .card.card-with-border.welcome-card.o-hidden
+                                      img.main(src='../assets/images/dashboard/welcome.png', alt='')
+                                      img.decore1(src='../assets/images/dashboard/d1.png', alt='')
+                                      img.decore3(src='../assets/images/dashboard/d1.png', alt='')
+                                      img.decore4(src='../assets/images/dashboard/d1.png', alt='')
+                                      img.decore2(src='../assets/images/dashboard/d2.png', alt='')
+                                      .card-header.card-no-border.o-hidden.total-sale-widget
+                                          .media
+                                            .media-body
+                                              h3.f-w-600 Hello Johan Deo !
+                                              p   Welcome back to xolo dashboard
+                                          .media.mt-5
+                                            .media-body
+                                              h5.f-w-400 Wednesday, 20
+                                              p.mb-0 Today's Sale
+                                                span.font-success 3.56%
+                                                  i.fa.fa-caret-up
+                                              .sales-widgets.d-flex.mt-1
+                                                h3.mt-1.mb-0.f-w-600
+                                                  i.mr-1.txt-primary(data-feather='dollar-sign')
+                                                  span.counter.txt-primary 405,
+                                                  span.ml-2.f-12.f-w-400 Earrning
+                                              p.mb-0 your sales & earning over the last 24 hours
+                                  .col-sm-12.xl-50
+                                    .card.card-with-border.o-hidden.total-sale-widget
+                                      .media.align-items-center
+                                        .media-left
+                                          .card-no-border.p-20
+                                              .media
+                                                .media-body
+                                                  p.mb-0 Total Sale
+                                                    span.font-warning 3.56%
+                                                      i.fa.fa-caret-up
+                                                  .sales-widgets.d-flex
+                                                    h3.mt-1.mb-0.f-w-600
+                                                      i.mr-1(data-feather='dollar-sign')
+                                                      span.counter 12,461
+                                                    p.mb-0 Last Year
+                                        .media-right
+                                          .card-body.p-0          
+                                            .apex-chart-container
+                                              #timeline-chart1  
+                                    .card.card-with-border.o-hidden.total-sale-widget
+                                      .media.align-items-center
+                                        .media-left
+                                          .card-no-border.p-20
+                                              .media
+                                                .media-body
+                                                  p.mb-0 Active Customer
+                                                    span.font-success 01.56
+                                                      i.fa.fa-caret-up
+                                                  .sales-widgets.d-flex
+                                                    h3.mt-1.mb-0.f-w-600
+                                                      span.counter 10,14,12
+                                                    p.mb-0 Last Day
+                                        .media-right
+                                          .card-body.p-0          
+                                            .apex-chart-container
+                                              #timeline-chart2
+
+                              .col-xl-7.xl-100.box-col-12
+                                    .card.card-with-border.monthly-growth.o-hidden
+                                      .card-header.card-no-border
+                                        h5 Monthly Revenue Growth
+                                        span Number of This Monthly Revenue Growth
+                                        .card-header-right
+                                          ul.list-unstyled.card-option
+                                            li
+                                              i.icofont.icofont-double-left
+                                            li
+                                              i.view-html.fa.fa-code
+                                            li
+                                              i.icofont.icofont-maximize.full-card
+                                            li
+                                              i.icofont.icofont-minus.minimize-card
+                                            li
+                                              i.icofont.icofont-refresh.reload-card
+                                            li
+                                              i.icofont.icofont-error.close-card
+                                      .card-body.pt-0.px-0
+                                        .chart-value-box.pull-right.chart-data-set
+                                          .value-square-box-primary
+                                          span Purchase
+                                          .value-square-box-light.ml-3
+                                          span Sale
+                                        .dashboard-rounded-chart.flot-chart-container
+                                        .code-box-copy
+                                          button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#example-head', title='Copy')
+                                            i.icofont.icofont-copy-alt
+                                          pre
+                                            code.language-html#example-head
+                                                | &lt;!-- Cod Box Copy begin --&gt;
+                                                | &lt;div class="card-body pt-0 px-0"&gt;
+                                                |   &lt;div class="chart-value-box pull-right chart-data-set"&gt;
+                                                |     &lt;div class="value-square-box-primary"&gt;&lt;/div&gt;&lt;span&gt;Sale&lt;/span&gt;
+                                                |     &lt;div class="value-square-box-light ml-3"&gt;&lt;/div&gt;&lt;span&gt;Total&lt;/span&gt;
+                                                |   &lt;/div&gt;
+                                                |   &lt;div class="dashboard-rounded-chart flot-chart-container"&gt;&lt;/div&gt;
+                                                | &lt;/div&gt;
+                                                | &lt;div class="card-footer p-0"&gt;
+                                                |   &lt;div class="row growth-revenue-footer"&gt;
+                                                |     &lt;div class="col-6"&gt;
+                                                |       &lt;div class="card ecommerce-widget mb-0"&gt;
+                                                |         &lt;div class="card-body support-ticket-font"&gt;
+                                                |           &lt;div class="d-flex"&gt;
+                                                |             &lt;div class="data-left-ticket"&gt;&lt;span class="f-12"&gt;New User&lt;/span&gt;
+                                                |               &lt;h3 class="total-num"&gt;&lt;span class="mr-1"&gt;$&lt;/span&gt;&lt;span class="counter"&gt; 8,162&lt;/span&gt;&lt;/h3&gt;
+                                                |             &lt;/div&gt;
+                                                |             &lt;div class="data-right-ticket"&gt;
+                                                |               &lt;div class="text-md-right"&gt;
+                                                |                 &lt;ul&gt;
+                                                |                   &lt;li&gt;&lt;span class="f-12"&gt;85% goal reached&lt;/span&gt;&lt;/li&gt;
+                                                |                   &lt;li&gt;
+                                                |                     &lt;h6 class="f-18 mb-0"&gt;1,00,000&lt;/h6&gt;
+                                                |                   &lt;/li&gt;
+                                                |                 &lt;/ul&gt;
+                                                |               &lt;/div&gt;
+                                                |             &lt;/div&gt;
+                                                |           &lt;/div&gt;
+                                                |           &lt;div class="progress-showcase"&gt;
+                                                |             &lt;div class="progress sm-progress-bar"&gt;
+                                                |               &lt;div class="progress-bar bg-primary" role="progressbar" style="width: 75%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+                                                |             &lt;/div&gt;
+                                                |           &lt;/div&gt;
+                                                |         &lt;/div&gt;
+                                                |       &lt;/div&gt;
+                                                |     &lt;/div&gt;
+                                                |     &lt;div class="col-6"&gt;
+                                                |       &lt;div class="card ecommerce-widget mb-0"&gt;
+                                                |         &lt;div class="card-body support-ticket-font"&gt;
+                                                |           &lt;div class="d-flex"&gt;
+                                                |             &lt;div class="data-left-ticket"&gt;&lt;span class="f-12"&gt;Total Income&lt;/span&gt;
+                                                |               &lt;h3 class="total-num"&gt;&lt;span class="mr-1"&gt;$&lt;/span&gt;&lt;span class="counter"&gt; 4,685&lt;/span&gt;&lt;/h3&gt;
+                                                |             &lt;/div&gt;
+                                                |             &lt;div class="data-right-ticket"&gt;
+                                                |               &lt;div class="text-md-right"&gt;
+                                                |                 &lt;ul&gt;
+                                                |                   &lt;li&gt;&lt;span class="f-12"&gt;45% goal reached&lt;/span&gt;&lt;/li&gt;
+                                                |                   &lt;li&gt;
+                                                |                     &lt;h6 class="f-18 mb-0"&gt;1,00,000&lt;/h6&gt;
+                                                |                   &lt;/li&gt;
+                                                |                 &lt;/ul&gt;
+                                                |               &lt;/div&gt;
+                                                |             &lt;/div&gt;
+                                                |           &lt;/div&gt;
+                                                |           &lt;div class="progress-showcase"&gt;
+                                                |             &lt;div class="progress sm-progress-bar"&gt;
+                                                |               &lt;div class="progress-bar bg-success" role="progressbar" style="width: 75%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+                                                |             &lt;/div&gt;
+                                                |           &lt;/div&gt;
+                                                |         &lt;/div&gt;
+                                                |       &lt;/div&gt;
+                                                |     &lt;/div&gt;
+                                                |     &lt;div class="col-6"&gt;
+                                                |       &lt;div class="card ecommerce-widget mb-0"&gt;
+                                                |         &lt;div class="card-body support-ticket-font"&gt;
+                                                |           &lt;div class="d-flex"&gt;
+                                                |             &lt;div class="data-left-ticket"&gt;&lt;span class="f-12"&gt;Active User&lt;/span&gt;
+                                                |               &lt;h3 class="total-num"&gt;&lt;span class="mr-1"&gt;$&lt;/span&gt;&lt;span class="counter"&gt; 3,513&lt;/span&gt;&lt;/h3&gt;
+                                                |             &lt;/div&gt;
+                                                |             &lt;div class="data-right-ticket"&gt;
+                                                |               &lt;div class="text-md-right"&gt;
+                                                |                 &lt;ul&gt;
+                                                |                   &lt;li&gt;&lt;span class="f-12"&gt;70% goal reached&lt;/span&gt;&lt;/li&gt;
+                                                |                   &lt;li&gt;
+                                                |                     &lt;h6 class="f-18 mb-0"&gt;1,00,000&lt;/h6&gt;
+                                                |                   &lt;/li&gt;
+                                                |                 &lt;/ul&gt;
+                                                |               &lt;/div&gt;
+                                                |             &lt;/div&gt;
+                                                |           &lt;/div&gt;
+                                                |           &lt;div class="progress-showcase"&gt;
+                                                |             &lt;div class="progress sm-progress-bar"&gt;
+                                                |               &lt;div class="progress-bar bg-danger" role="progressbar" style="width: 75%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+                                                |             &lt;/div&gt;
+                                                |           &lt;/div&gt;
+                                                |         &lt;/div&gt;
+                                                |       &lt;/div&gt;
+                                                |     &lt;/div&gt;
+                                                |     &lt;div class="col-6"&gt;
+                                                |       &lt;div class="card ecommerce-widget mb-0"&gt;
+                                                |         &lt;div class="card-body support-ticket-font"&gt;
+                                                |           &lt;div class="d-flex"&gt;
+                                                |             &lt;div class="data-left-ticket"&gt;&lt;span class="f-12"&gt;Total Tax&lt;/span&gt;
+                                                |               &lt;h3 class="total-num"&gt;&lt;span class="mr-1"&gt;$&lt;/span&gt;&lt;span class="counter"&gt; 2,749&lt;/span&gt;&lt;/h3&gt;
+                                                |             &lt;/div&gt;
+                                                |             &lt;div class="data-right-ticket"&gt;
+                                                |               &lt;div class="text-md-right"&gt;
+                                                |                 &lt;ul&gt;
+                                                |                   &lt;li&gt;&lt;span class="f-12"&gt;52% goal reached&lt;/span&gt;&lt;/li&gt;
+                                                |                   &lt;li&gt;
+                                                |                     &lt;h6 class="f-18 mb-0"&gt;1,00,000&lt;/h6&gt;
+                                                |                   &lt;/li&gt;
+                                                |                 &lt;/ul&gt;
+                                                |               &lt;/div&gt;
+                                                |             &lt;/div&gt;
+                                                |           &lt;/div&gt;
+                                                |           &lt;div class="progress-showcase"&gt;
+                                                |             &lt;div class="progress sm-progress-bar"&gt;
+                                                |               &lt;div class="progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+                                                |             &lt;/div&gt;
+                                                |           &lt;/div&gt;
+                                                |         &lt;/div&gt;
+                                                |       &lt;/div&gt;
+                                                |     &lt;/div&gt;
+                                                |   &lt;/div&gt;
+                                                |  &lt;/div&gt;
+                                                |  &lt;!-- Cod Box Copy end --&gt;
+                                      .card-footer.p-0
+                                        .row.growth-revenue-footer
+                                          .col-6
+                                            .card.ecommerce-widget.mb-0
+                                              .card-body.support-ticket-font
+                                                .d-flex
+                                                  .data-left-ticket
+                                                    span.f-12 Total sales
+                                                    h5.total-num
+                                                      span.mr-1 $
+                                                      span.counter  8,162
+                                                  .data-right-ticket
+                                                    .text-md-right
+                                                      ul
+                                                        li
+                                                          span.f-12 85% goal reached
+                                                        li
+                                                          h6.mb-0 1,00,000
+                                                .progress-showcase
+                                                  .progress.sm-progress-bar
+                                                    .progress-bar.bg-primary(role='progressbar', style='width: 75%', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100')
+                                          .col-6
+                                            .card.ecommerce-widget.mb-0
+                                              .card-body.support-ticket-font
+                                                .d-flex
+                                                  .data-left-ticket
+                                                    span.f-12 Total Income
+                                                    h5.total-num
+                                                      span.mr-1 $
+                                                      span.counter  4,685
+                                                  .data-right-ticket
+                                                    .text-md-right
+                                                      ul
+                                                        li
+                                                          span.f-12 45% goal reached
+                                                        li
+                                                          h6.mb-0 1,00,000
+                                                .progress-showcase
+                                                  .progress.sm-progress-bar
+                                                    .progress-bar.bg-success(role='progressbar', style='width: 75%', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100')
+                                          .col-6
+                                            .card.ecommerce-widget.mb-0
+                                              .card-body.support-ticket-font.pt-0
+                                                .d-flex
+                                                  .data-left-ticket
+                                                    span.f-12 Active User
+                                                    h5.total-num
+                                                      span.mr-1 $
+                                                      span.counter  3,513
+                                                  .data-right-ticket
+                                                    .text-md-right
+                                                      ul
+                                                        li
+                                                          span.f-12 70% goal reached
+                                                        li
+                                                          h6.mb-0 1,00,000
+                                                .progress-showcase
+                                                  .progress.sm-progress-bar
+                                                    .progress-bar.bg-primary-light(role='progressbar', style='width: 75%', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100')
+                                          .col-6
+                                            .card.ecommerce-widget.mb-0
+                                              .card-body.support-ticket-font.pt-0
+                                                .d-flex
+                                                  .data-left-ticket
+                                                    span.f-12 Total Tax
+                                                    h5.total-num
+                                                      span.mr-1 $
+                                                      span.counter  2,749
+                                                  .data-right-ticket
+                                                    .text-md-right
+                                                      ul
+                                                        li
+                                                          span.f-12 52% goal reached
+                                                        li
+                                                          h6.mb-0 1,00,000
+                                                .progress-showcase
+                                                  .progress.sm-progress-bar
+                                                    .progress-bar.bg-warning(role='progressbar', style='width: 75%', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100')
+
+                          .col-xl-6.xl-100.box-col-12
+                            .card.card-with-border.total-users-lists
+                              .card-header.card-no-border
+                                h5 Total New Venders
+                                span Number of Totally Users
+                                
+                                .card-header-right
+                                  ul.list-unstyled.card-option
+                                    li
+                                      i.icofont.icofont-double-left
+                                    li
+                                      i.view-html.fa.fa-code
+                                    li
+                                      i.icofont.icofont-maximize.full-card
+                                    li
+                                      i.icofont.icofont-minus.minimize-card
+                                    li
+                                      i.icofont.icofont-refresh.reload-card
+                                    li
+                                      i.icofont.icofont-error.close-card
+                              .card-body.p-0
+                                .users-total.table-responsive
+                                  table.table.table-bordernone
+                                    thead
+                                      tr
+                                        th Name
+                                        th Country
+                                        th Date
+                                        th Payment
+                                        th Total
+                                    tbody
+                                      tr
+                                        td
+                                          .d-inline-block.align-middle
+                                            img.img-40.align-top.m-r-15.b-r-10(src='../assets/images/user/2.png', alt='')
+                                            .d-inline-block
+                                              span Nick Stone
+                                        td
+                                          i.flag-icon.flag-icon-gb
+                                        td
+                                          span.f-12 10 May 2018
+                                        td
+                                          i COD
+                                        td
+                                          span 8652.00 $
+                                      tr
+                                        td
+                                          .d-inline-block.align-middle
+                                            img.img-40.align-top.m-r-15.b-r-10(src='../assets/images/user/5.jpg', alt='')
+                                            .d-inline-block
+                                              span Milano Esco
+                                        td
+                                          i.flag-icon.flag-icon-lr
+                                        td
+                                          span.f-12 10 May 2018
+                                        td
+                                          i COD
+                                        td
+                                          span 102.00 $
+                                      tr
+                                        td
+                                          .d-inline-block.align-middle
+                                            img.img-40.align-top.m-r-15.b-r-10(src='../assets/images/user/3.jpg', alt='')
+                                            .d-inline-block
+                                              span Wiltor Noice
+                                        td
+                                          i.flag-icon.flag-icon-za
+                                        td
+                                          span.f-12 10 May 2018
+                                        td
+                                          i Cash
+                                        td
+                                          span 2315.00 $
+                                      tr
+                                        td
+                                          .d-inline-block.align-middle
+                                            img.img-40.align-top.m-r-15.b-r-10(src='../assets/images/user/4.jpg', alt='')
+                                            .d-inline-block
+                                              span Anna Strong
+                                        td
+                                          i.flag-icon.flag-icon-at
+                                        td
+                                          span.f-12 10 May 2018
+                                        td
+                                          i Bank
+                                        td
+                                          span 4513.00 $
+                                      tr
+                                        td
+                                          .d-inline-block.align-middle
+                                            img.img-40.align-top.m-r-15.b-r-10(src='../assets/images/user/12.png', alt='')
+                                            .d-inline-block
+                                              span Anna Strong
+                                        td
+                                          i.flag-icon.flag-icon-lr
+                                        td
+                                          span.f-12 10 May 2018
+                                        td
+                                          i Cheque
+                                        td
+                                          span 4513.00 $
+                                      tr
+                                        td
+                                          .d-inline-block.align-middle
+                                            img.img-40.align-top.m-r-15.b-r-10(src='../assets/images/user/5.jpg', alt='')
+                                            .d-inline-block
+                                              span Anna Strong
+                                        td
+                                          i.flag-icon.flag-icon-gb
+                                        td
+                                          span.f-12 10 May 2018
+                                        td
+                                          i Cheque
+                                        td
+                                          span 4513.00 $
+                                      tr
+                                        td
+                                          .d-inline-block.align-middle
+                                            img.img-40.align-top.m-r-15.b-r-10(src='../assets/images/user/10.jpg', alt='')
+                                            .d-inline-block
+                                              span Anna Strong
+                                        td
+                                          i.flag-icon.flag-icon-za
+                                        td
+                                          span.f-12 10 May 2018
+                                        td
+                                          i Cash
+                                        td
+                                          span 4513.00 $
+                                .code-box-copy
+                                  button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#example-head1', title='Copy')
+                                    i.icofont.icofont-copy-alt
+                                  pre
+                                    code.language-html#example-head1
+                                        | &lt;!-- Cod Box Copy begin --&gt;
+                                        | &lt;div class="card-body p-0"&gt;
+                                        |   &lt;div class="users-total table-responsive"&gt;
+                                        |     &lt;table class="table table-bordernone"&gt;
+                                        |       &lt;thead&gt;
+                                        |         &lt;tr&gt;
+                                        |           &lt;th&gt;Name&lt;/th&gt;
+                                        |           &lt;th&gt;Country&lt;/th&gt;
+                                        |           &lt;th&gt;Date&lt;/th&gt;
+                                        |           &lt;th&gt;Payment&lt;/th&gt;
+                                        |           &lt;th&gt;Total&lt;/th&gt;
+                                        |         &lt;/tr&gt;
+                                        |       &lt;/thead&gt;
+                                        |       &lt;tbody&gt;
+                                        |         &lt;tr&gt;
+                                        |           &lt;td&gt;
+                                        |             &lt;div class="d-inline-block align-middle"&gt;&lt;img class="img-radius img-40 align-top m-r-15 rounded-circle" src="../assets/images/user/2.png" alt=""&gt;
+                                        |               &lt;div class="d-inline-block"&gt;&lt;span&gt;Nick Stone&lt;/span&gt;&lt;/div&gt;
+                                        |             &lt;/div&gt;
+                                        |           &lt;/td&gt;
+                                        |           &lt;td&gt;&lt;i class="flag-icon flag-icon-gb"&gt;&lt;/i&gt;&lt;/td&gt;
+                                        |           &lt;td&gt;&lt;span class="f-12"&gt;10 May 2018&lt;/span&gt;&lt;/td&gt;
+                                        |           &lt;td&gt;&lt;img src="../assets/images/dashboard/payment-1.png" alt=""&gt;&lt;/td&gt;
+                                        |           &lt;td&gt;&lt;span&gt;8652.00 $&lt;/span&gt;&lt;/td&gt;
+                                        |         &lt;/tr&gt;
+                                        |         &lt;tr&gt;
+                                        |           &lt;td&gt;
+                                        |             &lt;div class="d-inline-block align-middle"&gt;&lt;img class="img-radius img-40 align-top m-r-15 rounded-circle" src="../assets/images/user/5.jpg" alt=""&gt;
+                                        |               &lt;div class="d-inline-block"&gt;&lt;span&gt;Milano Esco&lt;/span&gt;&lt;/div&gt;
+                                        |             &lt;/div&gt;
+                                        |           &lt;/td&gt;
+                                        |           &lt;td&gt;&lt;i class="flag-icon flag-icon-lr"&gt;&lt;/i&gt;&lt;/td&gt;
+                                        |           &lt;td&gt;&lt;span class="f-12"&gt;10 May 2018&lt;/span&gt;&lt;/td&gt;
+                                        |           &lt;td&gt;&lt;img src="../assets/images/dashboard/payment-2.png" alt=""&gt;&lt;/td&gt;
+                                        |           &lt;td&gt;&lt;span&gt;102.00 $&lt;/span&gt;&lt;/td&gt;
+                                        |         &lt;/tr&gt;
+                                        |         &lt;tr&gt;
+                                        |           &lt;td&gt;
+                                        |             &lt;div class="d-inline-block align-middle"&gt;&lt;img class="img-radius img-40 align-top m-r-15 rounded-circle" src="../assets/images/user/3.jpg" alt=""&gt;
+                                        |               &lt;div class="d-inline-block"&gt;&lt;span&gt;Wiltor Noice&lt;/span&gt;&lt;/div&gt;
+                                        |             &lt;/div&gt;
+                                        |           &lt;/td&gt;
+                                        |           &lt;td&gt;&lt;i class="flag-icon flag-icon-za"&gt;&lt;/i&gt;&lt;/td&gt;
+                                        |           &lt;td&gt;&lt;span class="f-12"&gt;10 May 2018&lt;/span&gt;&lt;/td&gt;
+                                        |           &lt;td&gt;&lt;img src="../assets/images/dashboard/payment-3.png" alt=""&gt;&lt;/td&gt;
+                                        |           &lt;td&gt;&lt;span&gt;2315.00 $&lt;/span&gt;&lt;/td&gt;
+                                        |         &lt;/tr&gt;
+                                        |         &lt;tr&gt;
+                                        |           &lt;td&gt;
+                                        |             &lt;div class="d-inline-block align-middle"&gt;&lt;img class="img-radius img-40 align-top m-r-15 rounded-circle" src="../assets/images/user/4.jpg" alt=""&gt;
+                                        |               &lt;div class="d-inline-block"&gt;&lt;span&gt;Anna Strong&lt;/span&gt;&lt;/div&gt;
+                                        |             &lt;/div&gt;
+                                        |           &lt;/td&gt;
+                                        |           &lt;td&gt;&lt;i class="flag-icon flag-icon-at"&gt;&lt;/i&gt;&lt;/td&gt;
+                                        |           &lt;td&gt;&lt;span class="f-12"&gt;10 May 2018&lt;/span&gt;&lt;/td&gt;
+                                        |           &lt;td&gt;&lt;img src="../assets/images/dashboard/payment-4.png" alt=""&gt;&lt;/td&gt;
+                                        |           &lt;td&gt;&lt;span&gt;4513.00 $&lt;/span&gt;&lt;/td&gt;
+                                        |         &lt;/tr&gt;
+                                        |         &lt;tr&gt;
+                                        |           &lt;td&gt;
+                                        |             &lt;div class="d-inline-block align-middle"&gt;&lt;img class="img-radius img-40 align-top m-r-15 rounded-circle" src="../assets/images/user/12.png" alt=""&gt;
+                                        |               &lt;div class="d-inline-block"&gt;&lt;span&gt;Anna Strong&lt;/span&gt;&lt;/div&gt;
+                                        |             &lt;/div&gt;
+                                        |           &lt;/td&gt;
+                                        |           &lt;td&gt;&lt;i class="flag-icon flag-icon-lr"&gt;&lt;/i&gt;&lt;/td&gt;
+                                        |           &lt;td&gt;&lt;span class="f-12"&gt;10 May 2018&lt;/span&gt;&lt;/td&gt;
+                                        |           &lt;td&gt;&lt;img src="../assets/images/dashboard/payment-4.png" alt=""&gt;&lt;/td&gt;
+                                        |           &lt;td&gt;&lt;span&gt;4513.00 $&lt;/span&gt;&lt;/td&gt;
+                                        |         &lt;/tr&gt;
+                                        |         &lt;tr&gt;
+                                        |           &lt;td&gt;
+                                        |             &lt;div class="d-inline-block align-middle"&gt;&lt;img class="img-radius img-40 align-top m-r-15 rounded-circle" src="../assets/images/user/5.jpg" alt=""&gt;
+                                        |               &lt;div class="d-inline-block"&gt;&lt;span&gt;Anna Strong&lt;/span&gt;&lt;/div&gt;
+                                        |             &lt;/div&gt;
+                                        |           &lt;/td&gt;
+                                        |           &lt;td&gt;&lt;i class="flag-icon flag-icon-gb"&gt;&lt;/i&gt;&lt;/td&gt;
+                                        |           &lt;td&gt;&lt;span class="f-12"&gt;10 May 2018&lt;/span&gt;&lt;/td&gt;
+                                        |           &lt;td&gt;&lt;img src="../assets/images/dashboard/payment-4.png" alt=""&gt;&lt;/td&gt;
+                                        |           &lt;td&gt;&lt;span&gt;4513.00 $&lt;/span&gt;&lt;/td&gt;
+                                        |         &lt;/tr&gt;
+                                        |         &lt;tr&gt;
+                                        |           &lt;td&gt;
+                                        |             &lt;div class="d-inline-block align-middle"&gt;&lt;img class="img-radius img-40 align-top m-r-15 rounded-circle" src="../assets/images/user/10.jpg" alt=""&gt;
+                                        |               &lt;div class="d-inline-block"&gt;&lt;span&gt;Anna Strong&lt;/span&gt;&lt;/div&gt;
+                                        |             &lt;/div&gt;
+                                        |           &lt;/td&gt;
+                                        |           &lt;td&gt;&lt;i class="flag-icon flag-icon-za"&gt;&lt;/i&gt;&lt;/td&gt;
+                                        |           &lt;td&gt;&lt;span class="f-12"&gt;10 May 2018&lt;/span&gt;&lt;/td&gt;
+                                        |           &lt;td&gt;&lt;img src="../assets/images/dashboard/payment-4.png" alt=""&gt;&lt;/td&gt;
+                                        |           &lt;td&gt;&lt;span&gt;4513.00 $&lt;/span&gt;&lt;/td&gt;
+                                        |         &lt;/tr&gt;
+                                        |       &lt;/tbody&gt;
+                                        |     &lt;/table&gt;
+                                        |   &lt;/div&gt;
+                                        | &lt;/div&gt;
+                                        | &lt;!-- Cod Box Copy end --&gt;
+                          .col-xl-6.xl-100.box-col-12
+                            .card.card-with-border.total-users-lists
+                              .card-header.card-no-border
+                                h5 Today Transaction Details
+                                span Today's transaction
+                                .card-header-right
+                                  ul.list-unstyled.card-option
+                                    li
+                                      i.icofont.icofont-double-left
+                                    li
+                                      i.view-html.fa.fa-code
+                                    li
+                                      i.icofont.icofont-maximize.full-card
+                                    li
+                                      i.icofont.icofont-minus.minimize-card
+                                    li
+                                      i.icofont.icofont-refresh.reload-card
+                                    li
+                                      i.icofont.icofont-error.close-card
+                              .card-body.p-0
+                                .users-total.table-responsive
+                                  table.table.table-bordernone
+                                    thead
+                                      tr
+                                        th Name
+                                        th Invoice No.
+                                        th Date
+                                        th Status
+                                        th Total
+                                    tbody
+                                      tr
+                                        td
+                                          .d-inline-block.align-middle
+                                            img.img-40.align-top.m-r-15.b-r-10(src='../assets/images/user/9.jpg', alt='')
+                                            .d-inline-block
+                                              span Karen Leah
+                                        td
+                                          | #PX0101
+                                        td
+                                          span.f-12 9:01
+                                        td
+                                          span.txt-success Complete &#x2764;
+                                        td
+                                          span 8652.00 $
+                                      tr
+                                        td
+                                          .d-inline-block.align-middle
+                                            img.img-40.align-top.m-r-15.b-r-10(src='../assets/images/user/10.jpg', alt='')
+                                            .d-inline-block
+                                              span Mary Esco
+                                        td
+                                          | #PX0102
+                                        td
+                                          span.f-12 9:10
+                                        td
+                                          span.txt-warning In progress &#8987;
+                                        td
+                                          span 102.00 $
+                                      tr
+                                        td
+                                          .d-inline-block.align-middle
+                                            img.img-40.align-top.m-r-15.b-r-10(src='../assets/images/user/11.jpg', alt='')
+                                            .d-inline-block
+                                              span Wiltor Molly
+                                        td
+                                          | #PX0103
+                                        td
+                                          span.f-12 9:42
+                                        td
+                                          span.txt-danger Due &#8986;
+                                        td
+                                          span 2315.00 $
+                                      tr
+                                        td
+                                          .d-inline-block.align-middle
+                                            img.img-40.align-top.m-r-15.b-r-10(src='../assets/images/user/12.png', alt='')
+                                            .d-inline-block
+                                              span Anna Colin
+                                        td
+                                          | #PX0104
+                                        td
+                                          span.f-12 10:01
+                                        td
+                                          span.txt-danger Due &#8986;
+                                        td
+                                          span 4513.00 $
+                                      tr
+                                        td
+                                          .d-inline-block.align-middle
+                                            img.img-40.align-top.m-r-15.b-r-10(src='../assets/images/user/14.png', alt='')
+                                            .d-inline-block
+                                              span Josep Jus
+                                        td
+                                          | #PX0105
+                                        td
+                                          span.f-12 10:01
+                                        td
+                                          span.txt-success complete &#x2764;
+                                        td
+                                          span 4513.00 $
+                                      tr
+                                        td
+                                          .d-inline-block.align-middle
+                                            img.img-40.align-top.m-r-15.b-r-10(src='../assets/images/user/2.jpg', alt='')
+                                            .d-inline-block
+                                              span Paul Owen
+                                        td
+                                          | #PX0106
+                                        td
+                                          span.f-12 10:50
+                                        td
+                                          span.txt-warning In progress &#8987;
+                                        td
+                                          span 4513.00 $
+                                      tr
+                                        td
+                                          .d-inline-block.align-middle
+                                            img.img-40.align-top.m-r-15.b-r-10(src='../assets/images/user/10.jpg', alt='')
+                                            .d-inline-block
+                                              span Burgess Carr
+                                        td
+                                          | #PX0107
+                                        td
+                                          span.f-12 10:59
+                                        td
+                                          span.txt-success complete &#x2764;
+                                        td
+                                          span 4513.00 $
+                                .code-box-copy
+                                  button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#example-head1', title='Copy')
+                                    i.icofont.icofont-copy-alt
+                                  pre
+                                    code.language-html#example-head1
+                                        | &lt;!-- Cod Box Copy begin --&gt;
+                                        | &lt;div class="card-body p-0"&gt;
+                                        |   &lt;div class="users-total table-responsive"&gt;
+                                        |     &lt;table class="table table-bordernone"&gt;
+                                        |       &lt;thead&gt;
+                                        |         &lt;tr&gt;
+                                        |           &lt;th&gt;Name&lt;/th&gt;
+                                        |           &lt;th&gt;Country&lt;/th&gt;
+                                        |           &lt;th&gt;Date&lt;/th&gt;
+                                        |           &lt;th&gt;Payment&lt;/th&gt;
+                                        |           &lt;th&gt;Total&lt;/th&gt;
+                                        |         &lt;/tr&gt;
+                                        |       &lt;/thead&gt;
+                                        |       &lt;tbody&gt;
+                                        |         &lt;tr&gt;
+                                        |           &lt;td&gt;
+                                        |             &lt;div class="d-inline-block align-middle"&gt;&lt;img class="img-radius img-40 align-top m-r-15 rounded-circle" src="../assets/images/user/2.png" alt=""&gt;
+                                        |               &lt;div class="d-inline-block"&gt;&lt;span&gt;Nick Stone&lt;/span&gt;&lt;/div&gt;
+                                        |             &lt;/div&gt;
+                                        |           &lt;/td&gt;
+                                        |           &lt;td&gt;&lt;i class="flag-icon flag-icon-gb"&gt;&lt;/i&gt;&lt;/td&gt;
+                                        |           &lt;td&gt;&lt;span class="f-12"&gt;10 May 2018&lt;/span&gt;&lt;/td&gt;
+                                        |           &lt;td&gt;&lt;img src="../assets/images/dashboard/payment-1.png" alt=""&gt;&lt;/td&gt;
+                                        |           &lt;td&gt;&lt;span&gt;8652.00 $&lt;/span&gt;&lt;/td&gt;
+                                        |         &lt;/tr&gt;
+                                        |         &lt;tr&gt;
+                                        |           &lt;td&gt;
+                                        |             &lt;div class="d-inline-block align-middle"&gt;&lt;img class="img-radius img-40 align-top m-r-15 rounded-circle" src="../assets/images/user/5.jpg" alt=""&gt;
+                                        |               &lt;div class="d-inline-block"&gt;&lt;span&gt;Milano Esco&lt;/span&gt;&lt;/div&gt;
+                                        |             &lt;/div&gt;
+                                        |           &lt;/td&gt;
+                                        |           &lt;td&gt;&lt;i class="flag-icon flag-icon-lr"&gt;&lt;/i&gt;&lt;/td&gt;
+                                        |           &lt;td&gt;&lt;span class="f-12"&gt;10 May 2018&lt;/span&gt;&lt;/td&gt;
+                                        |           &lt;td&gt;&lt;img src="../assets/images/dashboard/payment-2.png" alt=""&gt;&lt;/td&gt;
+                                        |           &lt;td&gt;&lt;span&gt;102.00 $&lt;/span&gt;&lt;/td&gt;
+                                        |         &lt;/tr&gt;
+                                        |         &lt;tr&gt;
+                                        |           &lt;td&gt;
+                                        |             &lt;div class="d-inline-block align-middle"&gt;&lt;img class="img-radius img-40 align-top m-r-15 rounded-circle" src="../assets/images/user/3.jpg" alt=""&gt;
+                                        |               &lt;div class="d-inline-block"&gt;&lt;span&gt;Wiltor Noice&lt;/span&gt;&lt;/div&gt;
+                                        |             &lt;/div&gt;
+                                        |           &lt;/td&gt;
+                                        |           &lt;td&gt;&lt;i class="flag-icon flag-icon-za"&gt;&lt;/i&gt;&lt;/td&gt;
+                                        |           &lt;td&gt;&lt;span class="f-12"&gt;10 May 2018&lt;/span&gt;&lt;/td&gt;
+                                        |           &lt;td&gt;&lt;img src="../assets/images/dashboard/payment-3.png" alt=""&gt;&lt;/td&gt;
+                                        |           &lt;td&gt;&lt;span&gt;2315.00 $&lt;/span&gt;&lt;/td&gt;
+                                        |         &lt;/tr&gt;
+                                        |         &lt;tr&gt;
+                                        |           &lt;td&gt;
+                                        |             &lt;div class="d-inline-block align-middle"&gt;&lt;img class="img-radius img-40 align-top m-r-15 rounded-circle" src="../assets/images/user/4.jpg" alt=""&gt;
+                                        |               &lt;div class="d-inline-block"&gt;&lt;span&gt;Anna Strong&lt;/span&gt;&lt;/div&gt;
+                                        |             &lt;/div&gt;
+                                        |           &lt;/td&gt;
+                                        |           &lt;td&gt;&lt;i class="flag-icon flag-icon-at"&gt;&lt;/i&gt;&lt;/td&gt;
+                                        |           &lt;td&gt;&lt;span class="f-12"&gt;10 May 2018&lt;/span&gt;&lt;/td&gt;
+                                        |           &lt;td&gt;&lt;img src="../assets/images/dashboard/payment-4.png" alt=""&gt;&lt;/td&gt;
+                                        |           &lt;td&gt;&lt;span&gt;4513.00 $&lt;/span&gt;&lt;/td&gt;
+                                        |         &lt;/tr&gt;
+                                        |         &lt;tr&gt;
+                                        |           &lt;td&gt;
+                                        |             &lt;div class="d-inline-block align-middle"&gt;&lt;img class="img-radius img-40 align-top m-r-15 rounded-circle" src="../assets/images/user/12.png" alt=""&gt;
+                                        |               &lt;div class="d-inline-block"&gt;&lt;span&gt;Anna Strong&lt;/span&gt;&lt;/div&gt;
+                                        |             &lt;/div&gt;
+                                        |           &lt;/td&gt;
+                                        |           &lt;td&gt;&lt;i class="flag-icon flag-icon-lr"&gt;&lt;/i&gt;&lt;/td&gt;
+                                        |           &lt;td&gt;&lt;span class="f-12"&gt;10 May 2018&lt;/span&gt;&lt;/td&gt;
+                                        |           &lt;td&gt;&lt;img src="../assets/images/dashboard/payment-4.png" alt=""&gt;&lt;/td&gt;
+                                        |           &lt;td&gt;&lt;span&gt;4513.00 $&lt;/span&gt;&lt;/td&gt;
+                                        |         &lt;/tr&gt;
+                                        |         &lt;tr&gt;
+                                        |           &lt;td&gt;
+                                        |             &lt;div class="d-inline-block align-middle"&gt;&lt;img class="img-radius img-40 align-top m-r-15 rounded-circle" src="../assets/images/user/5.jpg" alt=""&gt;
+                                        |               &lt;div class="d-inline-block"&gt;&lt;span&gt;Anna Strong&lt;/span&gt;&lt;/div&gt;
+                                        |             &lt;/div&gt;
+                                        |           &lt;/td&gt;
+                                        |           &lt;td&gt;&lt;i class="flag-icon flag-icon-gb"&gt;&lt;/i&gt;&lt;/td&gt;
+                                        |           &lt;td&gt;&lt;span class="f-12"&gt;10 May 2018&lt;/span&gt;&lt;/td&gt;
+                                        |           &lt;td&gt;&lt;img src="../assets/images/dashboard/payment-4.png" alt=""&gt;&lt;/td&gt;
+                                        |           &lt;td&gt;&lt;span&gt;4513.00 $&lt;/span&gt;&lt;/td&gt;
+                                        |         &lt;/tr&gt;
+                                        |         &lt;tr&gt;
+                                        |           &lt;td&gt;
+                                        |             &lt;div class="d-inline-block align-middle"&gt;&lt;img class="img-radius img-40 align-top m-r-15 rounded-circle" src="../assets/images/user/10.jpg" alt=""&gt;
+                                        |               &lt;div class="d-inline-block"&gt;&lt;span&gt;Anna Strong&lt;/span&gt;&lt;/div&gt;
+                                        |             &lt;/div&gt;
+                                        |           &lt;/td&gt;
+                                        |           &lt;td&gt;&lt;i class="flag-icon flag-icon-za"&gt;&lt;/i&gt;&lt;/td&gt;
+                                        |           &lt;td&gt;&lt;span class="f-12"&gt;10 May 2018&lt;/span&gt;&lt;/td&gt;
+                                        |           &lt;td&gt;&lt;img src="../assets/images/dashboard/payment-4.png" alt=""&gt;&lt;/td&gt;
+                                        |           &lt;td&gt;&lt;span&gt;4513.00 $&lt;/span&gt;&lt;/td&gt;
+                                        |         &lt;/tr&gt;
+                                        |       &lt;/tbody&gt;
+                                        |     &lt;/table&gt;
+                                        |   &lt;/div&gt;
+                                        | &lt;/div&gt;
+                                        | &lt;!-- Cod Box Copy end --&gt;
+
+
+                          .col-xl-5.xl-100.box-col-12
+                            .card.investments.card-with-border
+                              .card-header.card-no-border
+                                h5 Total Investment
+                                span Number of  Revenue Growth
+                                .card-header-right
+                                  ul.list-unstyled.card-option
+                                    li
+                                      i.icofont.icofont-double-left
+                                    li
+                                      i.view-html.fa.fa-code
+                                    li
+                                      i.icofont.icofont-maximize.full-card
+                                    li
+                                      i.icofont.icofont-minus.minimize-card
+                                    li
+                                      i.icofont.icofont-refresh.reload-card
+                                    li
+                                      i.icofont.icofont-error.close-card
+                              .card-body.p-0
+                                #circlechart
+                                .code-box-copy
+                                  button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#example-head2', title='Copy')
+                                    i.icofont.icofont-copy-alt
+                                  pre
+                                    code.language-html#example-head2
+                                        | &lt;!-- Cod Box Copy begin --&gt;
+                                        | &lt;div class="card-body p-0"&gt;
+                                        |   &lt;div id="circlechart"&gt;&lt;/div&gt;
+                                        | &lt;/div&gt;
+                                        | &lt;div class="card-footer p-0"&gt;
+                                        |   &lt;ul&gt;
+                                        |     &lt;li class="text-center"&gt;&lt;span class="f-12"&gt;Total&lt;/span&gt;
+                                        |       &lt;h6 class="f-w-600 mb-0"&gt;$34,4562&lt;/h6&gt;
+                                        |     &lt;/li&gt;
+                                        |     &lt;li class="text-center"&gt;&lt;span class="f-12"&gt;Monthly&lt;/span&gt;
+                                        |       &lt;h6 class="f-w-600 mb-0"&gt;$12,463&lt;/h6&gt;
+                                        |     &lt;/li&gt;
+                                        |     &lt;li class="text-center"&gt;&lt;span class="f-12"&gt;Daily&lt;/span&gt;
+                                        |       &lt;h6 class="f-w-600 mb-0"&gt;$5000&lt;/h6&gt;
+                                        |     &lt;/li&gt;
+                                        |   &lt;/ul&gt;
+                                        | &lt;/div&gt;
+                                        | &lt;!-- Cod Box Copy end --&gt;
+                              .card-footer.p-0
+                                ul
+                                  li.text-center
+                                    span.f-12 Total
+                                    h6.f-w-600.mb-0 $34,4562
+                                  li.text-center
+                                    span.f-12 Monthly
+                                    h6.f-w-600.mb-0 $12,463
+                                  li.text-center
+                                    span.f-12 Daily
+                                    h6.f-w-600.mb-0 $5000
+                          .col-xl-7.xl-100.box-col-12
+                            .card.card-with-border.total-users-lists
+                              .card-header.card-no-border
+                                h5 Product Details
+                                span Details of our best sale product
+                                .dashboard-btn-groups
+                                  .btn-group(role='group', aria-label='Basic example')
+                                    button.btn.btn-outline-light.btn-js1(type='button') Day
+                                    button.btn.btn-outline-light.btn-js1(type='button') Week
+                                    button.btn.btn-outline-light.btn-js1.active(type='button') Month
+                                .card-header-right
+                                  ul.list-unstyled.card-option
+                                    li
+                                      i.icofont.icofont-double-left
+                                    li
+                                      i.view-html.fa.fa-code
+                                    li
+                                      i.icofont.icofont-maximize.full-card
+                                    li
+                                      i.icofont.icofont-minus.minimize-card
+                                    li
+                                      i.icofont.icofont-refresh.reload-card
+                                    li
+                                      i.icofont.icofont-error.close-card
+                              .card-body.p-0
+                                .users-total.table-responsive.product-sales
+                                  table.table.table-bordernone
+                                    thead
+                                      tr
+                                        th Name
+                                        th Sale
+                                        th Shipping
+                                        th MRP
+                                        th Avaiablility
+                                    tbody
+                                      tr
+                                        td
+                                          .d-flex
+                                            .round-product.m-r-15
+                                              i.icofont.icofont-jersey
+                                            span Solid Men Turtle Neck Black
+                                        td
+                                          span.f-12 11
+                                        td
+                                          .progress-showcase
+                                            .progress.sm-progress-bar
+                                              .progress-bar.bg-success(role='progressbar' style='width: 75%' aria-valuenow='25' aria-valuemin='0' aria-valuemax='100')
+                                       
+                                        td
+                                          | $  5.15
+                                        td.txt-success In Stock
+                                      tr
+                                        td
+                                          .d-flex
+                                            .round-product.round-product-dark.m-r-15
+                                              i.icofont.icofont-time
+                                            span Solid Wall clock
+                                        td
+                                          span.f-12 31
+                                        td
+                                          .progress-showcase
+                                            .progress.sm-progress-bar
+                                              .progress-bar.bg-danger(role='progressbar' style='width: 25%' aria-valuenow='25' aria-valuemin='0' aria-valuemax='100')
+                                        td
+                                          | $  56.55
+                                        td.txt-success In Stock
+                                      tr
+                                        td
+                                          .d-flex
+                                            .round-product.round-product-dark.m-r-15
+                                              i.icofont.icofont-helmet
+                                            span New Men Helmet
+                                        td
+                                          span.f-12 12
+                                        td
+                                          .progress-showcase
+                                            .progress.sm-progress-bar
+                                              .progress-bar.bg-warning(role='progressbar' style='width: 50%' aria-valuenow='25' aria-valuemin='0' aria-valuemax='100')
+                                        td
+                                          | $  0.564
+                                        td.txt-success In Stock
+                                      tr
+                                        td
+                                          .d-flex
+                                            .round-product.round-product-dark.m-r-15
+                                              i.icofont.icofont-tennis
+                                            span Solid Tennis ball
+                                        td
+                                          span.f-12 25
+                                        td
+                                          .progress-showcase
+                                            .progress.sm-progress-bar
+                                              .progress-bar.bg-danger(role='progressbar' style='width: 10%' aria-valuenow='25' aria-valuemin='0' aria-valuemax='100')
+                                        td
+                                          | $1.556
+                                        td.txt-danger Out Of Stock
+                                      tr
+                                        td
+                                          .d-flex
+                                            .round-product.round-product-dark.m-r-15
+                                              i.icofont.icofont-water-bottle
+                                            span Colorfull Water bottle
+                                        td
+                                          span.f-12 48
+                                        td
+                                          .progress-showcase
+                                            .progress.sm-progress-bar
+                                              .progress-bar.bg-success(role='progressbar' style='width: 75%' aria-valuenow='25' aria-valuemin='0' aria-valuemax='100')
+                                        td
+                                          | $  56.26
+                                        td.txt-success In Stock
+                                      tr
+                                        td
+                                          .d-flex
+                                            .round-product.round-product-dark.m-r-15
+                                              i.icofont.icofont-skydiving-goggles
+                                            span Solid Unisex skydiving goggles
+                                        td
+                                          span.f-12 34
+                                        td
+                                          .progress-showcase
+                                            .progress.sm-progress-bar
+                                              .progress-bar.bg-success(role='progressbar' style='width: 100%' aria-valuenow='25' aria-valuemin='0' aria-valuemax='100')
+                                        td
+                                          | $  2.564
+                                        td.txt-success In Stock
+                                .code-box-copy
+                                  button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#example-head3', title='Copy')
+                                    i.icofont.icofont-copy-alt
+                                  pre
+                                    code.language-html#example-head3
+                                        | &lt;!-- Cod Box Copy begin --&gt;
+                                        | &lt;div class="card-body p-0"&gt;
+                                        |   &lt;div class="users-total table-responsive product-sales"&gt;
+                                        |     &lt;table class="table table-bordernone"&gt;
+                                        |       &lt;thead&gt;
+                                        |         &lt;tr&gt;
+                                        |           &lt;th&gt;Product&lt;/th&gt;
+                                        |           &lt;th&gt;Sold&lt;/th&gt;
+                                        |           &lt;th&gt;Record Point&lt;/th&gt;
+                                        |           &lt;th&gt;Stock&lt;/th&gt;
+                                        |           &lt;th&gt;Amount&lt;/th&gt;
+                                        |           &lt;th&gt;Stock Status&lt;/th&gt;
+                                        |         &lt;/tr&gt;
+                                        |       &lt;/thead&gt;
+                                        |       &lt;tbody&gt;
+                                        |         &lt;tr&gt;
+                                        |           &lt;td&gt;
+                                        |             &lt;div class="d-flex"&gt;
+                                        |               &lt;div class="round-product m-r-15"&gt;&lt;/div&gt;&lt;span&gt;Women Imported Wallet-E32N&lt;/span&gt;
+                                        |             &lt;/div&gt;
+                                        |           &lt;/td&gt;
+                                        |           &lt;td&gt;&lt;span class="f-12"&gt;18&lt;/span&gt;&lt;/td&gt;
+                                        |           &lt;td&gt;&lt;span class="badge badge-light f-14"&gt;05&lt;/span&gt;&lt;/td&gt;
+                                        |           &lt;td&gt;123&lt;/td&gt;
+                                        |           &lt;td&gt;$ 5.15&lt;/td&gt;
+                                        |           &lt;td&gt;In Stock&lt;/td&gt;
+                                        |         &lt;/tr&gt;
+                                        |         &lt;tr&gt;
+                                        |           &lt;td&gt;
+                                        |             &lt;div class="d-flex"&gt;
+                                        |               &lt;div class="round-product round-product-dark m-r-15"&gt;&lt;/div&gt;&lt;span&gt;Men Shoeless Nike Shoes&lt;/span&gt;
+                                        |             &lt;/div&gt;
+                                        |           &lt;/td&gt;
+                                        |           &lt;td&gt;&lt;span class="f-12"&gt;8&lt;/span&gt;&lt;/td&gt;
+                                        |           &lt;td&gt;&lt;span class="badge badge-light f-14"&gt;12&lt;/span&gt;&lt;/td&gt;
+                                        |           &lt;td&gt;415&lt;/td&gt;
+                                        |           &lt;td&gt;$ 56.55&lt;/td&gt;
+                                        |           &lt;td&gt;In Stock&lt;/td&gt;
+                                        |         &lt;/tr&gt;
+                                        |         &lt;tr&gt;
+                                        |           &lt;td&gt;
+                                        |             &lt;div class="d-flex"&gt;
+                                        |               &lt;div class="round-product round-product-dark m-r-15"&gt;&lt;/div&gt;&lt;span&gt;Women Red one piece Dress&lt;/span&gt;
+                                        |             &lt;/div&gt;
+                                        |           &lt;/td&gt;
+                                        |           &lt;td&gt;&lt;span class="f-12"&gt;23&lt;/span&gt;&lt;/td&gt;
+                                        |           &lt;td&gt;&lt;span class="badge badge-light f-14"&gt;10&lt;/span&gt;&lt;/td&gt;
+                                        |           &lt;td&gt;360&lt;/td&gt;
+                                        |           &lt;td&gt;$ 0.564&lt;/td&gt;
+                                        |           &lt;td&gt;In Stock&lt;/td&gt;
+                                        |         &lt;/tr&gt;
+                                        |         &lt;tr&gt;
+                                        |           &lt;td&gt;
+                                        |             &lt;div class="d-flex"&gt;
+                                        |               &lt;div class="round-product round-product-dark m-r-15"&gt;&lt;/div&gt;&lt;span&gt;Electroics Items&lt;/span&gt;
+                                        |             &lt;/div&gt;
+                                        |           &lt;/td&gt;
+                                        |           &lt;td&gt;&lt;span class="f-12"&gt;52&lt;/span&gt;&lt;/td&gt;
+                                        |           &lt;td&gt;&lt;span class="badge badge-light f-14"&gt;32&lt;/span&gt;&lt;/td&gt;
+                                        |           &lt;td&gt;481&lt;/td&gt;
+                                        |           &lt;td&gt;$ 1.556&lt;/td&gt;
+                                        |           &lt;td&gt;Out Of Stock&lt;/td&gt;
+                                        |         &lt;/tr&gt;
+                                        |         &lt;tr&gt;
+                                        |           &lt;td&gt;
+                                        |             &lt;div class="d-flex"&gt;
+                                        |               &lt;div class="round-product round-product-dark m-r-15"&gt;&lt;/div&gt;&lt;span&gt;Mens Gold Watches E9850&lt;/span&gt;
+                                        |             &lt;/div&gt;
+                                        |           &lt;/td&gt;
+                                        |           &lt;td&gt;&lt;span class="f-12"&gt;84&lt;/span&gt;&lt;/td&gt;
+                                        |           &lt;td&gt;&lt;span class="badge badge-light f-14"&gt;25&lt;/span&gt;&lt;/td&gt;
+                                        |           &lt;td&gt;523&lt;/td&gt;
+                                        |           &lt;td&gt;$ 56.26&lt;/td&gt;
+                                        |           &lt;td&gt;In Stock&lt;/td&gt;
+                                        |         &lt;/tr&gt;
+                                        |         &lt;tr&gt;
+                                        |           &lt;td&gt;
+                                        |             &lt;div class="d-flex"&gt;
+                                        |               &lt;div class="round-product round-product-dark m-r-15"&gt;&lt;/div&gt;&lt;span&gt;Women Wallet-E32N&lt;/span&gt;
+                                        |             &lt;/div&gt;
+                                        |           &lt;/td&gt;
+                                        |           &lt;td&gt;&lt;span class="f-12"&gt;43&lt;/span&gt;&lt;/td&gt;
+                                        |           &lt;td&gt;&lt;span class="badge badge-light f-14"&gt;08&lt;/span&gt;&lt;/td&gt;
+                                        |           &lt;td&gt;137&lt;/td&gt;
+                                        |           &lt;td&gt;$ 2.564&lt;/td&gt;
+                                        |           &lt;td&gt;In Stock&lt;/td&gt;
+                                        |         &lt;/tr&gt;
+                                        |       &lt;/tbody&gt;
+                                        |     &lt;/table&gt;
+                                        |   &lt;/div&gt;
+                                        | &lt;/div&gt;
+                                        | &lt;!-- Cod Box Copy end --&gt;        
+                    // Container-fluid Ends
+                include ../../components/footer        
+        include ../../components/footer-files

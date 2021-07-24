@@ -1,0 +1,541 @@
+- var prism                 = true;
+- var apex                  = true;
+- var clipboard             = true;
+- var customcard            = true;
+- var theme_customizer      = true;
+- var tooltip               = true;
+- var dashboard_4           = true;
+- var counter               = true;
+
+doctype html
+html(lang='en')
+    include ../../components/header-files
+    body
+        include ../../components/loader
+        // page-wrapper Start
+        #pageWrapper.page-wrapper.compact-wrapper
+            include ../../components/header
+            // Page Body Start
+            .page-body-wrapper.sidebar-icon
+                include ../../components/sidebar
+                .page-body
+                    .container-fluid
+                        .page-header
+                            .row
+                                .col-lg-6
+                                    ol.breadcrumb
+                                        li.breadcrumb-item
+                                          a(href='index.html')
+                                            i.f-16.fa.fa-home
+                                        li.breadcrumb-item Dashboard
+                                    h3 
+                                      | Enterprise
+                                .col-lg-6
+                                  include ../../components/bookmark
+                    // Container-fluid starts
+                    .container-fluid
+                      .row
+                        .col-xl-9.xl-100.box-col-12
+                          .row
+                            .col-12
+                              .project-overview
+                                .row
+                                  .col-xl-2.col-sm-4.col-6
+                                    h2.f-w-600.counter.font-primary 18
+                                    p.mb-0 Active Cases
+                                  .col-xl-2.col-sm-4.col-6
+                                    h2.f-w-600.counter.font-secondary 143
+                                    p.mb-0 Pending Tasks
+                                  .col-xl-2.col-sm-4.col-6
+                                    h2.f-w-600.counter.font-success 574
+                                    p.mb-0 Upcoming Events
+                                  .col-xl-2.col-sm-4.col-6
+                                    h2.f-w-600.counter.font-info 15
+                                    p.mb-0 New Messages
+                                  .col-xl-2.col-sm-4.col-6
+                                    h2.f-w-600.counter.font-warning 20
+                                    p.mb-0 Open Requests
+                                  .col-xl-2.col-sm-4.col-6
+                                    h2.f-w-600.counter.font-danger 312
+                                    p.mb-0 Hours Spent
+                            .col-xl-7.box-col-6
+                              .card.card-with-border.monthly-growth
+                                .card-header.card-no-border
+                                  h5 Task Completion Level
+                                  .chart-value-box.pull-right.chart-data-set
+                                    .value-square-box-info
+                                    span Tasks
+                                  .card-header-right
+                                    ul.list-unstyled.card-option
+                                      li
+                                        i.icofont.icofont-double-left
+                                      li
+                                        i.view-html.fa.fa-code
+                                      li
+                                        i.icofont.icofont-maximize.full-card
+                                      li
+                                        i.icofont.icofont-minus.minimize-card
+                                      li
+                                        i.icofont.icofont-refresh.reload-card
+                                      li
+                                        i.icofont.icofont-error.close-card
+                                .card-body.pt-0.o-hidden
+                                  .spaline-container
+                                    #area-spaline
+                                  .code-box-copy
+                                    button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#example-head', title='Copy')
+                                      i.icofont.icofont-copy-alt
+                                    pre
+                                      code.language-html#example-head
+                                          | &lt;!-- Cod Box Copy begin --&gt;
+                                          | &lt;div class="card-body pt-0 o-hidden"&gt;
+                                          |   &lt;div class="spaline-container"&gt;
+                                          |     &lt;div id="area-spaline"&gt;&lt;/div&gt;
+                                          |   &lt;/div&gt;
+                                          | &lt;/div&gt;
+                                          | &lt;!-- Cod Box Copy end --&gt;
+                            .col-xl-5.box-col-6
+                              .card.card-with-border
+                                .card-header.card-no-border
+                                  h5 Tasks
+                                  .card-header-right
+                                    ul.list-unstyled.card-option
+                                      li
+                                        i.icofont.icofont-double-left
+                                      li
+                                        i.view-html.fa.fa-code
+                                      li
+                                        i.icofont.icofont-maximize.full-card
+                                      li
+                                        i.icofont.icofont-minus.minimize-card
+                                      li
+                                        i.icofont.icofont-refresh.reload-card
+                                      li
+                                        i.icofont.icofont-error.close-card
+                                .card-body.pt-0.o-hidden
+                                  .apex-circle
+                                    #circlechart
+                                  .code-box-copy
+                                    button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#example-head1', title='Copy')
+                                      i.icofont.icofont-copy-alt
+                                    pre
+                                      code.language-html#example-head1
+                                          | &lt;!-- Cod Box Copy begin --&gt;
+                                          | &lt;div class="card-body pt-0 o-hidden"&gt;
+                                          |   &lt;div class="apex-circle"&gt;
+                                          |     &lt;div id="circlechart"&gt;&lt;/div&gt;
+                                          |   &lt;/div&gt;
+                                          | &lt;/div&gt;
+                                          | &lt;!-- Cod Box Copy end --&gt;
+                        .col-xl-3.xl-100.box-col-6
+                          .card.card-with-border.connection.firm-activity
+                            .card-header
+                              h5.d-inline-block Firm Activity
+                              span.pull-right.mt-0 457
+                            .card-body.p-0
+                              ul
+                                li
+                                  .media
+                                    img.img-40.m-r-15.rounded-circle(src='../assets/images/user/2.png', alt='')
+                                    .media-body
+                                      span 
+                                        span.f-w-600 Jason Borne
+                                        |  uploaded this file
+                                      p Just Now
+                                li
+                                  .media
+                                    img.img-40.m-r-15.rounded-circle(src='../assets/images/user/1.jpg', alt='')
+                                    .media-body
+                                      span
+                                        span.f-w-600 Vincent Porter
+                                        |  created this new case
+                                      p 10:00 AM Today
+                                li
+                                  .media
+                                    img.img-40.m-r-15.rounded-circle(src='../assets/images/user/3.jpg', alt='')
+                                    .media-body
+                                      span
+                                        span.f-w-600 Erica Hughes
+                                        |  created an event
+                                      p 4:00 PM Yesterday
+                                li
+                                  .media
+                                    img.img-40.m-r-15.rounded-circle(src='../assets/images/user/4.jpg', alt='')
+                                    .media-body
+                                      span
+                                        span.f-w-600 Hileri Jecno
+                                        |  completed this task
+                                      p 2:30 PM Yesterday
+                                li
+                                  .media
+                                    img.img-40.m-r-15.rounded-circle(src='../assets/images/user/8.jpg', alt='')
+                                    .media-body
+                                      span
+                                        span.f-w-600 Ginger Johnston
+                                        |  uploaded this file
+                                      p 11:45 AM Monday
+                                li
+                                  .media
+                                    img.img-40.m-r-15.rounded-circle(src='../assets/images/user/2.png', alt='')
+                                    .media-body
+                                      span
+                                        span.f-w-600 Jason Borne
+                                        |  assigned a task to 
+                                        span.f-w-600 Erica Hughes
+                                      p 9:15 AM Saturday
+                                li
+                                  .media
+                                    img.img-40.m-r-15.rounded-circle(src='../assets/images/user/1.jpg', alt='')
+                                    .media-body
+                                      span
+                                        span.f-w-600 Vincent Porter
+                                        |  created an event
+                                      p 10:00 AM Monday           
+                        .col-xl-9.xl-60.box-col-6
+                          .card.card-with-border.project-card
+                            .card-header
+                              h5 Project Status
+                              span Details of our project status
+                              .dashboard-btn-groups
+                                .btn-group(role='group', aria-label='Basic example')
+                                  button.btn.btn-outline-light.btn-js(type='button') Day
+                                  button.btn.btn-outline-light.btn-js(type='button') Week
+                                  button.btn.btn-outline-light.btn-js.active(type='button') Month
+                              .card-header-right
+                                ul.list-unstyled.card-option
+                                  li
+                                    i.icofont.icofont-double-left
+                                  li
+                                    i.view-html.fa.fa-code
+                                  li
+                                    i.icofont.icofont-maximize.full-card
+                                  li
+                                    i.icofont.icofont-minus.minimize-card
+                                  li
+                                    i.icofont.icofont-refresh.reload-card
+                                  li
+                                    i.icofont.icofont-error.close-card
+                            .card-body.p-0
+                              .table-responsive.project-tables
+                                table.table.table-bordernone
+                                  thead
+                                    tr
+                                      th Task
+                                      th Status
+                                      th Deadline
+                                      th Progress
+                                  tbody
+                                    tr
+                                      td Network Infrastructure strategy
+                                      td
+                                        .badge.badge-light-info Pending
+                                      td
+                                        span Jul 14, 2018
+                                      td 
+                                        .progress-showcase
+                                          .progress.sm-progress-bar
+                                            .progress-bar.bg-info(role='progressbar', style='width: 60%', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100')
+                                    tr
+                                      td Server hosting Issues
+                                      td
+                                        .badge.badge-light-success Done
+                                      td
+                                        span Aug 18, 2018
+                                      td 
+                                        .progress-showcase
+                                          .progress.sm-progress-bar
+                                            .progress-bar.bg-success(role='progressbar', style='width: 40%', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100')
+                                    tr
+                                      td Flexible Server hosting
+                                      td
+                                        .badge.badge-light-danger In Process
+                                      td
+                                        span Sep 23, 2018
+                                      td 
+                                        .progress-showcase
+                                          .progress.sm-progress-bar
+                                            .progress-bar.bg-danger(role='progressbar', style='width: 80%', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100')
+                                    tr
+                                      td Data management plans
+                                      td
+                                        .badge.badge-light-secondary Pending
+                                      td
+                                        span Oct 11, 2018
+                                      td 
+                                        .progress-showcase
+                                          .progress.sm-progress-bar
+                                            .progress-bar.bg-secondary(role='progressbar', style='width: 85%', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100')
+                                    tr
+                                      td Storage Strategy
+                                      td
+                                        .badge.badge-light-warning In Process
+                                      td
+                                        span Oct 20, 2018
+                                      td 
+                                        .progress-showcase
+                                          .progress.sm-progress-bar
+                                            .progress-bar.bg-warning(role='progressbar', style='width: 50%', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100')
+                                    tr
+                                      td CMVM Digitisation of paper records
+                                      td
+                                        .badge.badge-light-success Done
+                                      td
+                                        span Oct 28, 2018
+                                      td 
+                                        .progress-showcase
+                                          .progress.sm-progress-bar
+                                            .progress-bar.bg-success(role='progressbar', style='width: 75%', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100')
+                                    tr
+                                      td REF readiness
+                                      td
+                                        .badge.badge-light-primary Done
+                                      td
+                                        span Nov 5, 2018
+                                      td 
+                                        .progress-showcase
+                                          .progress.sm-progress-bar
+                                            .progress-bar.bg-primary(role='progressbar', style='width: 45%', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100')
+                              .code-box-copy
+                                button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#example-head2', title='Copy')
+                                  i.icofont.icofont-copy-alt
+                                pre
+                                  code.language-html#example-head2
+                                      | &lt;!-- Cod Box Copy begin --&gt;
+                                      | &lt;div class="table-responsive project-tables"&gt;
+                                      |   &lt;table class="table table-bordernone"&gt;
+                                      |     &lt;thead&gt;
+                                      |       &lt;tr&gt;
+                                      |         &lt;th&gt;Task&lt;/th&gt;
+                                      |         &lt;th&gt;Status&lt;/th&gt;
+                                      |         &lt;th&gt;Deadline&lt;/th&gt;
+                                      |         &lt;th&gt;Progress&lt;/th&gt;
+                                      |       &lt;/tr&gt;
+                                      |     &lt;/thead&gt;
+                                      |     &lt;tbody&gt;
+                                      |       &lt;tr&gt;
+                                      |         &lt;td&gt;Network Infrastructure strategy&lt;/td&gt;
+                                      |         &lt;td&gt;
+                                      |           &lt;div class="badge badge-light-info"&gt;Pending&lt;/div&gt;
+                                      |         &lt;/td&gt;
+                                      |         &lt;td&gt;&lt;span&gt;Jul 14, 2018&lt;/span&gt;&lt;/td&gt;
+                                      |         &lt;td&gt;
+                                      |           &lt;div class="progress-showcase"&gt;
+                                      |             &lt;div class="progress sm-progress-bar"&gt;
+                                      |               &lt;div class="progress-bar bg-info" role="progressbar" style="width: 60%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+                                      |             &lt;/div&gt;
+                                      |           &lt;/div&gt;
+                                      |         &lt;/td&gt;
+                                      |       &lt;/tr&gt;
+                                      |       &lt;tr&gt;
+                                      |         &lt;td&gt;Server hosting Issues&lt;/td&gt;
+                                      |         &lt;td&gt;
+                                      |           &lt;div class="badge badge-light-success"&gt;Done&lt;/div&gt;
+                                      |         &lt;/td&gt;
+                                      |         &lt;td&gt;&lt;span&gt;Aug 18, 2018&lt;/span&gt;&lt;/td&gt;
+                                      |         &lt;td&gt;
+                                      |           &lt;div class="progress-showcase"&gt;
+                                      |             &lt;div class="progress sm-progress-bar"&gt;
+                                      |               &lt;div class="progress-bar bg-success" role="progressbar" style="width: 40%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+                                      |             &lt;/div&gt;
+                                      |           &lt;/div&gt;
+                                      |         &lt;/td&gt;
+                                      |       &lt;/tr&gt;
+                                      |       &lt;tr&gt;
+                                      |         &lt;td&gt;Flexible Server hosting&lt;/td&gt;
+                                      |         &lt;td&gt;
+                                      |           &lt;div class="badge badge-light-danger"&gt;In Process&lt;/div&gt;
+                                      |         &lt;/td&gt;
+                                      |         &lt;td&gt;&lt;span&gt;Sep 23, 2018&lt;/span&gt;&lt;/td&gt;
+                                      |         &lt;td&gt;
+                                      |           &lt;div class="progress-showcase"&gt;
+                                      |             &lt;div class="progress sm-progress-bar"&gt;
+                                      |               &lt;div class="progress-bar bg-danger" role="progressbar" style="width: 80%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+                                      |             &lt;/div&gt;
+                                      |           &lt;/div&gt;
+                                      |         &lt;/td&gt;
+                                      |       &lt;/tr&gt;
+                                      |       &lt;tr&gt;
+                                      |         &lt;td&gt;Data management plans&lt;/td&gt;
+                                      |         &lt;td&gt;
+                                      |           &lt;div class="badge badge-light-secondary"&gt;Pending&lt;/div&gt;
+                                      |         &lt;/td&gt;
+                                      |         &lt;td&gt;&lt;span&gt;Oct 11, 2018&lt;/span&gt;&lt;/td&gt;
+                                      |         &lt;td&gt;
+                                      |           &lt;div class="progress-showcase"&gt;
+                                      |             &lt;div class="progress sm-progress-bar"&gt;
+                                      |               &lt;div class="progress-bar bg-secondary" role="progressbar" style="width: 85%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+                                      |             &lt;/div&gt;
+                                      |           &lt;/div&gt;
+                                      |         &lt;/td&gt;
+                                      |       &lt;/tr&gt;
+                                      |       &lt;tr&gt;
+                                      |         &lt;td&gt;Storage Strategy&lt;/td&gt;
+                                      |         &lt;td&gt;
+                                      |           &lt;div class="badge badge-light-warning"&gt;In Process&lt;/div&gt;
+                                      |         &lt;/td&gt;
+                                      |         &lt;td&gt;&lt;span&gt;Oct 20, 2018&lt;/span&gt;&lt;/td&gt;
+                                      |         &lt;td&gt;
+                                      |           &lt;div class="progress-showcase"&gt;
+                                      |             &lt;div class="progress sm-progress-bar"&gt;
+                                      |               &lt;div class="progress-bar bg-warning" role="progressbar" style="width: 50%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+                                      |             &lt;/div&gt;
+                                      |           &lt;/div&gt;
+                                      |         &lt;/td&gt;
+                                      |       &lt;/tr&gt;
+                                      |       &lt;tr&gt;
+                                      |         &lt;td&gt;CMVM Digitisation of paper records&lt;/td&gt;
+                                      |         &lt;td&gt;
+                                      |           &lt;div class="badge badge-light-success"&gt;Done&lt;/div&gt;
+                                      |         &lt;/td&gt;
+                                      |         &lt;td&gt;&lt;span&gt;Oct 28, 2018&lt;/span&gt;&lt;/td&gt;
+                                      |         &lt;td&gt;
+                                      |           &lt;div class="progress-showcase"&gt;
+                                      |             &lt;div class="progress sm-progress-bar"&gt;
+                                      |               &lt;div class="progress-bar bg-success" role="progressbar" style="width: 75%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+                                      |             &lt;/div&gt;
+                                      |           &lt;/div&gt;
+                                      |         &lt;/td&gt;
+                                      |       &lt;/tr&gt;
+                                      |       &lt;tr&gt;
+                                      |         &lt;td&gt;REF readiness&lt;/td&gt;
+                                      |         &lt;td&gt;
+                                      |           &lt;div class="badge badge-light-primary"&gt;Done&lt;/div&gt;
+                                      |         &lt;/td&gt;
+                                      |         &lt;td&gt;&lt;span&gt;Nov 5, 2018&lt;/span&gt;&lt;/td&gt;
+                                      |         &lt;td&gt;
+                                      |           &lt;div class="progress-showcase"&gt;
+                                      |             &lt;div class="progress sm-progress-bar"&gt;
+                                      |               &lt;div class="progress-bar bg-primary" role="progressbar" style="width: 45%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"&gt;&lt;/div&gt;
+                                      |             &lt;/div&gt;
+                                      |           &lt;/div&gt;
+                                      |         &lt;/td&gt;
+                                      |       &lt;/tr&gt;
+                                      |     &lt;/tbody&gt;
+                                      |   &lt;/table&gt;
+                                      | &lt;/div&gt;
+                                      | &lt;!-- Cod Box Copy end --&gt;
+                        .col-xl-3.xl-40.box-col-12
+                          .row
+                            .col-xl-12.col-md-6.box-col-6
+                              .card.card-with-border
+                                .card-body.revenue-project
+                                  h6 Monthly Sale
+                                  ul
+                                    li
+                                      p Growth
+                                      h4 $
+                                        span.counter 67140
+                                    li
+                                      .apex-spark
+                                        #spark3
+                            .col-xl-12.col-md-6.box-col-6
+                              .card.card-with-border
+                                .card-body.revenue-project.inovice-ul
+                                  h6 Invoices
+                                  ul
+                                    li
+                                      p Due
+                                      h4 $
+                                        span.counter 54612
+                                    li
+                                      p Overdue
+                                      h4 $
+                                        span.counter 61271
+                            .col-xl-12.box-col-12
+                              .card.card-with-border
+                                .card-header
+                                  h6.mb-0 My Status
+                                .card-body.p-0.my-status
+                                  ul
+                                    li
+                                      span Task Pending
+                                        span.f-12.font-warning.pull-right 18
+                                    li
+                                      span Active Projects
+                                        span.f-12.font-success.pull-right 24
+                                    li
+                                      span Support Tickets
+                                        span.f-12.font-info.pull-right 47
+                        .col-sm-12.box-col-12
+                          .row.overall-report
+                            .col-xl-3.xl-50.col-md-6.box-col-6
+                              .card.card-with-border
+                                .card-body
+                                  div.text-center
+                                    h2.counter.f-w-600 124
+                                    p Total Employee
+                                    .employees
+                                      i.fa.fa-female
+                                      i.fa.fa-female
+                                      i.fa.fa-female
+                                      i.fa.fa-female
+                                      i.fa.fa-female
+                                      i.fa.fa-female.light-icon
+                                      i.fa.fa-female.light-icon
+                                      i.fa.fa-female.light-icon
+                                      i.fa.fa-female.light-icon  
+                                  .employee-progress
+                                    .value-total
+                                      label Female (80%)
+                                      .progress-showcase
+                                        .progress.sm-progress-bar
+                                          .progress-bar.bg-primary(role='progressbar', style='width: 80%', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100')
+                                    .value-total
+                                      label Male (20%)
+                                      .progress-showcase
+                                        .progress.sm-progress-bar
+                                          .progress-bar.bg-danger(role='progressbar', style='width: 20%', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100')
+                                    .value-total
+                                      label Total Staff
+                                      .progress-showcase
+                                        .progress.sm-progress-bar
+                                          .progress-bar.bg-secondary(role='progressbar', style='width: 75%', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100')
+                            .col-xl-3.xl-50.col-md-6.box-col-6
+                              .card.card-with-border
+                                .card-body
+                                  div.text-center
+                                    h2.counter.f-w-600 47
+                                    p Total Products
+                                    .employees
+                                      i.fa.fa-cube
+                                      i.fa.fa-cube
+                                      i.fa.fa-cube
+                                      i.fa.fa-cube
+                                      i.fa.fa-cube
+                                      i.fa.fa-cube
+                                      i.fa.fa-cube.light-icon
+                                      i.fa.fa-cube.light-icon
+                                  .employee-progress
+                                    .value-total
+                                      label Digital products (75%)
+                                      .progress-showcase
+                                        .progress.sm-progress-bar
+                                          .progress-bar.bg-success(role='progressbar', style='width: 75%', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100')
+                                    .value-total
+                                      label Non-digital products (25%)
+                                      .progress-showcase
+                                        .progress.sm-progress-bar
+                                          .progress-bar.bg-info(role='progressbar', style='width: 25%', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100')
+                                    .value-total
+                                      label Total Products
+                                      .progress-showcase
+                                        .progress.sm-progress-bar
+                                          .progress-bar.bg-warning(role='progressbar', style='width: 68%', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100')
+                            .col-xl-6.xl-100.box-col-12
+                              .card.card-with-border.tickets
+                                .card-header.card-no-border
+                                  .d-flex
+                                    h5 Monthly Revenue
+                                    button.btn.btn-outline-light(type='button') Last Week 
+                                      i.fa.fa-caret-down
+                                .card-body.pt-0
+                                  .likes-page.pl-0
+                                    h4.mb-0 $46,814 
+                                      span.font-danger.f-12
+                                        i(data-feather='arrow-up')
+                                        | 1.8% 
+                                  .apex-monthly
+                                    #monthly 
+                    // Container-fluid Ends
+                include ../../components/footer 
+        include ../../components/footer-files

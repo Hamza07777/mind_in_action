@@ -1,0 +1,326 @@
+/**=====================
+      69. Dashboard 4 CSS Start
+==========================**/
+ @each $badge-light-name, $badge-light-color in (primary, $primary-color),
+        (secondary, $secondary-color) ,
+        (success, $success-color),
+        (danger, $danger-color),
+        (info, $info-color),
+        (light, $light-color),
+        (dark, $dark-color),
+        (warning, $warning-color) {
+          .badge-light-#{$badge-light-name}{
+            background-color: lighten($badge-light-color, 35%);
+            color: $badge-light-color;
+          }
+        }
+.badge-light-primary {
+    background-color: rgba($primary-color, 0.2);
+  }
+.badge-light-success {
+  background-color: rgba($success-color, 0.2);
+}
+.project-overview {
+  margin-bottom: 30px;
+  padding: 30px;
+  border: 1px solid $light-color;
+  border-radius: 8px;
+  background-color: $white;
+  p {
+    color: $theme-body-sub-title-color;
+    font-weight: 500;
+  }
+  .row {
+    > div {
+      + div {
+        border-left: 1px solid $light-color;
+      }
+    }
+  }
+}
+.apex-circle {
+  svg {
+    .apexcharts-legend {
+      &.left {
+        .apexcharts-legend-series {
+          margin: 0 10px !important;
+        }
+      }
+    }
+    .apexcharts-legend-marker {
+      width: 8px !important;
+      height: 8px !important;
+      border-radius: 100% !important;
+      margin-right: 8px;
+    }
+    .apexcharts-legend-text {
+      font-size: 12px !important;
+    }
+  }
+}
+.firm-activity {
+  ul {
+    li {
+      .media {
+        align-items: end;
+        .media-body {
+          p {
+            margin-top: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+.revenue-project {
+  h6 {
+    margin-bottom: 20px;
+  }
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    li {
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+      p {
+        margin-bottom: 5px;
+        color: $theme-body-sub-title-color;
+      }
+      h4 {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+.inovice-ul {
+  ul {
+    li {
+      + li {
+        border-left: 1px solid $light-color;
+      }
+    }
+  }
+}
+.my-status {
+  ul {
+    li {
+      padding: 10px 30px;
+      span {
+        .f-12 {
+          font-weight: 600;
+        }
+      }
+      + li {
+        border-top: 1px solid $light-color;
+      }
+    }
+  }
+}
+.project-tables {
+  table {
+    tr {
+      th,td {
+        padding: 20px 30px;
+      }
+      th {
+        border-top: none;
+        border-bottom: 1px solid $light-color;
+      }
+      td {
+        vertical-align: middle;
+        span {
+          font-family: $font-roboto, $font-serif;
+          color: $theme-body-sub-title-color;
+        }
+      }
+      + tr {
+        td {
+          border-top: 1px solid $light-color;
+        }
+      }
+    }
+  }
+}
+.overall-report {
+  .employees {
+    i {
+      font-size: 20px;
+      color: darken($light-color, 10%);
+      &.light-icon {
+        color: $light-color;
+      }
+      + i {
+        margin-left: 5px;
+      }
+    }
+  }
+  .employee-progress {
+    margin-top: 30px;
+    .value-total {
+      + .value-total {
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+// responsive css
+@media screen and (max-width: 1660px) {
+  .project-tables {
+    table {
+      tr{
+        td, th {
+          min-width: 150px;
+           &:first-child {
+            min-width: 340px;
+           }
+        }
+      }
+    }
+  }
+}
+@media screen and (min-device-width: 1200px) and (max-device-width: 1366px) {
+ .project-card {
+  .dashboard-btn-groups {
+    display: none;
+  }
+ }
+}
+@media screen and (max-width: 1199px) {
+  .project-overview {
+    .row {
+      >div {
+        &:nth-child(4) {
+          border-left: none;
+        }
+        &:nth-child(4), &:nth-child(5), &:last-child {
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+  .apex-spark {
+    #spark3 {
+      min-height: 58px !important;
+    }
+    .apexcharts-canvas, svg {
+      height: 58px !important;
+    }
+  }
+}
+@media screen and (max-width: 991px) {
+  .project-overview {
+    padding: 20px;
+    .row {
+      >div {
+        &:nth-child(4), &:nth-child(5) &:last-child {
+            margin-top: 20px;
+        }
+      }
+    }
+  }
+  .project-tables {
+    table {
+      tr {
+        th,td {
+          padding: 20px;
+        }
+      }
+    }
+  }
+  .my-status {
+    ul {
+       li {
+        padding: 10px 20px;
+       }
+    }
+  }
+  .overall-report {
+    .employee-progress {
+      margin-top: 20px;
+    }
+  }
+} 
+@media screen and (max-width: 767px) {
+  .project-card {
+    .dashboard-btn-groups {
+      display: none;
+    }
+  }
+}
+@media screen and (max-width: 575px) {
+  .project-overview {
+    padding: 15px;
+    .row {
+      >div {
+        &:nth-child(4) {
+          border-left: 1px solid $light-color;
+        }
+        &:nth-child(3), &:nth-child(5) {
+          border-left: none;
+        }
+        + div {
+          + div {
+            margin-top: 15px !important;
+          }
+        }
+      }
+    }
+  }
+  .project-tables {
+    table {
+      tr {
+        th, td {
+          padding: 15px;
+        }
+      }
+    }
+  }
+  .revenue-project {
+    h6 {
+      margin-bottom: 15px;
+    }
+  }
+  .my-status {
+    ul {
+      li {
+        padding: 10px 15px;
+      }
+    }
+  }
+  .overall-report {
+    .employee-progress {
+      margin-top: 15px;
+       .value-total {
+        +.value-total {
+          margin-top: 15px;
+        }
+       }
+    }
+  }
+}
+@media screen and (max-width: 360px) {
+  .project-overview {
+    p {
+      letter-spacing: 0.2px;
+      font-size: 12px;
+    }
+  }
+  .apex-circle {
+    svg {
+      .apexcharts-legend {
+        &.left {
+          .apexcharts-legend-series {
+            margin: 0 5px !important;
+          }
+        }
+      }
+    }
+  }
+}
+/**=====================
+     69. Dashboard 4  CSS End
+==========================**/

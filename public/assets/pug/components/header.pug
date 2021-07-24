@@ -1,0 +1,115 @@
+// Page Header Start
+- var status_toggle = (sidebar_open ? undefined : 'checked');
+- var landing_status = (body ? 'landing-page' : '');
+.page-main-header
+                .main-header-right
+                    .main-header-left
+                        .logo-wrapper
+                            a(href='index.html')
+                                img(src='../assets/images/logo/logo.png', alt='')
+                    .mobile-sidebar
+                        .media-body.text-right.switch-sm
+                            label.switch
+                                input#sidebar-toggle(type='checkbox', data-toggle='.container', checked=status_toggle)
+                                span.switch-state
+                    .nav-right.col.pull-right.right-menu
+                        ul.nav-menus
+                            li.px-0
+                                form.form-inline.search-form
+                                    input.form-control-plaintext(placeholder='Search.....')
+                                    i.close-search(data-feather='x')
+                                span.mobile-search
+                                  i(data-feather='search')
+                                
+                            li.onhover-dropdown
+                                i(data-feather='bell')
+                                ul.notification-dropdown.onhover-show-div
+                                    li
+                                        h6.f-w-600 Notifications
+                                        span.f-12 You have 2 unread messages
+                                    li
+                                      p.mb-0
+                                        i.fa.fa-circle-o.mr-3.font-primary 
+                                        | Delivery processing 
+                                        span.pull-right 10 min.
+                                    li
+                                      p.mb-0
+                                        i.fa.fa-circle-o.mr-3.font-success
+                                        | Order Complete
+                                        span.pull-right 1 hr
+                                    li
+                                      p.mb-0
+                                        i.fa.fa-circle-o.mr-3.font-info
+                                        | Tickets Generated
+                                        span.pull-right 3 hr
+                                    li
+                                      p.mb-0
+                                        i.fa.fa-circle-o.mr-3.font-warning
+                                        | Delivery Complete
+                                        span.pull-right 6 hr
+                                    li.bg-light.txt-dark
+                                        a(href='#') All 
+                                        |  notification
+                            li.onhover-dropdown
+                                i(data-feather='message-circle')
+                                ul.chat-dropdown.onhover-show-div.p-t-20.p-b-20
+                                  li
+                                    .media
+                                      img.img-fluid.rounded-circle.mr-3(src='../assets/images/user/2.jpg', alt='')
+                                      .status-circle.online
+                                      .media-body
+                                        span.f-w-600 Erica Hughes
+                                        p.f-12.mb-0.light-font There are many variations of passages...
+                                        p.f-12.mb-0.font-primary 1 hr ago
+                                  li
+                                    .media
+                                      img.img-fluid.rounded-circle.mr-3(src='../assets/images/user/1.jpg', alt='')
+                                      .status-circle.away
+                                      .media-body
+                                        span.f-w-600 Kori Thomas
+                                        p.f-12.mb-0.light-font There are many variations of passages...
+                                        p.f-12.mb-0.font-primary 58 mins ago
+                                  li
+                                    .media
+                                      img.img-fluid.rounded-circle.mr-3(src='../assets/images/user/4.jpg', alt='')
+                                      .status-circle.offline
+                                      .media-body
+                                        span.f-w-600 Ain Chavez
+                                        p.f-12.mb-0.light-font There are many variations of passages...
+                                        p.f-12.mb-0.font-primary 32 mins ago
+                                  li.light-font.text-center Mark all as read      
+                            //- li
+                            //-   .mobile-sidebar(class=header_status)
+                            //-       .media-body.text-right.switch-sm
+                            //-           i(data-feather='align-right')#sidebar-toggle
+                            li
+                                a.text-dark(href='#!', onclick='javascript:toggleFullScreen()')
+                                    i(data-feather='maximize')
+                            li.theme-setting
+                                i(data-feather='settings')
+                            li.onhover-dropdown.px-0
+                                span.media.user-header
+                                    img.mr-2.rounded-circle.img-35(src='../assets/images/dashboard/user.png', alt='')
+                                    span.media-body
+                                        span.f-12.f-w-600 Elana Saint
+                                        span.d-block Admin
+                                ul.profile-dropdown.onhover-show-div
+                                  li
+                                    i(data-feather='user') 
+                                    | Profile
+                                  li.f-w-600 Home
+                                  li.f-12
+                                    i(data-feather='chevron-right') 
+                                    | Inbox
+                                  li.f-12
+                                    i(data-feather='chevron-right') 
+                                    | Taskboard
+                                  li.f-12
+                                    i(data-feather='chevron-right') 
+                                    | Settings
+                                  li
+                                    i(data-feather='log-in')
+                                    | Log in  
+                    .d-lg-none.mobile-toggle.pull-right
+                        i(data-feather='more-horizontal')
+// Page Header Ends                              

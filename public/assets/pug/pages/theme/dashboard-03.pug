@@ -1,0 +1,668 @@
+- var prism                 = true;
+- var apex                  = true;
+- var clipboard             = true;
+- var customcard            = true;
+- var theme_customizer      = true;
+- var tooltip               = true;
+- var dashboard_3           = true;
+- var counter               = true;
+
+doctype html
+html(lang='en')
+    include ../../components/header-files
+    body
+        include ../../components/loader
+        // page-wrapper Start
+        #pageWrapper.page-wrapper.compact-wrapper
+            include ../../components/header
+            // Page Body Start
+            .page-body-wrapper.sidebar-icon
+                include ../../components/sidebar
+                .page-body
+                    .container-fluid
+                        .page-header
+                            .row
+                                .col-lg-6
+                                    ol.breadcrumb
+                                        li.breadcrumb-item
+                                          a(href='index.html')
+                                            i.f-16.fa.fa-home
+                                        li.breadcrumb-item Dashboard
+                                    h3 
+                                      | Social Dashboard
+                                .col-lg-6
+                                  include ../../components/bookmark
+                    // Container-fluid starts
+                    .container-fluid
+                      .row
+                        .col-xl-9.xl-100.box-col-12
+                          .row
+                            .col-xl-8.xl-60.box-col-7
+                              div
+                                h5.social-title Welcome back, Elana!
+                                p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.
+                              .card.card-with-border.resolve-complain.insta-profile
+                                .card-header.card-no-border
+                                  .media
+                                    img.img-90.align-top.m-r-15.rounded-circle(src='../assets/images/user/2.png', alt='')
+                                    .media-body
+                                      h5 Elana Saint
+                                      p.f-12  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.
+                                      ul
+                                        li
+                                          h6.counter.mb-0.font-primary.f-w-600 158
+                                          p.mb-0 Followers
+                                        li
+                                          h6.counter.mb-0.font-secondary.f-w-600 67
+                                          p.mb-0 Posts
+                                        li
+                                          h6.counter.mb-0.font-success.f-w-600 94
+                                          p.mb-0 Following
+                            .col-xl-4.xl-40.box-col-5
+                              .card.card-with-border.view-members.birthday-card.bg-primary.o-hidden
+                                .birthday-bg
+                                .card-body
+                                  .d-flex
+                                    i.icofont.icofont-birthday-cake
+                                    a(href='#').pull-right
+                                      i.icofont.icofont-arrow-right
+                                  img.img-50.align-top.m-r-15.rounded-circle(src='../assets/images/user/1.jpg', alt='')
+                                  small.d-block Today is
+                                  h4 Hileri Jecno’s Birthday!
+                                  p Leave here greetings with your best wishes on her profile page!
+                            .col-xl-4.col-md-6.xl-40.box-col-5
+                              .card.card-with-border
+                                .card-header.card-no-border
+                                  h5.d-inline-block My Profile
+                                  span.setting-round.pull-right.d-inline-block.mt-0
+                                    i.fa.fa-spin.fa-cog
+                                .card-body.socialprofile.filter-cards-view.pt-0
+                                  .media
+                                    img.img-50.img-fluid.rounded-circle.mr-3(src='../assets/images/user/1.jpg', alt='')
+                                    .media-body
+                                      h6.font-danger.f-w-600 Maria deo
+                                      span.d-block
+                                        span
+                                          i.f-14.fa.fa-comments-o  
+                                          span.px-2 Messages
+                                              span.badge.badge-pill.badge-light.ml-1 9
+                                      span.d-block
+                                        span
+                                          i.f-14.fa.fa-bell-o  
+                                          span.px-2 Notification
+                                              span.badge.badge-pill.badge-light.ml-1 9
+                                  .social-btngroup.d-flex
+                                    button.btn.btn-primary.w-100(type='button') Likes
+                                    button.btn.btn-light.w-100(type='button') View
+                                  .likes-profile.text-center
+                                    h5 
+                                      span 
+                                        i.fa.fa-heart.font-danger
+                                        |  884
+                                  div.text-center
+                                    | 35 New Likes This Week  
+                                  .customers.text-center.social-group
+                                    ul
+                                      li.d-inline-block
+                                        img.img-40.rounded-circle(src='../assets/images/user/3.jpg', alt=''
+                                        data-container='body', data-toggle='popover', data-placement='top', title='', data-original-title='Johny Waston')
+                                      li.d-inline-block
+                                        img.img-40.rounded-circle(src='../assets/images/user/5.jpg', alt=''
+                                        data-container='body', data-toggle='popover', data-placement='top', title='', data-original-title='Andew Jon')
+                                      li.d-inline-block
+                                        img.img-40.rounded-circle(src='../assets/images/user/1.jpg', alt=''
+                                        data-container='body', data-toggle='popover', data-placement='top', title='', data-original-title='Comeren Diaz')
+                                      li.d-inline-block
+                                        img.img-40.rounded-circle(src='../assets/images/user/2.png', alt=''
+                                        data-container='body', data-toggle='popover', data-placement='top', title='', data-original-title='Bucky Barnes')
+                                      li.d-inline-block
+                                        img.img-40.rounded-circle(src='../assets/images/user/8.jpg', alt=''
+                                        data-container='body', data-toggle='popover', data-placement='top', title='', data-original-title='Jason Borne')
+                                      li.d-inline-block
+                                        img.img-40.rounded-circle(src='../assets/images/user/11.png', alt='' data-container='body', data-toggle='popover', data-placement='top', title='', data-original-title='Comeren Diaz')
+                            .col-xl-8.col-md-6.xl-60.box-col-7
+                              .card.card-with-border.o-hidden.complaints
+                                .card-header.card-no-border.d-flex
+                                  h5 Page Likes
+                                  button.btn.btn-outline-light(type='button') Last Week 
+                                    i.fa.fa-caret-down
+                                .card-body.p-0
+                                  .likes-page
+                                    h4.mb-0 1,597
+                                      span.font-success.f-12
+                                        i(data-feather='arrow-up')
+                                        | 5.6%
+                                    p Total Page Likes  
+                                  .apex-social
+                                    #social-chart
+                        .col-xl-3.xl-100.box-col-12
+                          .card.card-with-border.connection
+                            .card-header
+                              h5.d-inline-block Connection
+                              span.pull-right.mt-0 879
+                            .card-body.p-0
+                              ul
+                                li
+                                  .media
+                                    img.img-40.m-r-15.rounded-circle(src='../assets/images/user/2.png', alt='')
+                                    .media-body
+                                      span.f-w-600 Jason Borne
+                                      p 
+                                        span.font-success Elisse Joson San 
+                                        | Francisco, CA
+                                li
+                                  .media
+                                    img.img-40.m-r-15.rounded-circle(src='../assets/images/user/1.jpg', alt='')
+                                    .media-body
+                                      span.f-w-600 Vincent Porter
+                                      p 
+                                        span.font-secondary Elisse Joson San 
+                                        | Francisco, CA
+                                li
+                                  .media
+                                    img.img-40.m-r-15.rounded-circle(src='../assets/images/user/3.jpg', alt='')
+                                    .media-body
+                                      span.f-w-600 Erica Hughes
+                                      p 
+                                        span.font-warning Elisse Joson San 
+                                        | Francisco, CA
+                                li
+                                  .media
+                                    img.img-40.m-r-15.rounded-circle(src='../assets/images/user/4.jpg', alt='')
+                                    .media-body
+                                      span.f-w-600 Hileri Jecno
+                                      p 
+                                       span.font-danger Elisse Joson San 
+                                       | Francisco, CA
+                                li
+                                  .media
+                                    img.img-40.m-r-15.rounded-circle(src='../assets/images/user/8.jpg', alt='')
+                                    .media-body
+                                      span.f-w-600 Ginger Johnston
+                                      p 
+                                        span.font-success Elisse Joson San 
+                                        | Francisco, CA 
+                                li
+                                  .media
+                                    img.img-40.m-r-15.rounded-circle(src='../assets/images/user/2.png', alt='')
+                                    .media-body
+                                      span.f-w-600 Jason Borne
+                                      p 
+                                        span.font-info Elisse Joson San 
+                                        | Francisco, CA
+                          .card.card-with-border.view-members
+                            .card-body
+                              .d-flex
+                                img.img-50.align-top.m-r-15.rounded-circle(src='../assets/images/user/1.jpg', alt='')
+                                ul
+                                  li
+                                    a(href='#')
+                                      i(data-feather='user-plus')
+                                  li
+                                    a(href='#')
+                                      i(data-feather='arrow-right')
+                              h6 Comeren Diaz
+                              p Explorer. Social media hero. Bacon fanatic Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        .col-sm-12.box-col-12
+                          .card.card-with-border
+                            .row.project-details.m-0.social-row.py-4
+                              .col-xl-2.col-sm-4.xl-4
+                                .project-incomes.text-center
+                                  i.font-primary(data-feather='heart')
+                                  h5.mb-0 Likes
+                                  p.mb-0 15% increase
+                              .col-xl-2.col-sm-4.xl-4
+                                .project-incomes.text-center
+                                  i.font-secondary(data-feather='edit')
+                                  h5.mb-0 Posts
+                                  p.mb-0 10% increase
+                              .col-xl-2.col-sm-4.xl-4
+                                .project-incomes.text-center
+                                  i.font-success(data-feather='share-2')
+                                  h5.mb-0 Shares
+                                  p.mb-0 38% increase
+                              .col-xl-2.col-sm-4.xl-4
+                                .project-incomes.text-center
+                                  i.font-info(data-feather='globe')
+                                  h5.mb-0 Visits
+                                  p.mb-0 38% increase
+                              .col-xl-2.col-sm-4.xl-4
+                                .project-incomes.text-center
+                                  i.font-warning(data-feather='headphones')
+                                  h5.mb-0 Songs
+                                  p.mb-0 27% increase
+                              .col-xl-2.col-sm-4.xl-4
+                                .project-incomes.text-center
+                                  i.font-danger(data-feather='award')
+                                  h5.mb-0 Awards
+                                  p.mb-0 12% increase
+                        .col-xl-4.xl-50.box-col-6
+                          .card.social-user-card.card-with-border
+                            .card-body.socialprofile
+                              .social-user-top-content.text-center
+                                img.img-fluid.rounded-circle.img-social(src='../assets/images/user/11.jpg', alt='')
+                                h4 Jason Borne
+                                span.f-12 UI/UX Designer
+                                ul
+                                  li
+                                    .badge.badge-pill.badge-light-primary Html 5
+                                  li
+                                    .badge.badge-pill.badge-light-secondary Css 3
+                                  li
+                                    .badge.badge-pill.badge-light-success Javascript
+                                  li
+                                    .badge.badge-pill.badge-light-warning React
+                                .option-social
+                                  button.btn.btn-outline-light(type='button')
+                                    i(data-feather='user-plus') 
+                                    |  Add Friend
+                                  button.btn.btn-outline-light(type='button') Remove
+                                p.mb-0 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                .customers.text-center.social-group
+                                  ul.mt-0
+                                    li.d-inline-block
+                                      img.img-40.rounded-circle(src='../assets/images/user/3.jpg', alt=''
+                                      data-container='body', data-toggle='popover', data-placement='top', title='', data-original-title='Johny Waston')
+                                    li.d-inline-block
+                                      img.img-40.rounded-circle(src='../assets/images/user/5.jpg', alt=''
+                                      data-container='body', data-toggle='popover', data-placement='top', title='', data-original-title='Andew Jon')
+                                    li.d-inline-block
+                                      img.img-40.rounded-circle(src='../assets/images/user/1.jpg', alt=''
+                                      data-container='body', data-toggle='popover', data-placement='top', title='', data-original-title='Comeren Diaz')
+                                    li.d-inline-block
+                                      img.img-40.rounded-circle(src='../assets/images/user/2.png', alt=''
+                                      data-container='body', data-toggle='popover', data-placement='top', title='', data-original-title='Bucky Barnes')
+                                    li.d-inline-block
+                                      img.img-40.rounded-circle(src='../assets/images/user/8.jpg', alt=''
+                                      data-container='body', data-toggle='popover', data-placement='top', title='', data-original-title='Jason Borne')
+                                    li.d-inline-block
+                                      span.f-12 Mutual Friends
+                            .card-footer.p-0
+                              ul
+                                li
+                                  span View Profile
+                                li
+                                  span Message
+                                  
+                        .col-xl-4.xl-50.box-col-6
+                          .card.card-with-border
+                            .card-header.card-no-border
+                              h5 Chat
+                              .card-header-right
+                                ul.list-unstyled.card-option
+                                  li
+                                    i.icofont.icofont-double-left
+                                  li
+                                    i.view-html.fa.fa-code
+                                  li
+                                    i.icofont.icofont-maximize.full-card
+                                  li
+                                    i.icofont.icofont-minus.minimize-card
+                                  li
+                                    i.icofont.icofont-refresh.reload-card
+                                  li
+                                    i.icofont.icofont-error.close-card
+                            .card-body.chat-box.messanger-chat.pt-0
+                              .chat
+                                .media.left-side-chat
+                                  img.rounded-circle.chat-user-img.img-50.m-r-20(src='../assets/images/user/12.jpg', alt='')
+                                  .media-body
+                                    span Message seen 4:07 PM
+                                    .message-main
+                                      p.mb-0.f-12 Lorem  Ipsum is  simply  dummy text  of the printing and typesetting.
+                                .media.right-side-chat
+                                  .media-body.text-right
+                                    span.f-12.d-block Message seen 4:10 PM
+                                    .message-main.pull-right
+                                      p.mb-0.text-left
+                                        | Lorem  Ipsum is  simply  dummy text  of the printing.
+                                      .clearfix
+                                  img.rounded-circle.chat-user-img.img-50.m-l-20(src='../assets/images/user/2.jpg', alt='')
+                                .media.left-side-chat
+                                  img.rounded-circle.chat-user-img.img-50.m-r-20(src='../assets/images/user/12.jpg', alt='')
+                                  .media-body
+                                    span Message seen 4:15 PM
+                                    .message-main
+                                      p Lorem  Ipsum is  simply  dummy.
+                                      ul
+                                        li
+                                          img.img-50.m-r-5.b-r-8(src='../assets/images/email/1.jpg', alt='')
+                                        li
+                                          img.img-50.b-r-8(src='../assets/images/email/2.jpg', alt='')
+                                .input-group
+                                  input#mail.form-control(type='text', placeholder='Type Your Message', name='text')
+                                  .input-group-append
+                                    span.input-group-text 
+                                      i(data-feather='send')
+                              .code-box-copy
+                                button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#example-head', title='Copy')
+                                  i.icofont.icofont-copy-alt
+                                pre
+                                  code.language-html#example-head
+                                      | &lt;!-- Cod Box Copy begin --&gt;
+                                      | &lt;div class="card-body chat-box messanger-chat"&gt;
+                                      | &lt;div class="chat"&gt;
+                                      | &lt;div class="media left-side-chat"&gt;&lt;img class="rounded-circle chat-user-img img-60 m-r-20" src="../assets/images/user/12.jpg" alt=""&gt;
+                                      | &lt;div class="media-body"&gt;&lt;span class="f-12"&gt;Message seen 4:07 PM&lt;/span&gt;
+                                      | &lt;div class="message-main"&gt;
+                                      | &lt;p class="mb-0 f-12"&gt;Lorem  Ipsum is  simply  dummy text  of the printing and typesetting.&lt;/p&gt;
+                                      | &lt;/div&gt;
+                                      | &lt;/div&gt;
+                                      | &lt;/div&gt;
+                                      | &lt;div class="media right-side-chat"&gt;
+                                      | &lt;div class="media-body text-right"&gt;&lt;span class="f-12 d-block"&gt;Message seen 4:10 PM&lt;/span&gt;
+                                      | &lt;div class="message-main pull-right"&gt;
+                                      | &lt;p class="mb-0 text-left"&gt;Lorem  Ipsum is  simply  dummy text  of the printing and typesetting industry.&lt;/p&gt;
+                                      | &lt;div class="clearfix"&gt;&lt;/div&gt;
+                                      | &lt;/div&gt;
+                                      | &lt;/div&gt;&lt;img class="rounded-circle chat-user-img img-60 m-l-20" src="../assets/images/user/2.jpg" alt=""&gt;
+                                      | &lt;/div&gt;
+                                      | &lt;div class="media left-side-chat"&gt;&lt;img class="rounded-circle chat-user-img img-60 m-r-20" src="../assets/images/user/12.jpg" alt=""&gt;
+                                      | &lt;div class="media-body"&gt;&lt;span class="f-12"&gt;Message seen 4:15 PM&lt;/span&gt;
+                                      | &lt;div class="message-main"&gt;
+                                      | &lt;p&gt;Lorem  Ipsum is  simply  dummy.&lt;/p&gt;
+                                      | &lt;/div&gt;
+                                      | &lt;/div&gt;
+                                      | &lt;/div&gt;
+                                      | &lt;/div&gt;
+                                      | &lt;div class="input-group"&gt;
+                                      | &lt;input class="form-control" id="mail" type="text" placeholder="Type Your Message" name="text"&gt;
+                                      | &lt;div class="input-group-append"&gt;&lt;span class="input-group-text"&gt; &lt;i data-feather="send"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;
+                                      | &lt;/div&gt;
+                                      | &lt;/div&gt;
+                                      | &lt;!-- Cod Box Copy end --&gt;
+
+
+
+                        .col-xl-4.xl-50.box-col-6
+                          .card.social-user-card.card-with-border
+                            .card-body.socialprofile
+                              .social-user-top-content.text-center
+                                img.img-fluid.rounded-circle.img-social(src='../assets/images/user/2.jpg', alt='')
+                                h4 Alena Ketrol
+                                span.f-12 UI/UX Designer
+                                ul
+                                  li
+                                    .badge.badge-pill.badge-light-primary Html 5
+                                  li
+                                    .badge.badge-pill.badge-light-secondary Css 3
+                                  li
+                                    .badge.badge-pill.badge-light-success Javascript
+                                  li
+                                    .badge.badge-pill.badge-light-warning React
+                                .option-social
+                                  button.btn.btn-outline-light(type='button')
+                                    i(data-feather='user-plus') 
+                                    |  Add Friend
+                                  button.btn.btn-outline-light(type='button') Remove
+                                p.mb-0 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                .customers.text-center.social-group
+                                  ul.mt-0
+                                    li.d-inline-block
+                                      img.img-40.rounded-circle(src='../assets/images/user/3.jpg', alt=''
+                                      data-container='body', data-toggle='popover', data-placement='top', title='', data-original-title='Johny Waston')
+                                    li.d-inline-block
+                                      img.img-40.rounded-circle(src='../assets/images/user/5.jpg', alt=''
+                                      data-container='body', data-toggle='popover', data-placement='top', title='', data-original-title='Andew Jon')
+                                    li.d-inline-block
+                                      img.img-40.rounded-circle(src='../assets/images/user/1.jpg', alt=''
+                                      data-container='body', data-toggle='popover', data-placement='top', title='', data-original-title='Comeren Diaz')
+                                    li.d-inline-block
+                                      img.img-40.rounded-circle(src='../assets/images/user/2.png', alt=''
+                                      data-container='body', data-toggle='popover', data-placement='top', title='', data-original-title='Bucky Barnes')
+                                    li.d-inline-block
+                                      img.img-40.rounded-circle(src='../assets/images/user/8.jpg', alt=''
+                                      data-container='body', data-toggle='popover', data-placement='top', title='', data-original-title='Jason Borne')
+                                    li.d-inline-block
+                                      span.f-12 Mutual Friends
+                            .card-footer.p-0
+                              ul
+                                li
+                                  span View Profile
+                                li
+                                  span Message
+
+                        .col-xl-4.xl-50.box-col-6
+                          .card.card-with-border
+                            .card-body
+                              .new-users-social
+                                .media
+                                  img.rounded-circle.image-radius.m-r-15(src='../assets/images/user/1.jpg', alt='')
+                                  .media-body
+                                    h6.mb-0.f-w-700 ELANA
+                                    p January, 12,2019
+                                  span.pull-right.mt-0
+                                    i(data-feather='more-vertical')
+                              img.img-fluid(alt='', src='../assets/images/social-app/social-image.png')
+                              .timeline-content
+                                p
+                                  | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sed urna in justo euismod condimentum. Fusce 
+                                  | placerat enim et odio molestie sagittis.
+                                div.like-content
+                                  span
+                                    i.fa.fa-heart.font-danger
+                                  span.pull-right.comment-number
+                                    span 20 
+                                    span
+                                      i.fa.fa-share-alt.mr-0
+                                  span.pull-right.comment-number
+                                    span 10 
+                                    span
+                                      i.fa.fa-comments-o
+                                .comments-box
+                                    .media
+                                      img.img-40.img-fluid.m-r-20.rounded-circle(alt='', src='../assets/images/user/1.jpg')
+                                      .media-body
+                                        .input-group.text-box
+                                          input.form-control.input-txt-bx(type='text', name='message-to-send', placeholder='Post Your commnets')
+                                          .input-group-append
+                                            button.btn.btn-transparent(type='button')
+                                              i.fa.fa-smile-o   
+                        .col-xl-5.xl-50.box-col-6
+                          .card.card-with-border
+                            .card-header
+                              h5 Joined Groups
+                              .joined-status
+                                .circle-dashed-box
+                                  .circle-dashed
+                                    i.fa.fa-plus
+                                img.img-30.rounded-circle(src='../assets/images/user/2.jpg', alt='')
+                                img.img-30.rounded-circle.mr-0(src='../assets/images/user/12.jpg', alt='')
+                              .card-header-right
+                                ul.list-unstyled.card-option
+                                  li
+                                    i.icofont.icofont-double-left
+                                  li
+                                    i.view-html.fa.fa-code
+                                  li
+                                    i.icofont.icofont-maximize.full-card
+                                  li
+                                    i.icofont.icofont-minus.minimize-card
+                                  li
+                                    i.icofont.icofont-refresh.reload-card
+                                  li
+                                    i.icofont.icofont-error.close-card
+                            .card-body.p-0
+                              .table-responsive.groups-table.agent-performance-table
+                                table.table
+                                  tbody
+                                    tr
+                                      td
+                                        .d-inline-block.align-middle
+                                          img.img-radius.img-40.align-top.m-r-15.rounded-circle(src='../assets/images/user/11.png', alt='')
+                                          .d-inline-block
+                                            span.f-w-600 Milano esco
+                                            span.d-block.f-12.font-primary Friends Group
+                                      td
+                                        span 28k Members
+                                      td
+                                        button.btn.badge-light-primary.btn-xs(type='button') leave group
+                                    tr
+                                      td
+                                        .d-inline-block.align-middle
+                                          img.img-radius.img-40.align-top.m-r-15.rounded-circle(src='../assets/images/user/12.png', alt='')
+                                          .d-inline-block
+                                            span.f-w-600 Anna strong
+                                            span.d-block.f-12.font-success Public Group
+                                      td
+                                        span 42k Members
+                                      td
+                                        button.btn.badge-light-success.btn-xs(type='button') leave group
+                                    tr
+                                      td
+                                        .d-inline-block.align-middle
+                                          img.img-radius.img-40.align-top.m-r-15.rounded-circle(src='../assets/images/user/4.jpg', alt='')
+                                          .d-inline-block
+                                            span.f-w-600 Elana Saint
+                                            span.d-block.f-12.font-warning Private Group
+                                      td
+                                        span 15k Members
+                                      td
+                                        button.btn.badge-light-warning.btn-xs(type='button') leave group 
+                                    tr
+                                      td
+                                        .d-inline-block.align-middle
+                                          img.img-radius.img-40.align-top.m-r-15.rounded-circle(src='../assets/images/user/5.jpg', alt='')
+                                          .d-inline-block
+                                            span.f-w-600 Andew Jon
+                                            span.d-block.f-12.font-info Public Group
+                                      td
+                                        span 37k Members
+                                      td
+                                        button.btn.badge-light-info.btn-xs(type='button') leave group
+                                    tr
+                                      td
+                                        .d-inline-block.align-middle
+                                          img.img-radius.img-40.align-top.m-r-15.rounded-circle(src='../assets/images/user/1.jpg', alt='')
+                                          .d-inline-block
+                                            span.f-w-600 Comeren Diaz
+                                            span.d-block.f-12.font-danger Friends Group
+                                      td
+                                        span 14k Members
+                                      td
+                                        button.btn.badge-light-danger.btn-xs(type='button') leave group 
+                                    tr
+                                      td
+                                        .d-inline-block.align-middle
+                                          img.img-radius.img-40.align-top.m-r-15.rounded-circle(src='../assets/images/user/8.jpg', alt='')
+                                          .d-inline-block
+                                            span.f-w-600 Jason Borne
+                                            span.d-block.f-12.font-secondary Public Group
+                                      td
+                                        span 52k Members
+                                      td
+                                        button.btn.badge-light-secondary.btn-xs(type='button') leave group  
+                              .code-box-copy
+                                button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#example-head1', title='Copy')
+                                  i.icofont.icofont-copy-alt
+                                pre
+                                  code.language-html#example-head1
+                                      | &lt;!-- Cod Box Copy begin --&gt;
+                                      | &lt;div class="table-responsive groups-table agent-performance-table"&gt;
+                                      |   &lt;table class="table"&gt;
+                                      |     &lt;tbody&gt;
+                                      |       &lt;tr&gt;
+                                      |         &lt;td&gt;
+                                      |           &lt;div class="d-inline-block align-middle"&gt;&lt;img class="img-radius img-40 align-top m-r-15 rounded-circle" src="../assets/images/user/11.png" alt=""&gt;
+                                      |             &lt;div class="d-inline-block"&gt;&lt;span class="f-w-600"&gt;Milano esco&lt;/span&gt;&lt;span class="d-block f-12 font-primary"&gt;Friends Group&lt;/span&gt;&lt;/div&gt;
+                                      |           &lt;/div&gt;
+                                      |         &lt;/td&gt;
+                                      |         &lt;td&gt;&lt;span&gt;28k Members&lt;/span&gt;&lt;/td&gt;
+                                      |         &lt;td&gt;
+                                      |           &lt;button class="btn badge-light-primary btn-xs" type="button"&gt;leave group&lt;/button&gt;
+                                      |         &lt;/td&gt;
+                                      |       &lt;/tr&gt;
+                                      |       &lt;tr&gt;
+                                      |         &lt;td&gt;
+                                      |           &lt;div class="d-inline-block align-middle"&gt;&lt;img class="img-radius img-40 align-top m-r-15 rounded-circle" src="../assets/images/user/12.png" alt=""&gt;
+                                      |             &lt;div class="d-inline-block"&gt;&lt;span class="f-w-600"&gt;Anna strong&lt;/span&gt;&lt;span class="d-block f-12 font-success"&gt;Public Group&lt;/span&gt;&lt;/div&gt;
+                                      |           &lt;/div&gt;
+                                      |         &lt;/td&gt;
+                                      |         &lt;td&gt;&lt;span&gt;42k Members&lt;/span&gt;&lt;/td&gt;
+                                      |         &lt;td&gt;
+                                      |           &lt;button class="btn badge-light-success btn-xs" type="button"&gt;leave group&lt;/button&gt;
+                                      |         &lt;/td&gt;
+                                      |       &lt;/tr&gt;
+                                      |       &lt;tr&gt;
+                                      |         &lt;td&gt;
+                                      |           &lt;div class="d-inline-block align-middle"&gt;&lt;img class="img-radius img-40 align-top m-r-15 rounded-circle" src="../assets/images/user/4.jpg" alt=""&gt;
+                                      |             &lt;div class="d-inline-block"&gt;&lt;span class="f-w-600"&gt;Elana Saint&lt;/span&gt;&lt;span class="d-block f-12 font-warning"&gt;Private Group&lt;/span&gt;&lt;/div&gt;
+                                      |           &lt;/div&gt;
+                                      |         &lt;/td&gt;
+                                      |         &lt;td&gt;&lt;span&gt;15k Members&lt;/span&gt;&lt;/td&gt;
+                                      |         &lt;td&gt;
+                                      |           &lt;button class="btn badge-light-warning btn-xs" type="button"&gt;leave group &lt;/button&gt;
+                                      |         &lt;/td&gt;
+                                      |       &lt;/tr&gt;
+                                      |       &lt;tr&gt;
+                                      |         &lt;td&gt;
+                                      |           &lt;div class="d-inline-block align-middle"&gt;&lt;img class="img-radius img-40 align-top m-r-15 rounded-circle" src="../assets/images/user/5.jpg" alt=""&gt;
+                                      |             &lt;div class="d-inline-block"&gt;&lt;span class="f-w-600"&gt;Andew Jon&lt;/span&gt;&lt;span class="d-block f-12 font-info"&gt;Public Group&lt;/span&gt;&lt;/div&gt;
+                                      |           &lt;/div&gt;
+                                      |         &lt;/td&gt;
+                                      |         &lt;td&gt;&lt;span&gt;37k Members&lt;/span&gt;&lt;/td&gt;
+                                      |         &lt;td&gt;
+                                      |           &lt;button class="btn badge-light-info btn-xs" type="button"&gt;leave group&lt;/button&gt;
+                                      |         &lt;/td&gt;
+                                      |       &lt;/tr&gt;
+                                      |       &lt;tr&gt;
+                                      |         &lt;td&gt;
+                                      |           &lt;div class="d-inline-block align-middle"&gt;&lt;img class="img-radius img-40 align-top m-r-15 rounded-circle" src="../assets/images/user/1.jpg" alt=""&gt;
+                                      |             &lt;div class="d-inline-block"&gt;&lt;span class="f-w-600"&gt;Comeren Diaz&lt;/span&gt;&lt;span class="d-block f-12 font-danger"&gt;Friends Group&lt;/span&gt;&lt;/div&gt;
+                                      |           &lt;/div&gt;
+                                      |         &lt;/td&gt;
+                                      |         &lt;td&gt;&lt;span&gt;14k Members&lt;/span&gt;&lt;/td&gt;
+                                      |         &lt;td&gt;
+                                      |           &lt;button class="btn badge-light-danger btn-xs" type="button"&gt;leave group &lt;/button&gt;
+                                      |         &lt;/td&gt;
+                                      |       &lt;/tr&gt;
+                                      |       &lt;tr&gt;
+                                      |         &lt;td&gt;
+                                      |           &lt;div class="d-inline-block align-middle"&gt;&lt;img class="img-radius img-40 align-top m-r-15 rounded-circle" src="../assets/images/user/8.jpg" alt=""&gt;
+                                      |             &lt;div class="d-inline-block"&gt;&lt;span class="f-w-600"&gt;Jason Borne&lt;/span&gt;&lt;span class="d-block f-12 font-secondary"&gt;Public Group&lt;/span&gt;&lt;/div&gt;
+                                      |           &lt;/div&gt;
+                                      |         &lt;/td&gt;
+                                      |         &lt;td&gt;&lt;span&gt;52k Members&lt;/span&gt;&lt;/td&gt;
+                                      |         &lt;td&gt;
+                                      |           &lt;button class="btn badge-light-secondary btn-xs" type="button"&gt;leave group &lt;/button&gt;
+                                      |         &lt;/td&gt;
+                                      |       &lt;/tr&gt;
+                                      |     &lt;/tbody&gt;
+                                      |   &lt;/table&gt;
+                                      | &lt;/div&gt;
+                                      | &lt;!-- Cod Box Copy end --&gt;
+                        .col-xl-3.xl-50.box-col-6
+                          .card.card-with-border
+                            .card-header
+                              h5.d-inline-block Recent Activity
+                              span.setting-round.pull-right.d-inline-block.mt-0
+                                i.fa.fa-spin.fa-cog
+                            .card-body.activity-social
+                              ul
+                                li.border-recent-success
+                                  small 10 hours Ago
+                                  p.mb-0 Commented on Video posted
+                                  P by 
+                                    a(href='#') Alena Ketrol.
+                                li.border-recent-warning
+                                  small 1 Day Ago
+                                  p.mb-0 Posted your status. “Hello, how are you?”
+                                li.border-recent-info
+                                  small 5 hours Ago
+                                  p.mb-0 Commented on photo posted
+                                  P by 
+                                    a(href='#') Jason Borne.
+                                li.border-recent-danger
+                                  small 3 hours Ago
+                                  p.mb-0 Johny Waston likes your post's.
+                                li.border-recent-success
+                                  small 18 hours Ago
+                                  p.mb-0 Andew Jon became friends with Comeren.
+                                li.border-recent-secondary
+                                  small 5 hours Ago
+                                  p.mb-0 Commented on photo posted
+                                  P by 
+                                    a(href='#') Jason Borne.
+                    // Container-fluid starts                
+                include ../../components/footer                  
+        include ../../components/footer-files

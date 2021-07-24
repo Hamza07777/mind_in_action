@@ -1,0 +1,19 @@
+/**=====================
+     74. internationalization css start
+==========================**/
+.hdg_main{
+  position: relative;
+}
+.main {
+  .langChoice{
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    padding: 10px 12px;
+    background-color: $transparent-color;
+    border-radius: $theme_radious;
+  }
+}
+/**=====================
+     74. internationalization CSS end
+==========================**/

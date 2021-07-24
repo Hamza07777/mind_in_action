@@ -1,0 +1,925 @@
+- var prism                 = true;
+- var height_equal          = true;
+- var clipboard             = true;
+- var customcard            = true;
+- var theme_customizer      = true;
+- var tooltip               = true;
+- var date_picker           = true;
+- var whether_icon          = true;
+- var counter               = true;
+- var owlcarousel           = true;
+- var general_widget        = true;
+
+doctype html
+html(lang='en')
+    include ../../components/header-files
+    body
+        include ../../components/loader
+        // page-wrapper Start
+        #pageWrapper.page-wrapper.compact-wrapper
+            include ../../components/header
+            // Page Body Start
+            .page-body-wrapper.sidebar-icon
+                include ../../components/sidebar
+                .page-body
+                    .container-fluid
+                        .page-header
+                            .row
+                                .col-lg-6
+                                    ol.breadcrumb
+                                      li.breadcrumb-item
+                                        a(href='index.html')
+                                         i.f-16.fa.fa-home
+                                      li.breadcrumb-item Widgets
+                                    h3
+                                      | General Widgets 
+                                .col-lg-6
+                                  include ../../components/bookmark
+                    // Container-fluid starts
+                    .container-fluid
+                      .row
+                        .col-sm-6.col-xl-3.col-lg-6
+                          .card.o-hidden
+                            .bg-primary.b-r-4.card-body
+                              .media.static-top-widget
+                                .align-self-center.text-center
+                                  i(data-feather="database")
+                                .media-body
+                                  span.m-0 Earnings
+                                  h4.mb-0.counter 6659
+                                  i.icon-bg(data-feather='database')
+                        .col-sm-6.col-xl-3.col-lg-6
+                          .card.o-hidden
+                            .bg-secondary.b-r-4.card-body
+                              .media.static-top-widget
+                                .align-self-center.text-center
+                                  i(data-feather="shopping-bag")
+                                .media-body
+                                  span.m-0 Products
+                                  h4.mb-0.counter 9856
+                                  i.icon-bg(data-feather='shopping-bag')
+                        .col-sm-6.col-xl-3.col-lg-6
+                          .card.o-hidden
+                            .bg-primary.b-r-4.card-body
+                              .media.static-top-widget
+                                .align-self-center.text-center
+                                  i(data-feather='message-circle')
+                                .media-body
+                                  span.m-0 Messages
+                                  h4.mb-0.counter 893
+                                  i.icon-bg(data-feather='message-circle')                        
+                        .col-sm-6.col-xl-3.col-lg-6
+                          .card.o-hidden
+                            .bg-primary.b-r-4.card-body
+                              .media.static-top-widget
+                                .align-self-center.text-center
+                                  i(data-feather='user-plus')
+                                .media-body
+                                  span.m-0 New User
+                                  h4.mb-0.counter 45631
+                                  i.icon-bg(data-feather='user-plus')
+
+                        .col-xl-6.xl-100.box-col-12
+                          .widget-joins.card.widget-arrow
+                            .row
+                              .col-sm-6.pr-0
+                                .media.border-after-xs
+                                  .align-self-center.mr-3.text-left
+                                    h6.mb-1 Sale
+                                    h4.mb-0 Today
+                                  .media-body.align-self-center
+                                    i.font-primary(data-feather='arrow-down')
+                                  .media-body
+                                    h5.mb-0
+                                      | $
+                                      span.counter 25698
+                                    span.mb-1 -$2658(36%)
+                              .col-sm-6.pl-0
+                                .media
+                                  .align-self-center.mr-3.text-left
+                                    h6.mb-1 Sale
+                                    h4.mb-0 Month
+                                  .media-body.align-self-center
+                                    i.font-primary(data-feather='arrow-up')
+                                  .media-body.pl-2
+                                    h5.mb-0
+                                      | $
+                                      span.counter 6954
+                                    span.mb-1 +$369(15%)
+                              .col-sm-6.pr-0
+                                .media.border-after-xs
+                                  .align-self-center.mr-3.text-left
+                                    h6.mb-1 Sale
+                                    h4.mb-0 Week
+                                  .media-body.align-self-center
+                                    i.font-primary(data-feather='arrow-up')
+                                  .media-body
+                                    h5.mb-0
+                                      | $
+                                      span.counter 63147
+                                    span.mb-1 +$69(65%)
+                              .col-sm-6.pl-0
+                                .media
+                                  .align-self-center.mr-3.text-left
+                                    h6.mb-1 Sale
+                                    h4.mb-0 Year
+                                  .media-body.align-self-center.pl-3
+                                    i.font-primary(data-feather='arrow-up')
+                                  .media-body.pl-2
+                                    h5.mb-0
+                                      | $
+                                      span.counter 963198
+                                    span.mb-1 +$3654(90%)          
+                        .col-xl-6.xl-100.box-col-12
+                          .widget-joins.card
+                            .row
+                              .col-sm-6.pr-0
+                                .media.border-after-xs
+                                  .align-self-center.mr-3
+                                    | 68%
+                                    i.fa.fa-angle-up.ml-2
+                                  .media-body.details.pl-3
+                                    span.mb-1 New
+                                    h4.mb-0.counter.digits 6982
+                                  .media-body.align-self-center
+                                    i.font-primary.float-left.ml-2(data-feather='shopping-bag')
+                              .col-sm-6.pl-0
+                                .media
+                                  .align-self-center.mr-3.digits
+                                    | 12%
+                                    i.fa.fa-angle-down.ml-2
+                                  .media-body.details.pl-3
+                                    span.mb-1 Pending
+                                    h4.mb-0.counter.digits 783
+                                  .media-body.align-self-center
+                                    i.font-primary.float-left.ml-3(data-feather='layers')
+                              .col-sm-6.pr-0
+                                .media.border-after-xs
+                                  .align-self-center.mr-3
+                                    | 68%
+                                    i.fa.fa-angle-up.ml-2
+                                  .media-body.details.pl-3.pt-0
+                                    span.mb-1 Done
+                                    h4.mb-0.counter.digits 3674
+                                  .media-body.align-self-center
+                                    i.font-primary.float-left.ml-2(data-feather='shopping-cart')
+                              .col-sm-6.pl-0
+                                .media
+                                  .align-self-center.mr-3
+                                    | 68%
+                                    i.fa.fa-angle-up.ml-2
+                                  .media-body.details.pl-3.pt-0
+                                    span.mb-1 Cancel
+                                    h4.mb-0.counter.digits 069
+                                  .media-body.align-self-center
+                                    i.font-primary.float-left.ml-2(data-feather='dollar-sign')
+
+                        
+                        .col-xl-4.col-lg-12.box-col-12
+                          div
+                            .card
+                              .card-header
+                                h5.text-uppercase Recent Activity
+                                .card-header-right
+                                  ul.list-unstyled.card-option
+                                    li
+                                      i.icofont.icofont-double-left
+                                    li
+                                      i.view-html.fa.fa-code
+                                    li
+                                      i.icofont.icofont-maximize.full-card
+                                    li
+                                      i.icofont.icofont-minus.minimize-card
+                                    li
+                                      i.icofont.icofont-refresh.reload-card
+                                    li
+                                      i.icofont.icofont-error.close-card
+                              .card-body
+                                ul.crm-activity
+                                  li.media
+                                    span.mr-3.font-primary A
+                                    .align-self-center.media-body
+                                      h6.mt-0 Any desktop publishing packages and web page editors.
+                                      ul.dates
+                                        li.digits 25 July 2017
+                                        li.digits 20 hours ago
+                                  li.media
+                                    span.mr-3.font-secondary C
+                                    .align-self-center.media-body
+                                      h6.mt-0 Contrary to popular belief, Lorem Ipsum is not simply. 
+                                      ul.dates
+                                        li.digits 25 July 2017
+                                        li.digits 20 hours ago      
+                                  li.media
+                                    span.mr-3.font-primary E
+                                    .align-self-center.media-body
+                                      h6.mt-0 Established fact that a reader will be distracted 
+                                      ul.dates
+                                        li.digits 25 July 2017
+                                        li.digits 20 hours ago
+                                  li.media
+                                    span.mr-3.font-secondary H
+                                    .align-self-center.media-body
+                                      h6.mt-0 H-Code - A premium portfolio template from ThemeZaa 
+                                      ul.dates
+                                        li.digits 25 July 2017
+                                        li.digits 20 hours ago      
+                                  li.media
+                                    span.mr-3.font-primary T
+                                    .align-self-center.media-body
+                                      h6.mt-0 There isn't anything embarrassing hidden.
+                                      ul.dates
+                                        li.digits 25 July 2017
+                                        li.digits 20 hours ago
+                                  li.media
+                                    .align-self-center.media-body
+                                      ul.dates
+                                        li.digits 25 July 2017
+                                        li.digits 20 hours ago
+                                .code-box-copy
+                                  button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#example-head', title='Copy')
+                                    i.icofont.icofont-copy-alt
+                                  pre
+                                    code.language-html#example-head
+                                        | &lt;!-- Cod Box Copy begin --&gt;
+                                        | &lt;ul class=&quot;crm-activity&quot;&gt;
+                                        |   &lt;li class=&quot;media&quot;&gt;
+                                        |     &lt;span class=&quot;mr-3 font-primary&quot;&gt;A&lt;/span&gt;
+                                        |     &lt;div class=&quot;align-self-center media-body&quot;&gt;
+                                        |       &lt;h6 class=&quot;mt-0&quot;&gt;Any desktop publishing packages and web page editors.&lt;/h6&gt;
+                                        |       &lt;ul class=&quot;dates&quot;&gt;
+                                        |         &lt;li class=&quot;digits&quot;&gt;25 July 2017&lt;/li&gt;
+                                        |         &lt;li class=&quot;digits&quot;&gt;20 hours ago&lt;/li&gt;
+                                        |       &lt;/ul&gt;
+                                        |     &lt;/div&gt;
+                                        |   &lt;/li&gt;
+                                        |   &lt;li class=&quot;media&quot;&gt;
+                                        |     &lt;span class=&quot;mr-3 font-secondary&quot;&gt;C&lt;/span&gt;
+                                        |     &lt;div class=&quot;align-self-center media-body&quot;&gt;
+                                        |       &lt;h6 class=&quot;mt-0&quot;&gt;Contrary to popular belief, Lorem Ipsum is not simply.&lt;/h6&gt;
+                                        |       &lt;ul class=&quot;dates&quot;&gt;
+                                        |         &lt;li class=&quot;digits&quot;&gt;25 July 2017&lt;/li&gt;
+                                        |         &lt;li class=&quot;digits&quot;&gt;20 hours ago&lt;/li&gt;
+                                        |       &lt;/ul&gt;
+                                        |     &lt;/div&gt;
+                                        |   &lt;/li&gt;
+                                        |   &lt;li class=&quot;media&quot;&gt;
+                                        |     &lt;span class=&quot;mr-3 font-primary&quot;&gt;E&lt;/span&gt;
+                                        |     &lt;div class=&quot;align-self-center media-body&quot;&gt;
+                                        |       &lt;h6 class=&quot;mt-0&quot;&gt;Established fact that a reader will be distracted&lt;/h6&gt;
+                                        |       &lt;ul class=&quot;dates&quot;&gt;
+                                        |         &lt;li class=&quot;digits&quot;&gt;25 July 2017&lt;/li&gt;
+                                        |         &lt;li class=&quot;digits&quot;&gt;20 hours ago&lt;/li&gt;
+                                        |       &lt;/ul&gt;
+                                        |     &lt;/div&gt;
+                                        |   &lt;/li&gt;
+                                        |   &lt;li class=&quot;media&quot;&gt;
+                                        |     &lt;span class=&quot;mr-3 font-secondary&quot;&gt;H&lt;/span&gt;
+                                        |     &lt;div class=&quot;align-self-center media-body&quot;&gt;
+                                        |       &lt;h6 class=&quot;mt-0&quot;&gt;H-Code - A premium portfolio template from ThemeZaa&lt;/h6&gt;
+                                        |       &lt;ul class=&quot;dates&quot;&gt;
+                                        |         &lt;li class=&quot;digits&quot;&gt;25 July 2017&lt;/li&gt;
+                                        |         &lt;li class=&quot;digits&quot;&gt;20 hours ago&lt;/li&gt;
+                                        |       &lt;/ul&gt;
+                                        |     &lt;/div&gt;
+                                        |   &lt;/li&gt;
+                                        |   &lt;li class=&quot;media&quot;&gt;
+                                        |     &lt;span class=&quot;mr-3 font-primary&quot;&gt;T&lt;/span&gt;
+                                        |     &lt;div class=&quot;align-self-center media-body&quot;&gt;
+                                        |       &lt;h6 class=&quot;mt-0&quot;&gt;There isn't anything embarrassing hidden.&lt;/h6&gt;
+                                        |       &lt;ul class=&quot;dates&quot;&gt;
+                                        |         &lt;li class=&quot;digits&quot;&gt;25 July 2017&lt;/li&gt;
+                                        |         &lt;li class=&quot;digits&quot;&gt;20 hours ago&lt;/li&gt;
+                                        |       &lt;/ul&gt;
+                                        |     &lt;/div&gt;
+                                        |   &lt;/li&gt;
+                                        |   &lt;li class=&quot;media&quot;&gt;
+                                        |     &lt;div class=&quot;align-self-center media-body&quot;&gt;
+                                        |       &lt;ul class=&quot;dates&quot;&gt;
+                                        |         &lt;li class=&quot;digits&quot;&gt;25 July 2017&lt;/li&gt;
+                                        |         &lt;li class=&quot;digits&quot;&gt;20 hours ago&lt;/li&gt;
+                                        |       &lt;/ul&gt;
+                                        |     &lt;/div&gt;
+                                        |   &lt;/li&gt;
+                                        | &lt;/ul&gt;
+                                        | &lt;!-- Cod Box Copy end --&gt;
+                        .col-xl-4.box-col-6
+                          .card.custom-card
+                            .card-header
+                              img.img-fluid(src='../assets/images/user-card/3.jpg', alt='')
+                            .card-profile
+                              img.rounded-circle(src='../assets/images/avtar/3.jpg', alt='')
+                            ul.card-social
+                              li
+                                a(href='#')
+                                  i.fa.fa-facebook
+                              li
+                                a(href='#')
+                                  i.fa.fa-google-plus
+                              li
+                                a(href='#')
+                                  i.fa.fa-twitter
+                              li
+                                a(href='#')
+                                  i.fa.fa-instagram
+                              li
+                                a(href='#')
+                                  i.fa.fa-rss
+                            .text-center.profile-details
+                              h4 Scarlett john
+                              h6 Manager
+                            .card-footer.row
+                              .col-4.col-sm-4
+                                h6 Follower
+                                h3.counter 9564
+                              .col-4.col-sm-4
+                                h6 Following
+                                h3
+                                  span.counter 49
+                                  | K
+                              .col-4.col-sm-4
+                                h6 Total Post
+                                h3
+                                  span.counter 96
+                                  | M
+                        .col-xl-4.box-col-6
+                          .card.testimonial.text-center
+                            .card-body
+                              #owl-carousel-testimonial.owl-carousel.owl-theme
+                                .item
+                                  i.icon-quote-left
+                                  p
+                                    | Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia
+                                  img.img-80(src='../assets/images/dashboard/boy-2.png', alt='')
+                                  h5.font-primary Poio klot
+                                  span Developer
+                                .item
+                                  i.icon-quote-left
+                                  p
+                                    | Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia
+                                  img.img-80(src='../assets/images/dashboard/boy-2.png', alt='')
+                                  h5.font-primary Poio klot
+                                  span Developer
+                          .card.xl-none
+                            .ecommerce-widget.card-body
+                              .row
+                                .col-6
+                                  span New Order
+                                  h3.total-num.counter 25639
+                                .col-6
+                                  .text-md-right
+                                    ul
+                                      li
+                                        | Profit
+                                        span.product-stts.font-primary.ml-2
+                                          | 8989
+                                          i.icon-angle-up.f-12.ml-1
+                                      li
+                                        | Loss
+                                        span.product-stts.font-primary.ml-2
+                                          | 2560
+                                          i.icon-angle-down.f-12.ml-1
+                              .progress-showcase
+                                .progress.lg-progress-bar
+                                  .progress-bar.bg-primary(role='progressbar', style='width: 70%', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100')                                                
+                        .col-sm-6.col-xl-3.xl-50.col-lg-6.box-col-6
+                          .card.social-widget-card
+                            .card-body
+                              .redial-social-widget.radial-bar-70(data-label='50%')
+                                i.fa.fa-facebook.font-primary
+                              h5.b-b-light.pb-4.pt-3.text-center Facebook
+                              .row
+                                .col.text-center.b-r-light
+                                  span Post
+                                  h4.counter.mb-0 6589
+                                .col.text-center
+                                  span Like
+                                  h4.counter.mb-0 75269
+                        .col-sm-6.col-xl-3.xl-50.col-lg-6.box-col-6
+                          .card.social-widget-card
+                            .card-body
+                              .redial-social-widget.radial-bar-70(data-label='50%')
+                                i.fa.fa-twitter.font-primary
+                              h5.b-b-light.pb-4.pt-3.text-center Twitter
+                              .row
+                                .col.text-center.b-r-light
+                                  span Post
+                                  h4.counter.mb-0 6589
+                                .col.text-center
+                                  span Follower
+                                  h4.counter.mb-0 75269
+                        .col-sm-6.col-xl-3.xl-50.col-lg-6.box-col-6
+                          .card.social-widget-card
+                            .card-body
+                              .redial-social-widget.radial-bar-70(data-label='50%')
+                                i.fa.fa-linkedin.font-primary
+                              h5.b-b-light.pb-4.pt-3.text-center linkedin
+                              .row
+                                .col.text-center.b-r-light
+                                  span Post
+                                  h4.counter.mb-0 1234
+                                .col.text-center
+                                  span linkedin
+                                  h4.counter.mb-0 4369
+                        .col-sm-6.col-xl-3.xl-50.col-lg-6.box-col-6
+                          .card.social-widget-card
+                            .card-body
+                              .redial-social-widget.radial-bar-70(data-label='50%')
+                                i.fa.fa-google-plus.font-primary
+                              h5.b-b-light.pb-4.pt-3.text-center Google +
+                              .row
+                                .col.text-center.b-r-light
+                                  span Post
+                                  h4.counter.mb-0 369
+                                .col.text-center
+                                  span Follower
+                                  h4.counter.mb-0 3458
+                        .col-md-4.col-sm-12
+                          .card.browser-widget
+                            .media.card-body
+                              .media-img
+                                img(src='../assets/images/dashboard/chrome.png', alt='')
+                              .media-body.align-self-center
+                                div
+                                  p Daily 
+                                  h4
+                                    span.counter 36
+                                    | %
+                                div
+                                  p Month 
+                                  h4
+                                    span.counter 96
+                                    | %
+                                div
+                                  p Week 
+                                  h4
+                                    span.counter 46
+                                    | %
+                        .col-md-4.col-sm-12
+                          .card.browser-widget
+                            .media.card-body
+                              .media-img
+                                img(src='../assets/images/dashboard/firefox.png', alt='')
+                              .media-body.align-self-center
+                                div
+                                  p Daily 
+                                  h4
+                                    span.counter 36
+                                    | %
+                                div
+                                  p Month 
+                                  h4
+                                    span.counter 96
+                                    | %
+                                div
+                                  p Week 
+                                  h4
+                                    span.counter 46
+                                    | %
+                        .col-md-4.col-sm-12
+                          .card.browser-widget
+                            .media.card-body
+                              .media-img
+                                img(src='../assets/images/dashboard/safari.png', alt='')
+                              .media-body.align-self-center
+                                div
+                                  p Daily 
+                                  h4
+                                    span.counter 36
+                                    | %
+                                div
+                                  p Month 
+                                  h4
+                                    span.counter 96
+                                    | %
+                                div
+                                  p Week 
+                                  h4
+                                    span.counter 46
+                                    | %
+                        .col-xl-6.xl-100.box-col-12
+                          .card
+                            .card-header
+                              h5 PRODUCTS CART
+                              .card-header-right
+                                ul.list-unstyled.card-option
+                                  li
+                                    i.icofont.icofont-double-left
+                                  li
+                                    i.view-html.fa.fa-code
+                                  li
+                                    i.icofont.icofont-maximize.full-card
+                                  li
+                                    i.icofont.icofont-minus.minimize-card
+                                  li
+                                    i.icofont.icofont-refresh.reload-card
+                                  li
+                                    i.icofont.icofont-error.close-card
+                            .card-body
+                              .user-status.table-responsive
+                                table.table.table-bordernone
+                                  thead
+                                    tr
+                                      th(scope='col') Details
+                                      th(scope='col') Quantity
+                                      th(scope='col') Status
+                                      th(scope='col') Price
+                                  tbody
+                                    tr
+                                      td Simply dummy text of the printing
+                                      td.digits 1
+                                      td.font-primary Pending
+                                      td
+                                        .span.badge.badge-pill.pill-badge-secondary 6523
+                                    tr
+                                      td Long established
+                                      td.digits 5
+                                      td.font-secondary Cancle
+                                      td
+                                        .span.badge.badge-pill.pill-badge-success 6523
+                                    tr
+                                      td sometimes by accident
+                                      td.digits 10
+                                      td.font-secondary Cancle
+                                      td
+                                        .span.badge.badge-pill.pill-badge-warning 6523
+                                    tr
+                                      td Classical Latin literature
+                                      td.digits 9
+                                      td.font-primary Return
+                                      td
+                                        .span.badge.badge-pill.pill-badge-primary 6523
+                                    tr
+                                      td keep the site on the Internet
+                                      td.digits 8
+                                      td.font-primary Pending
+                                      td
+                                        .span.badge.badge-pill.pill-badge-danger 6523
+                                    tr
+                                      td Molestiae consequatur
+                                      td.digits 3
+                                      td.font-secondary Cancle
+                                      td
+                                        .span.badge.badge-pill.pill-badge-info 6523
+                                    tr
+                                      td Pain can procure
+                                      td.digits 8
+                                      td.font-primary Return
+                                      td
+                                        .span.badge.badge-pill.pill-badge-primary 6523
+                              .code-box-copy
+                                button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#example-head1', title='Copy')
+                                  i.icofont.icofont-copy-alt
+                                pre
+                                  code.language-html#example-head1
+                                      | &lt;!-- Cod Box Copy begin --&gt;
+                                      | &lt;div class=&quot;user-status table-responsive&quot;&gt;
+                                      |   &lt;table class=&quot;table table-bordernone&quot;&gt;
+                                      |     &lt;thead&gt;
+                                      |       &lt;tr&gt;
+                                      |         &lt;th scope=&quot;col&quot;&gt;Details&lt;/th&gt;
+                                      |         &lt;th scope=&quot;col&quot;&gt;Quantity&lt;/th&gt;
+                                      |         &lt;th scope=&quot;col&quot;&gt;Status&lt;/th&gt;
+                                      |         &lt;th scope=&quot;col&quot;&gt;Price&lt;/th&gt;
+                                      |       &lt;/tr&gt;
+                                      |     &lt;/thead&gt;
+                                      |     &lt;tbody&gt;
+                                      |       &lt;tr&gt;
+                                      |         &lt;td&gt;Simply dummy text of the printing&lt;/td&gt;
+                                      |         &lt;td class=&quot;digits&quot;&gt;1&lt;/td&gt;
+                                      |         &lt;td class=&quot;font-primary&quot;&gt;Pending&lt;/td&gt;
+                                      |         &lt;td class=&quot;span badge badge-pill pill-badge-secondary&quot;&gt;6523&lt;/td&gt;
+                                      |       &lt;/tr&gt;
+                                      |       &lt;tr&gt;
+                                      |         &lt;td&gt;Long established&lt;/td&gt;
+                                      |         &lt;td class=&quot;digits&quot;&gt;5&lt;/td&gt;
+                                      |         &lt;td class=&quot;font-secondary&quot;&gt;cancle&lt;/td&gt;
+                                      |         &lt;td class=&quot;span badge badge-pill pill-badge-success&quot;&gt;6523&lt;/td&gt;
+                                      |       &lt;/tr&gt;
+                                      |       &lt;tr&gt;
+                                      |         &lt;td&gt;sometimes by accident&lt;/td&gt;
+                                      |         &lt;td class=&quot;digits&quot;&gt;10&lt;/td&gt;
+                                      |         &lt;td class=&quot;font-secondary&quot;&gt;cancle&lt;/td&gt;
+                                      |         &lt;td class=&quot;span badge badge-pill pill-badge-warning&quot;&gt;6523&lt;/td&gt;
+                                      |       &lt;/tr&gt;
+                                      |       &lt;tr&gt;
+                                      |         &lt;td&gt;Classical Latin literature&lt;/td&gt;
+                                      |         &lt;td class=&quot;digits&quot;&gt;9&lt;/td&gt;
+                                      |         &lt;td class=&quot;font-primary&quot;&gt;Return&lt;/td&gt;
+                                      |         &lt;td class=&quot;span badge badge-pill pill-badge-primary&quot;&gt;6523&lt;/td&gt;
+                                      |       &lt;/tr&gt;
+                                      |       &lt;tr&gt;
+                                      |         &lt;td&gt;keep the site on the Internet&lt;/td&gt;
+                                      |         &lt;td class=&quot;digits&quot;&gt;8&lt;/td&gt;
+                                      |         &lt;td class=&quot;font-primary&quot;&gt;Pending&lt;/td&gt;
+                                      |         &lt;td class=&quot;span badge badge-pill pill-badge-danger&quot;&gt;6523&lt;/td&gt;
+                                      |       &lt;/tr&gt;
+                                      |       &lt;tr&gt;
+                                      |         &lt;td&gt;Molestiae consequatur&lt;/td&gt;
+                                      |         &lt;td class=&quot;digits&quot;&gt;3&lt;/td&gt;
+                                      |         &lt;td class=&quot;font-secondary&quot;&gt;cancle&lt;/td&gt;
+                                      |         &lt;td class=&quot;span badge badge-pill pill-badge-info&quot;&gt;6523&lt;/td&gt;
+                                      |       &lt;/tr&gt;
+                                      |       &lt;tr&gt;
+                                      |         &lt;td&gt;Pain can procure&lt;/td&gt;
+                                      |         &lt;td class=&quot;digits&quot;&gt;8&lt;/td&gt;
+                                      |         &lt;td class=&quot;font-primary&quot;&gt;Return&lt;/td&gt;
+                                      |         &lt;td class=&quot;span badge badge-pill pill-badge-primary&quot;&gt;6523&lt;/td&gt;
+                                      |       &lt;/tr&gt;
+                                      |     &lt;/tbody&gt;
+                                      |   &lt;/table&gt;
+                                      | &lt;/div&gt;
+                                      | &lt;!-- Cod Box Copy end --&gt;
+                        .col-xl-6.xl-100.box-col-12
+                          .card
+                            .card-header
+                              h5 EMPLOYEE STATUS
+                              .card-header-right
+                                ul.list-unstyled.card-option
+                                  li
+                                    i.icofont.icofont-double-left
+                                  li
+                                    i.view-html.fa.fa-code
+                                  li
+                                    i.icofont.icofont-maximize.full-card
+                                  li
+                                    i.icofont.icofont-minus.minimize-card
+                                  li
+                                    i.icofont.icofont-refresh.reload-card
+                                  li
+                                    i.icofont.icofont-error.close-card
+                            .card-body
+                              .user-status.table-responsive
+                                table.table.table-bordernone
+                                  thead
+                                    tr
+                                      th(scope='col') Name
+                                      th(scope='col') Designation
+                                      th(scope='col') Skill Level
+                                      th(scope='col') Experience
+                                  tbody
+                                    tr
+                                      td.bd-t-none.u-s-tb
+                                        .align-middle.image-sm-size
+                                          img.img-radius.align-top.m-r-15.rounded-circle(src='../assets/images/user/4.jpg', alt='')
+                                          .d-inline-block
+                                            h6
+                                              | John Deo 
+                                              span.text-muted.digits (14+ Online)
+                                      td Designer
+                                      td
+                                        .progress-showcase
+                                          .progress(style='height: 8px;')
+                                            .progress-bar.bg-primary(role='progressbar', style='width: 30%', aria-valuenow='50', aria-valuemin='0', aria-valuemax='100')
+                                      td.digits 2 Year
+                                    tr
+                                      td.bd-t-none.u-s-tb
+                                        .align-middle.image-sm-size
+                                          img.img-radius.align-top.m-r-15.rounded-circle(src='../assets/images/user/1.jpg', alt='')
+                                          .d-inline-block
+                                            h6
+                                              | Holio Mako 
+                                              span.text-muted.digits (250+ Online)
+                                      td Developer
+                                      td
+                                        .progress-showcase
+                                          .progress(style='height: 8px;')
+                                            .progress-bar.bg-secondary(role='progressbar', style='width: 70%', aria-valuenow='50', aria-valuemin='0', aria-valuemax='100')
+                                      td.digits 3 Year
+                                    tr
+                                      td.bd-t-none.u-s-tb
+                                        .align-middle.image-sm-size
+                                          img.img-radius.align-top.m-r-15.rounded-circle(src='../assets/images/user/5.jpg', alt='')
+                                          .d-inline-block
+                                            h6
+                                              | Mohsib lara
+                                              span.text-muted.digits (99+ Online)
+                                      td Tester
+                                      td
+                                        .progress-showcase
+                                          .progress(style='height: 8px;')
+                                            .progress-bar.bg-primary(role='progressbar', style='width: 60%', aria-valuenow='50', aria-valuemin='0', aria-valuemax='100')
+                                      td.digits 5 Month
+                                    tr
+                                      td.bd-t-none.u-s-tb
+                                        .align-middle.image-sm-size
+                                          img.img-radius.align-top.m-r-15.rounded-circle(src='../assets/images/user/6.jpg', alt='')
+                                          .d-inline-block
+                                            h6
+                                              | Hileri Soli 
+                                              span.text-muted.digits (150+ Online)
+                                      td Designer
+                                      td
+                                        .progress-showcase
+                                          .progress(style='height: 8px;')
+                                            .progress-bar.bg-secondary(role='progressbar', style='width: 30%', aria-valuenow='50', aria-valuemin='0', aria-valuemax='100')
+                                      td.digits 3 Month
+                                    tr
+                                      td.bd-t-none.u-s-tb
+                                        .align-middle.image-sm-size
+                                          img.img-radius.align-top.m-r-15.rounded-circle(src='../assets/images/user/7.jpg', alt='')
+                                          .d-inline-block
+                                            h6
+                                              | Pusiz bia 
+                                              span.text-muted.digits (14+ Online)
+                                      td Designer
+                                      td
+                                        .progress-showcase
+                                          .progress(style='height: 8px;')
+                                            .progress-bar.bg-primary(role='progressbar', style='width: 90%', aria-valuenow='50', aria-valuemin='0', aria-valuemax='100')
+                                      td.digits 5 Year
+                              .code-box-copy
+                                button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#example-head2', title='Copy')
+                                  i.icofont.icofont-copy-alt
+                                pre
+                                  code.language-html#example-head2
+                                      | &lt;!-- Cod Box Copy begin --&gt;
+                                      | &lt;div class=&quot;user-status table-responsive&quot;&gt;
+                                      |   &lt;table class=&quot;table table-bordernone&quot;&gt;
+                                      |     &lt;thead&gt;
+                                      |       &lt;tr&gt;
+                                      |         &lt;th scope=&quot;col&quot;&gt;Name&lt;/th&gt;
+                                      |         &lt;th scope=&quot;col&quot;&gt;Designation&lt;/th&gt;
+                                      |         &lt;th scope=&quot;col&quot;&gt;Skill Level&lt;/th&gt;
+                                      |         &lt;th scope=&quot;col&quot;&gt;Experience&lt;/th&gt;
+                                      |       &lt;/tr&gt;
+                                      |     &lt;/thead&gt;
+                                      |     &lt;tbody&gt;
+                                      |       &lt;tr&gt;
+                                      |         &lt;td class=&quot;bd-t-none u-s-tb&quot;&gt;
+                                      |           &lt;div class=&quot;align-middle image-sm-size&quot;&gt;
+                                      |             &lt;img src=&quot;../assets/images/user/4.jpg&quot; atl=&quot;user&quot; class=&quot;img-radius align-top m-r-15 rounded-circle&quot;&gt;
+                                      |             &lt;div class=&quot;d-inline-block&quot;&gt;&gt;
+                                      |               &lt;h6&gt;John Deo &lt;span class=&quot;text-muted digits&quot;&gt;(14+ Online)&lt;/span&gt;&lt;/h6&gt;
+                                      |             &lt;/div&gt;
+                                      |           &lt;/div&gt;
+                                      |         &lt;/td&gt;
+                                      |         &lt;td&gt;Designer&lt;/td&gt;
+                                      |         &lt;td&gt;
+                                      |           &lt;div class=&quot;progress-showcase&quot;&gt;
+                                      |             &lt;div class=&quot;progress&quot; style=&quot;height:8px;&quot;&gt;
+                                      |               &lt;div class=&quot;progress-bar bg-primary&quot; role=&quot;progressbar&quot; style=&quot;width: 30%&quot; aria-valuenow=&quot;50&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;&lt;/div&gt;
+                                      |             &lt;/div&gt;
+                                      |           &lt;/div&gt;
+                                      |         &lt;/td&gt;
+                                      |         &lt;td&gt;class=&quot;digits&quot;&gt;2 Year&lt;/td&gt;
+                                      |       &lt;/tr&gt;
+                                      |       &lt;tr&gt;
+                                      |         &lt;td class=&quot;bd-t-none u-s-tb&quot;&gt;
+                                      |           &lt;div class=&quot;align-middle image-sm-size&quot;&gt;
+                                      |             &lt;img src=&quot;../assets/images/user/1.jpg&quot; atl=&quot;user&quot; class=&quot;img-radius align-top m-r-15 rounded-circle&quot;&gt;
+                                      |             &lt;div class=&quot;d-inline-block&quot;&gt;&gt;
+                                      |               &lt;h6&gt;Holio Mako &lt;span class=&quot;text-muted digits&quot;&gt;(250+ Online)&lt;/span&gt;&lt;/h6&gt;
+                                      |             &lt;/div&gt;
+                                      |           &lt;/div&gt;
+                                      |         &lt;/td&gt;
+                                      |         &lt;td&gt;Developer&lt;/td&gt;
+                                      |         &lt;td&gt;
+                                      |           &lt;div class=&quot;progress-showcase&quot;&gt;
+                                      |             &lt;div class=&quot;progress&quot; style=&quot;height:8px;&quot;&gt;
+                                      |               &lt;div class=&quot;progress-bar bg-secondary&quot; role=&quot;progressbar&quot; style=&quot;width: 70%&quot; aria-valuenow=&quot;50&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;&lt;/div&gt;
+                                      |             &lt;/div&gt;
+                                      |           &lt;/div&gt;
+                                      |         &lt;/td&gt;
+                                      |         &lt;td&gt;class=&quot;digits&quot;&gt;3 Year&lt;td&gt;
+                                      |       &lt;/tr&gt;
+                                      |       &lt;tr&gt;
+                                      |         &lt;td class=&quot;bd-t-none u-s-tb&quot;&gt;
+                                      |           &lt;div class=&quot;align-middle image-sm-size&quot;&gt;
+                                      |             &lt;img src=&quot;../assets/images/user/5.jpg&quot; atl=&quot;user&quot; class=&quot;img-radius align-top m-r-15 rounded-circle&quot;&gt;
+                                      |             &lt;div class=&quot;d-inline-block&quot;&gt;&gt;
+                                      |               &lt;h6&gt;Mohsib lara&lt;span class=&quot;text-muted digits&quot;&gt;(99+ Online)&lt;/span&gt;&lt;/h6&gt;
+                                      |             &lt;/div&gt;
+                                      |           &lt;/div&gt;
+                                      |         &lt;/td&gt;
+                                      |         &lt;td&gt;Tester&lt;/td&gt;
+                                      |         &lt;td&gt;
+                                      |           &lt;div class=&quot;progress-showcase&quot;&gt;
+                                      |             &lt;div class=&quot;progress&quot; style=&quot;height:8px;&quot;&gt;
+                                      |               &lt;div class=&quot;progress-bar bg-primary&quot; role=&quot;progressbar&quot; style=&quot;width: 60%&quot; aria-valuenow=&quot;50&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;&lt;/div&gt;
+                                      |             &lt;/div&gt;
+                                      |           &lt;/div&gt;
+                                      |         &lt;/td&gt;
+                                      |         &lt;td&gt;class=&quot;digits&quot;&gt;5 Month&lt;/td&gt;
+                                      |       &lt;/tr&gt;
+                                      |       &lt;tr&gt;
+                                      |         &lt;td class=&quot;bd-t-none u-s-tb&quot;&gt;
+                                      |           &lt;div class=&quot;align-middle image-sm-size&quot;&gt;
+                                      |             &lt;img src=&quot;../assets/images/user/6.jpg&quot; atl=&quot;user&quot; class=&quot;img-radius align-top m-r-15 rounded-circle&quot;&gt;
+                                      |             &lt;div class=&quot;d-inline-block&quot;&gt;&gt;
+                                      |               &lt;h6&gt;Hileri Soli &lt;span class=&quot;text-muted digits&quot;&gt;(150+ Online)&lt;/span&gt;&lt;/h6&gt;
+                                      |             &lt;/div&gt;
+                                      |           &lt;/div&gt;
+                                      |         &lt;/td&gt;
+                                      |         &lt;td&gt;Designer&lt;/td&gt;
+                                      |         &lt;td&gt;
+                                      |           &lt;div class=&quot;progress-showcase&quot;&gt;
+                                      |             &lt;div class=&quot;progress&quot; style=&quot;height:8px;&quot;&gt;
+                                      |               &lt;div class=&quot;progress-bar bg-secondary&quot; role=&quot;progressbar&quot; style=&quot;width: 30%&quot; aria-valuenow=&quot;50&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;&lt;/div&gt;
+                                      |             &lt;/div&gt;
+                                      |           &lt;/div&gt;
+                                      |         &lt;/td&gt;
+                                      |         &lt;td&gt;class=&quot;digits&quot;&gt;3 Month&lt;/td&gt;
+                                      |       &lt;/tr&gt;
+                                      |       &lt;tr&gt;
+                                      |         &lt;td class=&quot;bd-t-none u-s-tb&quot;&gt;
+                                      |           &lt;div class=&quot;align-middle image-sm-size&quot;&gt;
+                                      |             &lt;img src=&quot;../assets/images/user/7.jpg&quot; atl=&quot;user&quot; class=&quot;img-radius align-top m-r-15 rounded-circle&quot;&gt;
+                                      |             &lt;div class=&quot;d-inline-block&quot;&gt;&gt;
+                                      |               &lt;h6&gt;Pusiz bia &lt;span class=&quot;text-muted digits&quot;&gt;(14+ Online)&lt;/span&gt;&lt;/h6&gt;
+                                      |             &lt;/div&gt;
+                                      |           &lt;/div&gt;
+                                      |         &lt;/td&gt;
+                                      |         &lt;td&gt;Designer&lt;/td&gt;
+                                      |         &lt;td&gt;
+                                      |           &lt;div class=&quot;progress-showcase&quot;&gt;
+                                      |             &lt;div class=&quot;progress&quot; style=&quot;height:8px;&quot;&gt;
+                                      |               &lt;div class=&quot;progress-bar bg-primary&quot; role=&quot;progressbar&quot; style=&quot;width: 90%&quot; aria-valuenow=&quot;50&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;&lt;/div&gt;
+                                      |             &lt;/div&gt;
+                                      |           &lt;/div&gt;
+                                      |         &lt;/td&gt;
+                                      |         &lt;td&gt;class=&quot;digits&quot;&gt;5 Year&lt;/td&gt;
+                                      |       &lt;/tr&gt;
+                                      |     &lt;/tbody&gt;
+                                      |   &lt;/table&gt;
+                                      | &lt;/div&gt;
+                                      | &lt;!-- Cod Box Copy end --&gt;
+                        .col-sm-12.col-lg-6.col-xl-4.xl-50.col-md-12.box-col-6
+                          .card.height-equal
+                            .calender-widget
+                              .cal-img
+                              .cal-date
+                                h5
+                                  | 25
+                                  br
+                                  | APRIL
+                              .cal-desc.text-center.card-body
+                                h6.f-w-600 I must explain to you how all this mistaken idea truth
+                                p.text-muted.mt-3.mb-0
+                                  | Denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth,Letraset sheets containing Lorem Ipsum passages, and more recently.
+                        .col-sm-12.col-lg-6.col-xl-8.xl-50.col-md-12.box-col-6
+                          .card.height-equal
+                            .card-header
+                              h5 Contact Us
+                              .card-header-right
+                                ul.list-unstyled.card-option
+                                  li
+                                    i.icofont.icofont-double-left
+                                  li
+                                    i.view-html.fa.fa-code
+                                  li
+                                    i.icofont.icofont-maximize.full-card
+                                  li
+                                    i.icofont.icofont-minus.minimize-card
+                                  li
+                                    i.icofont.icofont-refresh.reload-card
+                                  li
+                                    i.icofont.icofont-error.close-card
+                            .contact-form.card-body
+                              form.theme-form
+                                .form-icon
+                                  i.icofont.icofont-envelope-open.txt-primary
+                                .form-group
+                                  label(for='exampleInputName') Your Name
+                                  input#exampleInputName.form-control(type='text', placeholder='John Dio')
+                                .form-group
+                                  label.col-form-label(for='exampleInputEmail1') Email
+                                  input#exampleInputEmail1.form-control(type='email', placeholder='Demo@gmail.com')
+                                .form-group
+                                  label.col-form-label(for='exampleInputEmail1') Message
+                                  textarea.form-control.textarea(rows='3', cols='50', placeholder='Your Message')
+                                .text-sm-right
+                                  button.btn.btn-primary-gradien SEND IT
+                              .code-box-copy
+                                button.code-box-copy__btn.btn-clipboard(data-clipboard-target='#example-head3', title='Copy')
+                                  i.icofont.icofont-copy-alt
+                                pre
+                                  code.language-html#example-head3
+                                      | &lt;!-- Cod Box Copy begin --&gt;
+                                      | &lt;div class=&quot;contact-form card-body&quot;&gt;
+                                      |   &lt;form class=&quot;theme-form&quot;&gt;
+                                      |     &lt;div class=&quot;form-icon&quot;&gt;
+                                      |       &lt;i class=&quot;icofont icofont-envelope-open&quot;&gt;&lt;/i&gt;
+                                      |     &lt;/div&gt;
+                                      |     &lt;div class=&quot;form-group&quot;&gt;
+                                      |       &lt;label for=&quot;exampleInputName&quot;&gt;Your Name&lt;/label&gt;
+                                      |       &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;exampleInputName&quot; placeholder=&quot;John Dio&quot;&gt;
+                                      |     &lt;/div&gt;
+                                      |     &lt;div class=&quot;form-group&quot;&gt;
+                                      |       &lt;label for=&quot;exampleInputEmail1&quot; class=&quot;col-form-label&quot;&gt;Email&lt;/label&gt;
+                                      |       &lt;input type=&quot;email&quot; class=&quot;form-control&quot; id=&quot;exampleInputEmail1&quot; placeholder=&quot;Demo@gmail.com&quot;&gt;
+                                      |     &lt;/div&gt;
+                                      |     &lt;div class=&quot;form-group&quot;&gt;
+                                      |       &lt;label for=&quot;exampleInputEmail1&quot; class=&quot;col-form-label&quot;&gt;Message&lt;/label&gt;
+                                      |       &lt;textarea row=&quot;3&quot; cols=&quot;50&quot; class=&quot;form-control textarea&quot; placeholder=&quot;Your Message&quot;&gt;&lt;/textarea&gt;
+                                      |     &lt;/div&gt;
+                                      |     &lt;div class=&quot;text-sm-right&quot;&gt;
+                                      |       &lt;button class=&quot;btn btn-primary-gradien&quot;&gt;SEND IT&lt;/button&gt;
+                                      |     &lt;/div&gt;
+                                      |   &lt;/form&gt;
+                                      | &lt;/div&gt;
+                                      | &lt;!-- Cod Box Copy end --&gt;
+
+                    // Container-fluid Ends
+                include ../../components/footer
+        include ../../components/footer-files

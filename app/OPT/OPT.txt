@@ -1,0 +1,125 @@
+api routes
+
+
+
+
+Route::post('verify', [App\Http\Controllers\UserController::class, 'verify'])->name('verify');
+
+Route::post('user_store', [App\Http\Controllers\UserController::class, 'store'])->name('user_store');
+
+
+
+code 
+
+
+use Twilio\Rest\Client;
+
+
+    public function __construct($client = null, string $verification_sid = null)
+        {
+
+            if ($client === null) {
+                $sid = "ACc2f48cbc9890be69d26eb91762c8da22";
+                $token = "8199d7e3d8ec946cb351b73f89602703";
+                $client = new Client($sid, $token);
+            }
+            $this->client = $client;
+            $this->verification_sid = $verification_sid ?: "VA3a509fb7fc0e98aa1d3e925464ef4b78";
+
+
+    }
+
+
+
+
+
+  public function store(Request $request)
+    {
+
+
+        $token = "8199d7e3d8ec946cb351b73f89602703";
+        $twilio_sid = "ACc2f48cbc9890be69d26eb91762c8da22";
+        $twilio_verify_sid = "VA3a509fb7fc0e98aa1d3e925464ef4b78";
+        $twilio = new Client($twilio_sid, $token);
+        $twilio->verify->v2->services($twilio_verify_sid)
+            ->verifications
+            ->create(
+                $request['phone_number'], "sms");
+            $user=new User();
+            $user->full_name=$request->full_name;
+            $user->username=$request->username;
+            $user->phone_number=$request->phone_number;
+            $user->email=$request->email;
+            $user->password=bcrypt($request->password);
+            $result=$user->save();
+
+        $id=User::max('id');
+        if ($result) {
+
+            return response([
+                'status' =>true,
+
+                'token' =>true,
+
+                'uid' =>$id,
+
+                'message'=>'User Add successfully',
+
+                'phone_number' => $request['phone_number'],
+
+
+            ]);
+        }else{
+
+            return response([
+
+                'message'=>'Record Not Created..',
+                'status' =>'error'
+            ]);
+        }
+    }
+
+
+
+
+
+    public function verify(Request $request)
+    {
+        $data = $request->validate([
+            'verification_code' => ['required', 'numeric'],
+            'phone_number' => ['required', 'string'],
+        ]);
+        /* Get credentials from .env */
+        $token = "8199d7e3d8ec946cb351b73f89602703";
+        $twilio_sid = "ACc2f48cbc9890be69d26eb91762c8da22";
+        $twilio_verify_sid = "VA3a509fb7fc0e98aa1d3e925464ef4b78";
+        $twilio = new Client($twilio_sid, $token);
+        $verification = $twilio->verify->v2->services($twilio_verify_sid)
+            ->verificationChecks
+            ->create($request['verification_code'], array('to' => $request['phone_number']));
+        if ($verification->valid) {
+            $user = tap(User::where('phone_number', $request['phone_number']))->update(['isVerified' => true]);
+            /* Authenticate user */
+            $id=User::max('id');
+                return response([
+                    'status' =>true,
+
+                    'token' =>true,
+
+                    'uid' =>$id,
+
+                    'message'=>'User Add successfully',
+
+                    ]);
+
+            }
+            else{
+
+                return response([
+
+                    'message'=>'Record Not Created..',
+                    'status' =>'error'
+                ]);
+            }
+
+    }

@@ -1,0 +1,41 @@
+- var chat_menu             = true;
+- var pe7_icon              = true;
+- var tree                  = true;
+- var popover_custom        = true;
+- var tooltip               = true;
+doctype html
+html(lang='en').document
+    include ../../components/header-files
+    body.document(data-spy='scroll', data-target='#myScrollspy', data-offset='1')
+        include ../../components/loader
+        // page-wrapper Start
+        .page-wrapper
+            include ../../components/document-header
+            // Page Body Start
+            .page-body-wrapper.document-content
+                include ../../components/document-changelog-sidebar
+                .page-body
+                  .container-fluid
+                    .row
+                      .col-sm-12.set-height.set-padding
+                        #myTabContent.tab-content
+                          #general.tab-pane.fade.show.active(role='tabpanel')
+                            .card
+                              .card-header.b-l-primary
+                                h5
+                                  | 20-5-2020 
+                                  span.digits v1.0.0
+                              .card-body
+                                p Initial Release                            
+                            .card
+                              .card-header.b-l-primary
+                                h5
+                                  | 10-7-2020 
+                                  span.digits v1.1.0
+                              .card-body
+                                p Update Jquery version
+                                p Update Bootstrap version
+                                p Update calendar App
+
+                include ../../components/footer
+        include ../../components/footer-files

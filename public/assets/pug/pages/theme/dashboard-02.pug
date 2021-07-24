@@ -1,0 +1,526 @@
+- var chartist              = true;
+- var apex                  = true;
+- var rating                = true;
+- var theme_customizer      = true;
+- var tooltip               = true;
+- var dashboard_2           = true;
+- var counter               = true;
+
+doctype html
+html(lang='en')
+    include ../../components/header-files
+    body
+        include ../../components/loader
+        // page-wrapper Start
+        #pageWrapper.page-wrapper.compact-wrapper
+            include ../../components/header
+            // Page Body Start
+            .page-body-wrapper.sidebar-icon
+                include ../../components/sidebar
+                .page-body
+                    .container-fluid
+                        .page-header
+                            .row
+                                .col-lg-6
+                                    ol.breadcrumb
+                                        li.breadcrumb-item
+                                          a(href='index.html')
+                                            i.f-16.fa.fa-home
+                                        li.breadcrumb-item Dashboard
+                                    h3 
+                                      | Helpdesk Dashboard 
+                                .col-lg-6
+                                  include ../../components/bookmark
+                    // Container-fluid starts
+                    .container-fluid
+                      .row
+                        .col-md-6.col-xl-3.xl-50.col-lg-6.box-col-6
+                          .card.social-widget-card
+                            .p-25
+                              .media.b-b-light
+                                .media-left.mr-4
+                                  .redial-social-widget.radial-bar-70(data-label='20%')
+                                    i.icofont.icofont-tasks-alt.txt-primary
+                                .media-right
+                                    h5 Unresolve
+                                    p Lorem Ipsum is simply dummy  text of the Loren dummy text.
+                              .row
+                                .col.text-center.b-r-light
+                                  span Today
+                                  h6.counter.mb-0 05
+                                .col.text-center.b-r-light
+                                  span last Month
+                                  h6.counter.mb-0 56
+                                .col.text-center
+                                  span Total
+                                  h6.counter.mb-0 61
+                        .col-md-6.col-xl-3.xl-50.col-lg-6.box-col-6
+                          .card.social-widget-card
+                            .p-25
+                              .media.b-b-light
+                                .media-left.mr-4
+                                  .redial-social-widget.radial-bar-20.bar-sucess(data-label='20%')
+                                    i.icofont.icofont-clock-time.txt-success
+                                .media-right
+                                    h5 Open
+                                    p Lorem Ipsum is simply dummy  text of the Loren dummy text.
+                              .row
+                                .col.text-center.b-r-light
+                                  span Today
+                                  h6.counter.mb-0 100
+                                .col.text-center.b-r-light
+                                  span last Month
+                                  h6.counter.mb-0 901
+                                .col.text-center
+                                  span Total
+                                  h6.counter.mb-0 1001
+                        .col-md-6.col-xl-3.xl-50.col-lg-6.box-col-6
+                          .card.social-widget-card
+                            .p-25
+                              .media.b-b-light
+                                .media-left.mr-4
+                                  .redial-social-widget.radial-bar-70.bar-warrning(data-label='50%')
+                                    i.icofont.icofont-sand-clock.txt-warning
+                                .media-right
+                                    h5 On Hold
+                                    p Lorem Ipsum is simply dummy  text of the Loren dummy text.
+                              .row
+                                .col.text-center.b-r-light
+                                  span Today
+                                  h6.counter.mb-0 100
+                                .col.text-center.b-r-light
+                                  span last Month
+                                  h6.counter.mb-0 901
+                                .col.text-center
+                                  span Total
+                                  h6.counter.mb-0 1001
+                        .col-md-6.col-xl-3.xl-50.col-lg-6.box-col-6
+                          .card.social-widget-card
+                            .p-25
+                              .media.b-b-light
+                                .media-left.mr-4
+                                  .redial-social-widget.radial-bar-70.bar-danger(data-label='50%')
+                                    i.icofont.icofont-ui-edit.txt-danger
+                                .media-right
+                                    h5 Unassigned
+                                    p Lorem Ipsum is simply dummy  text of the Loren dummy text.
+                              .row
+                                .col.text-center.b-r-light
+                                  span Today
+                                  h6.counter.mb-0 100
+                                .col.text-center.b-r-light
+                                  span last Month
+                                  h6.counter.mb-0 901
+                                .col.text-center
+                                  span Total
+                                  h6.counter.mb-0 1001
+                        .col-xl-4.xl-100.box-col-12
+                          .card.card-with-border.tickets.o-hidden
+                            .card-header.card-no-border
+                              .d-flex
+                                h5 Ticket By Request Type
+                                button.btn.btn-outline-light(type='button') Last Week 
+                                  i.fa.fa-caret-down
+                              p.f-12 Lorem Ipsum is simply dummy text of the Loren dummy text of the Loren dummy printing......
+                              h4.mb-0 198
+                              .chart-value-box.pull-right.ticket-legend
+                                .value-square-box-primary
+                                span Approval
+                                .value-square-box-danger.ml-3
+                                span Cancel
+                                .value-square-box-light.ml-3
+                                span Other
+                              small.f-w-600  This Week 
+                                span.font-primary 3.56% 
+                                  i.fa.fa-caret-up
+                            .card-body.p-0
+                              .apex-complain
+                                #mix1
+                              .small-mix
+                        .col-xl-4.xl-50.box-col-6
+                          .card.card-with-border.customer-satisfied
+                            .card-header.card-no-border.resolve-complain
+                              h5 Customer Satisfaction
+                              p Lorem Ipsum is simply dummy text of the Loren dummy text of the Loren dummy printing......
+                              .customers-details.d-flex
+                                .complain-details.pl-0.d-inline-block
+                                  h4 6.8
+                                    span.font-primary 8.74% 
+                                      i.fa.fa-caret-up
+                                  span.d-block performance  score
+                                .legend-radial.d-inline-block
+                                  ul
+                                    li 
+                                      .value-square-box-success
+                                      span.f-w-600 Excellent score
+                                    li 
+                                      .value-square-box-secondary
+                                      span.f-w-600 Good score
+                                    li 
+                                      .value-square-box-warning
+                                      span.f-w-600 Fair score
+                                    li 
+                                      .value-square-box-warning
+                                      span.f-w-600 Poor score
+                            .card-body.p-0
+                              .satisfaction-table.table-responsive
+                                table.table.table-bordernone
+                                  tbody
+                                    tr
+                                      td
+                                        p.f-w-600 Excellent Score
+                                        span.d-block
+                                          span.font-success Elisse Joson San 
+                                          span Francisco, CA
+                                      td
+                                        p.f-w-600.light-font.mb-0 3,005
+                                      td
+                                        span 90%
+                                      td
+                                        .number-radial
+                                          .radial-bar.radial-bar-90.radial-bar-success(data-label='90%')
+                                    tr
+                                      td
+                                        p.f-w-600 Good Score
+                                        span.d-block
+                                          span.font-secondary Elisse Joson San 
+                                          span Francisco, CA
+                                      td
+                                        p.f-w-600.light-font.mb-0 3,005
+                                      td
+                                        span 75%
+                                      td
+                                        .number-radial
+                                          .radial-bar.radial-bar-75.radial-bar-secondary(data-label='75%')
+                                    tr
+                                      td
+                                        p.f-w-600 Fair Score
+                                        span.d-block
+                                          span.font-warning Elisse Joson San 
+                                          span Francisco, CA
+                                      td
+                                        p.f-w-600.light-font.mb-0 3,005
+                                      td
+                                        span 60%
+                                      td
+                                        .number-radial
+                                          .radial-bar.radial-bar-60.radial-bar-warning(data-label='60%')
+                                    tr
+                                      td
+                                        p.f-w-600 Fair Score
+                                        span.d-block
+                                          span.font-danger Elisse Joson San 
+                                          span Francisco, CA
+                                      td
+                                        p.f-w-600.light-font.mb-0 3,005
+                                      td
+                                        span 20%
+                                      td
+                                        .number-radial
+                                          .radial-bar.radial-bar-20.radial-bar-danger(data-label='20%')
+                        .col-xl-4.xl-50.box-col-6
+                          .row
+                            .col-sm-12
+                              .card.card-with-border.resolve-complain
+                                .card-header.card-no-border.chart-block
+                                  .media
+                                    .small-bar
+                                      .small-chart.flot-chart-container
+                                    .media-body
+                                      h5 Resolved Complaint
+                                      p.f-12  Lorem Ipsum is simply dummy text of the Loren dummy printing......
+                                      h4.mb-0 5m:65s
+                                       span.f-14.light-font  / Goal : 8m : 0s
+                            .col-sm-12
+                              .card.card-with-border.complaints.o-hidden
+                                .card-header.card-no-border.d-flex
+                                  h5 Complaints Received
+                                  button.btn.btn-outline-light(type='button') Last Week 
+                                   i.fa.fa-caret-down
+                                .card-body.p-0
+                                  .complain-details
+                                    h4 
+                                      span  This Week 
+                                      span.font-primary 3.56% 
+                                        i.fa.fa-caret-up
+                                      | 198    
+                                    p.f-12 The total number of complaints that have been received.
+                                  .apex-complain
+                                    #complain
+
+
+                        .col-xl-4.xl-100.box-col-12
+                          .card.card-with-border.overall-rating
+                            .card-header.resolve-complain.card-no-border
+                              h5.d-inline-block Recent Activities
+                              span.setting-round.pull-right.d-inline-block.mt-0
+                                i.fa.fa-spin.fa-cog
+                              p.f-12.mb-0 Lorem Ipsum is simply dummy text of the Loren dummy text of the Loren dummy printing......
+                            .card-body.pt-0
+                              .timeline-recent
+                                .media
+                                  .timeline-line
+                                  .timeline-dot-danger
+                                  .media-body
+                                    span.d-block.f-w-600 Natalie reassigned ticket
+                                      span.pull-right.light-font.f-w-400 2 hour ago
+                                    p 
+                                      span.font-danger Elisse Joson San 
+                                      | Francisco, CA
+                                .media
+                                  .timeline-dot-secondary
+                                  .media-body
+                                    span.d-block.f-w-600 Katherine submitted new ticket
+                                      span.pull-right.light-font.f-w-400 5 hour ago
+                                    p 
+                                      span.font-secondary Elisse Joson San 
+                                      | Francisco, CA
+                                    p.f-12.mb-0 Lorem Ipsum is simply dummy text of the text of the Loren dummy printing......
+                                .media
+                                  .timeline-dot-success
+                                  .media-body
+                                    span.d-block.f-w-600 Natalie reassigned ticket
+                                      span.pull-right.light-font.f-w-400 8 hour ago
+                                    p 
+                                      span.font-success Elisse Joson San 
+                                      | Francisco, CA
+                          .card.card-with-border
+                            .card-header.card-no-border.tickets
+                              .d-flex
+                                h5 Transaction History
+                                button.btn.btn-outline-light(type='button') Last Week 
+                                  i.fa.fa-caret-down
+                              p.f-12.mb-0 Lorem Ipsum is simply dummy text of the Loren dummy text of the Loren dummy printing......
+                            .card-body.p-0
+                              .transaction-table.table-responsive.agent-performance-table
+                                table.table.table-bordernone
+                                  tbody
+                                    tr
+                                      td
+                                        .media
+                                          .round-light-icon-primary
+                                            i.icon-money
+                                          .media-body
+                                            span.f-12.f-w-600 Process refund to 51451
+                                      td
+                                        p.f-w-600 Mar 14,2019
+                                      td
+                                        .badge.badge-primary Completed
+                                    tr
+                                      td
+                                        .media
+                                          .round-light-icon-warning
+                                            i.icon-wallet
+                                          .media-body
+                                            span.f-12.f-w-600 Payment from 95362
+                                      td
+                                        p.f-w-600 Apr 20,2019
+                                      td
+                                        .badge.badge-warning For Pickup
+                                    tr
+                                      td
+                                        .media
+                                          .round-light-icon-secondary
+                                            i.icon-money
+                                          .media-body
+                                            span.f-12.f-w-600 Process refund to 20135
+                                      td
+                                        p.f-w-600 Apr 20,2019
+                                      td
+                                        .badge.badge-secondary Completed
+                                    tr
+                                      td
+                                        .media
+                                          .round-light-icon-danger
+                                            i.icon-wallet
+                                          .media-body
+                                            span.f-12.f-w-600 Payment from 15485
+                                      td
+                                        p.f-w-600 Jan 05,2019
+                                      td
+                                        .badge.badge-danger 10,125 Point
+                                    tr
+                                      td
+                                        .media
+                                          .round-light-icon-success
+                                            i.icon-money
+                                          .media-body
+                                            span.f-12.f-w-600 Process refund to 95685
+                                      td
+                                        p.f-w-600 Mar 21,219
+                                      td
+                                        .badge.badge-success Declined
+                                    tr
+                                      td.text-center(colspan='3')
+                                        button.btn.btn-light(type='button') View All Transactions
+                        .col-xl-8.xl-100.box-col-12
+                          .row
+                            .col-xl-6
+                              .row
+                                .col-sm-12
+                                  .card.card-with-border.resolve-complain.average-radial
+                                    .card-header.card-no-border.chart-block
+                                      .media
+                                        .radial-bar.radial-bar-20.radial-bar-danger(data-label='20%')
+                                        .media-body
+                                          h5 Average Speed Of Ans.
+                                          p.f-12  Lorem Ipsum is simply dummy text of the Loren dummy printing......
+                                          h4.mb-0 0m:65s
+                                           span.f-14.light-font  / Goal : 0m : 45s
+                                .col-sm-12
+                                  .card.card-with-border.overall-rating
+                                    .card-header.resolve-complain
+                                      h5.d-inline-block Over All Rating
+                                      span.setting-round.pull-right.d-inline-block.mt-0
+                                        i.fa.fa-spin.fa-cog
+                                      p.f-12.mb-0 Lorem Ipsum is simply dummy text of the Loren dummy text of the Loren dummy printing......
+                                    .card-body.rating-box.p-0
+                                      .row.m-0
+                                        .col-sm-6.p-0.main-rating
+                                          .rating-box
+                                            h3 4.6
+                                            .rating-container
+                                              .star-ratings
+                                                .stars.stars-example-fontawesome-o
+                                                  select#u-rating-fontawesome-o(name='rating', data-current-rating='4.6', autocomplete='off')
+                                                    option(value='1') 1
+                                                    option(value='2') 2
+                                                    option(value='3') 3
+                                                    option(value='4') 4
+                                                    option(value='5') 5
+                                            p Measures the quality or your support team’s efforts.
+                                        
+                                        .col-sm-6.p-0
+                                          ul.small-rating
+                                            li
+                                              h6 4.6
+                                                span.stars-small.pl-2
+                                                  span.fa.fa-star.checked
+                                                  span.fa.fa-star.checked
+                                                  span.fa.fa-star.checked
+                                                  span.fa.fa-star.checked
+                                                  span.fa.fa-star
+                                                span.f-12.pull-right 95%
+                                            li
+                                              h6 4.1
+                                                span.stars-small.pl-2
+                                                  span.fa.fa-star.checked
+                                                  span.fa.fa-star.checked
+                                                  span.fa.fa-star.checked
+                                                  span.fa.fa-star.checked
+                                                  span.fa.fa-star
+                                                span.f-12.pull-right 89%
+                                            li
+                                              h6 3.0
+                                                span.stars-small.pl-2
+                                                  span.fa.fa-star.checked
+                                                  span.fa.fa-star.checked
+                                                  span.fa.fa-star.checked
+                                                  span.fa.fa-star
+                                                  span.fa.fa-star
+                                                span.f-12.pull-right 64%
+                            .col-xl-6
+                              .card.card-with-border.overall-rating
+                                .card-header.resolve-complain.card-no-border
+                                  h5.d-inline-block Agent Performance Points
+                                  span.setting-round.pull-right.d-inline-block.mt-0
+                                    i.fa.fa-spin.fa-cog
+                                  p.f-12.mb-0 Lorem Ipsum is simply dummy text of the Loren dummy text of the Loren dummy printing......
+                                .card-body.p-0
+                                  .table-responsive.agent-performance-table
+                                    table.table.table-bordernone
+                                      tbody
+                                        tr
+                                          td
+                                            .d-inline-block.align-middle
+                                              img.img-radius.img-40.align-top.m-r-15.rounded-circle(src='../assets/images/user/2.png', alt='')
+                                              .d-inline-block
+                                                span.f-12.f-w-600 Nick Stone
+                                                span.d-block Technical Support
+                                          td
+                                            .progress-showcase
+                                              .progress.sm-progress-bar
+                                                .progress-bar.bg-primary(role='progressbar', style='width: 40%', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100')
+                                              p.f-w-600 Elite Level
+                                          td
+                                            p.f-w-600 12,325 Point
+                                        tr
+                                          td
+                                            .d-inline-block.align-middle
+                                              img.img-radius.img-40.align-top.m-r-15.rounded-circle(src='../assets/images/user/11.png', alt='')
+                                              .d-inline-block
+                                                span.f-12.f-w-600 Milano esco
+                                                span.d-block Technical Support
+                                          td
+                                            .progress-showcase
+                                              .progress.sm-progress-bar
+                                                .progress-bar.bg-warning(role='progressbar', style='width: 50%', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100')
+                                              p.f-w-600 Exclusive Level
+                                          td
+                                            p.f-w-600 18,485 Point
+                                        tr
+                                          td
+                                            .d-inline-block.align-middle
+                                              img.img-radius.img-40.align-top.m-r-15.rounded-circle(src='../assets/images/user/3.jpg', alt='')
+                                              .d-inline-block
+                                                span.f-12.f-w-600 Wiltor Noice
+                                                span.d-block Technical Support
+                                          td
+                                            .progress-showcase
+                                              .progress.sm-progress-bar
+                                                .progress-bar.bg-secondary(role='progressbar', style='width: 80%', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100')
+                                              p.f-w-600 Exclusive Level
+                                          td
+                                            p.f-w-600 26,125 Point
+                                        tr
+                                          td
+                                            .d-inline-block.align-middle
+                                              img.img-radius.img-40.align-top.m-r-15.rounded-circle(src='../assets/images/user/4.jpg', alt='')
+                                              .d-inline-block
+                                                span.f-12.f-w-600 Anna strong
+                                                span.d-block Technical Support
+                                          td
+                                            .progress-showcase
+                                              .progress.sm-progress-bar
+                                                .progress-bar.bg-danger(role='progressbar', style='width: 30%', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100')
+                                              p.f-w-600 Elite Level
+                                          td
+                                            p.f-w-600 10,125 Point
+                                        tr
+                                          td
+                                            .d-inline-block.align-middle
+                                              img.img-radius.img-40.align-top.m-r-15.rounded-circle(src='../assets/images/user/12.png', alt='')
+                                              .d-inline-block
+                                                span.f-12.f-w-600 Anna strong
+                                                span.d-block Technical Support
+                                          td
+                                            .progress-showcase
+                                              .progress.sm-progress-bar
+                                                .progress-bar.bg-success(role='progressbar', style='width: 70%', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100')
+                                              p.f-w-600 Exclusive Level
+                                          td
+                                            p.f-w-600 22,114 Point
+                            .col-sm-12
+                              .card.card-with-border.current-tickets.tickets
+                                .card-header.card-no-border
+                                  .d-flex
+                                    h5 Current Ticket Status
+                                    button.btn.btn-outline-light(type='button') Last Week 
+                                      i.fa.fa-caret-down
+                                  p.f-12.mb-0 Lorem Ipsum is simply dummy text of the Loren dummy text of......
+                                  .chart-value-box.pull-right.current-legend
+                                    .value-square-box-primary
+                                    span Open Tickets
+                                    .value-square-box-light.ml-3
+                                    span Solved Ticket
+                                .card-body.pt-0
+                                  h4.mb-0 198
+                                  small.f-w-600  This Week 
+                                    span.font-primary 3.56% 
+                                      i.fa.fa-caret-up
+                                  .tickets-bar
+                                    .ct-chartbar.flot-chart-container
+
+                    // Container-fluid Ends
+                include ../../components/footer         
+        include ../../components/footer-files
